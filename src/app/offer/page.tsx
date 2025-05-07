@@ -1,17 +1,15 @@
 "use client";
-import React from "react";
+import { useEffect, useState } from "react";
+import { Offer } from "../../types/propsType";
 import {
-  NavBar,
-  Footer,
   CenteredHeading,
   Courses,
   Description,
+  Footer,
+  NavBar,
 } from "../homeComponents";
-import Training from "./components/Training";
-import CardContainer from "./components/Card";
-import PageWrapper from "../layouts/pageLayout";
-import { Offer, courseData } from "../../types/propsType";
 import InLayout from "../layouts/inlayout";
+import PageWrapper from "../layouts/pageLayout";
 import Grid from "./components/Grid";
 
 async function getData() {
@@ -52,18 +50,21 @@ async function getData() {
   return offers;
 }
 
-async function getCourseData() {
-  try {
-    const response = await fetch("https://murabbi.io/api/course");
-    const courses = await response.json(); // Assuming the server returns JSON dat
-    return courses;
-  } catch (error) {
-    console.error("An error occurred:", error);
-    throw error;
-  }
-}
-async function page() {
-  const data:any = await getCourseData();
+function page() {
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const res = await fetch("https://murabbi.io/api/course");
+        const json = await res.json();
+        setCourses(json);
+      } catch (err) {
+        console.error("Error fetching courses:", err);
+      }
+    };
+    fetchCourses();
+  }, []);
   return (
     <div>
       <NavBar page="Trainings" />
@@ -73,7 +74,7 @@ async function page() {
           <CenteredHeading text="Best Courses" />
           <Description text="Explore our top-rated courses here and equip yourself with the knowledge and skills you need for success." />
           {/* <CardContainer offers={data} home={true} /> */}
-          <Courses   />
+          <Courses />
         </InLayout>
       </PageWrapper>
       <Footer />

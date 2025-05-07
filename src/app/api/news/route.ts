@@ -1,5 +1,5 @@
+export const dynamic = "force-dynamic";
 import { NextRequest, NextResponse } from "next/server";
-import Course from "../../../../models/course";
 import { connectToMongoDB } from "../../../../lib/mongodb";
 import News from "../../../../models/news";
 
