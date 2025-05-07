@@ -1,0 +1,14 @@
+export { default as NavBar } from "./navBar";
+export { default as Hero_alt } from "./hero_alt";
+export { default as Info } from "./info";
+export { default as Trainings } from "./trainings";
+export { default as Description } from "./description";
+export { default as Courses } from "./courses";
+export { default as Background } from "./background";
+export { default as Events } from "./events";
+export { default as Testimonials } from "./testimonials";
+export { default as Footer } from "./Footer";
+export { default as CenteredHeading } from "./centeredHeading";
+export { default as Heading } from "./heading";
+export { default as Slider } from "./Slider";
+export { default as CardSlider } from "./CardSlide";
