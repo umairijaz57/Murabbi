@@ -1,12 +1,12 @@
 "use client";
+import { CourseDB } from "@/types/propsType";
+import { useAnimation } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef, useState, useEffect } from "react";
-import courses from "../../utils/courses.json";
+import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
-import {  useAnimation } from "framer-motion";
 import { FaPhone } from "react-icons/fa";
-import { CourseDB } from "@/types/propsType";
+import courses from "../../utils/courses.json";
 
 type Props = {
   page?: string;
@@ -246,9 +246,9 @@ const NavBar = (props: Props) => {
             </div>
 
             <div className="relative hidden lg:block mx-2 w-36  ">
-              <span>+92 336 5935790</span>
+              <span>+92 333 1555665</span>
             </div>
-            <FaPhone size={20} className="cursor-pointer hidden lg:block"/>
+            <FaPhone size={20} className="cursor-pointer hidden lg:block" />
           </div>
           <button
             data-collapse-toggle="navbar-multi-level"
@@ -341,7 +341,7 @@ const NavBar = (props: Props) => {
                 )}
               </div>
 
-              {links.map((link,index) => {
+              {links.map((link, index) => {
                 return (
                   <div key={index}>
                     {link.text === "Trainings" ? (
@@ -476,9 +476,7 @@ const NavBar = (props: Props) => {
               })}
               <div className="relative block lg:hidden mx-2 mt-4  ">
                 <Link href="/register/All-Courses" target="_blank">
-                  <button
-                    className="py-3 px-4  bg-blue-600 text-white font-semibold rounded-lg text-sm  w-full hover:bg-white hover:text-blue-500 border border-blue-600 "
-                  >
+                  <button className="py-3 px-4  bg-blue-600 text-white font-semibold rounded-lg text-sm  w-full hover:bg-white hover:text-blue-500 border border-blue-600 ">
                     Register Now
                   </button>
                 </Link>

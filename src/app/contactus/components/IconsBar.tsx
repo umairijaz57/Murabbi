@@ -1,8 +1,8 @@
-'use client'
-import React, { useRef, useEffect, useState } from 'react';
-import { AiFillInstagram } from 'react-icons/ai';
-import { FaFacebookF } from 'react-icons/fa';
-import { GrLinkedinOption } from 'react-icons/gr';
+"use client";
+import { useEffect, useRef, useState } from "react";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebookF } from "react-icons/fa";
+import { GrLinkedinOption } from "react-icons/gr";
 
 type Props = {};
 
@@ -40,10 +40,13 @@ function IconsBar({}: Props) {
 
   return (
     <div className="flex flex-wrap justify-evenly md:gap-20 mb-8">
-      <a href="http://facebook.com/murabbi.io" target="_blank">
+      <a
+        href="https://www.facebook.com/profile.php?id=61558689572370"
+        target="_blank"
+      >
         <div
           className={`w-24 h-24 rounded-full bg-blue-600 m-2 flex justify-center place-items-center  transform cursor-pointer shadow-md ${
-            isInView ? 'animate-icons' : ''
+            isInView ? "animate-icons" : ""
           }`}
           ref={element}
         >
@@ -53,7 +56,7 @@ function IconsBar({}: Props) {
       <a href="https://www.instagram.com/murabbi.io/" target="_blank">
         <div
           className={`w-24 h-24 rounded-full bg-blue-600 m-2 flex justify-center place-items-center  transform cursor-pointer shadow-md ${
-            isInView ? 'animate-icons' : ''
+            isInView ? "animate-icons" : ""
           }`}
           ref={element}
         >
@@ -63,7 +66,7 @@ function IconsBar({}: Props) {
       <a href="https://www.linkedin.com/company/murabbi/" target="_blank">
         <div
           className={`w-24 h-24 rounded-full bg-blue-600 m-2 flex justify-center place-items-center  transform cursor-pointer shadow-md ${
-            isInView ? 'animate-icons' : ''
+            isInView ? "animate-icons" : ""
           }`}
           ref={element}
         >

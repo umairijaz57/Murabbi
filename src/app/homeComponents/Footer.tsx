@@ -109,7 +109,7 @@ const Footer = (props: Props) => {
                     Contact Us
                   </a>
                 </li>
-                <li className="mb-4 text-sm">+92 336 5935790</li>
+                <li className="mb-4 text-sm">+92 333 1555665</li>
                 <li className="mb-4 text-sm">
                   {" "}
                   <Link

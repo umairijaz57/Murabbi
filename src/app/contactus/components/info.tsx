@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 import { MdLocationPin } from "react-icons/md";
 
@@ -12,7 +11,7 @@ const Info = (props: Props) => {
         <div className="h-32 w-32  mb-4 flex justify-center items-center">
           <FaPhone className="text-blue-500 " size={80} />
         </div>
-        <div className="text-base">+92 336 5935790</div>
+        <div className="text-base">+92 333 1555665</div>
         <div className="text-2xl font-extrabold">Phone Number</div>
       </div>
       <div className=" w-full sm:w-[22rem] bg-blue-500 text-white   flex flex-col justify-center items-center gap-4 p-6 md:py-12 shadow-lg hover:shadow-gray-800/60 shadow-gray-800/30 transition duration-500">
@@ -33,7 +32,7 @@ const Info = (props: Props) => {
           <FaEnvelope className="text-blue-600" size={80} />
         </div>{" "}
         <Link href="mailto:hr@murabbi.io" className="underline text-base">
-          <span>hr@murabbi.io</span>
+          <span>Murabbi.socials@gmail.com</span>
         </Link>
         <div className="text-2xl font-extrabold">Send Us Email</div>
       </div>
