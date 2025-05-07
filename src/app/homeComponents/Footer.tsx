@@ -113,10 +113,10 @@ const Footer = (props: Props) => {
                 <li className="mb-4 text-sm">
                   {" "}
                   <Link
-                    href="mailto:Murabbi.socials@gmail.coms"
+                    href="mailto:murabbi.socials@gmail.coms"
                     className="underline"
                   >
-                    <span>Murabbi.socials@gmail.com</span>
+                    <span>murabbi.socials@gmail.com</span>
                   </Link>
                 </li>
                 <li className="text-sm">

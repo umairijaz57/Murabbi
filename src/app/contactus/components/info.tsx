@@ -32,7 +32,7 @@ const Info = (props: Props) => {
           <FaEnvelope className="text-blue-600" size={80} />
         </div>{" "}
         <Link href="mailto:hr@murabbi.io" className="underline text-base">
-          <span>Murabbi.socials@gmail.com</span>
+          <span>murabbi.socials@gmail.com</span>
         </Link>
         <div className="text-2xl font-extrabold">Send Us Email</div>
       </div>
