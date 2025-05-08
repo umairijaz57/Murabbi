@@ -1,10 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { BsArrowRightShort } from "react-icons/bs";
-import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
 type Props = {};
 
@@ -38,7 +37,6 @@ const Hero = (props: Props) => {
     exit: { opacity: 0, x: "-100%" },
   };
 
-
   return (
     <div className="bg-gray-200">
       <div
@@ -46,7 +44,6 @@ const Hero = (props: Props) => {
         className="relative overflow-x-hidden main-hero " // Add overflow-x-hidden to prevent horizontal scrollbar
         data-carousel="static"
       >
-
         <div className="relative h-[95vh] bg-gray-200">
           {
             <div className={`${showItem === 0 ? "" : "hidden"}`}>

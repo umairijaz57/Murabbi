@@ -101,7 +101,7 @@ const Events = (props: Props) => {
           </>
         ) : (
           <>
-            {news?.map((item: any, index: number) => (
+            {/* {news?.map((item: any, index: number) => (
               <>
                 {index === 4 ? (
                   <EventCard
@@ -115,10 +115,26 @@ const Events = (props: Props) => {
                       Date: "30 January, 2024",
                     }}
                   />
-                ) : (
-                  <EventCard key={index} item={item} />
+                ) :
+                 (
+                <EventCard key={index} item={item} />
                 )}
               </>
+            ))} */}
+
+            {/* {
+                "_id": "6572b40e410c5fef99f25c4a",
+                "Title": "STEM CAMP 2023: Igniting Minds, Powering Futures",
+                "Image": "/news/stem.png",
+                "Description": "Murabbi, a cutting-edge tech startup, in collaboration with Elements Learning, and NCLS&C, is set to host an exhilarating event, the STEM Camp, at the prestigious NUST Campus. This immersive experience promises a dynamic fusion of science, math, AI, robotics, and game development, creating a STEM Wonderland for young minds. </br> Our mission is to empower students with the skills and mindset crucial for 21st-century success. The workshop utilizes interactive coding to deepen understanding in math and science, offering personalized training based on individual interests. </br> <span class=\"font-extrabold\" >Key Event Details:</span> </br> <span class=\"font-bold\" >Duration:</span> 5 Days </br> <span class=\"font-bold\" >Timings:</span> 9:30 am to 1:00 pm (Morning Session), 2:00 pm to 4:00 pm (Afternoon Session) </br> <span class=\"font-bold\">Target Audience: </span>Ages 8-18 (School and College Students)</br><span class=\"font-bold\">Venue: </span>NCLS (NUST)</br>Our program stands out with prestigious accreditation from STEM.org, a testament to its recognized quality in the field. Boasting an impressive rating of 4.6 out of 5 by both students and parents, our workshop has consistently garnered positive feedback, due to its effectiveness and impact. The curriculum follows the innovative BIDE model, designed to be Broad, Inspiring, Deep, and Efficient, ensuring a comprehensive and efficient learning experience. With a targeted focus on STEAM subjects—Science, Technology, Engineering, Arts, and Math—participants delve into a well-rounded exploration of diverse disciplines, fostering a holistic approach to education. </br> With Murabbi's STEM Workshop, you get to engage in dynamic activities designed to foster a genuine passion for STEM subjects. You can benefit from the expertise of industry leaders, gaining valuable insights from seasoned professionals in the field. Furthermore, you get to go beyond traditional learning methods and develop skills that extend past textbooks, nurturing your creativity and innovation. More importantly, you can equip yourself with essential future-ready skills, exploring the realms of AI, robotics, and game development. This immersive experience not only broadens your knowledge but also enhances analytical and structural thinking abilities, providing a well-rounded foundation for future success. </br>",
+                "Date": "8 December 2023",
+                "Link": ""
+              },                             this data is from news.json */}
+
+            {/* render all new through normal behave */}
+
+            {news?.map((item: any, index: number) => (
+              <EventCard key={index} item={item} />
             ))}
           </>
         )}

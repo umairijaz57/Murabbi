@@ -1,15 +1,12 @@
-"use client"
-import { useEffect, useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper/core";
-import "swiper/swiper.min.css";
-import "swiper/components/pagination/pagination.min.css";
-import "swiper/components/navigation/navigation.min.css";
+"use client";
 import Image from "next/image";
-import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
-import courses from "../data/courses";
-import Card from "../trainings/components/card";
-import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import "swiper/components/navigation/navigation.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper/core";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.min.css";
 
 // Initialize Swiper core
 SwiperCore.use([Pagination, Navigation, Autoplay]);
@@ -158,7 +155,7 @@ const CardSlider = (props: Props) => {
             >
               {props.type === "partner" && (
                 <>
-                  <SwiperSlide>
+                  {/* <SwiperSlide>
                     <div className="flex justify-center place-items-center mb-68 h-[3.5rem] cursor-pointer">
                       <Image
                         src="/logos/EL.png"
@@ -168,7 +165,7 @@ const CardSlider = (props: Props) => {
                         height={200}
                       />
                     </div>
-                  </SwiperSlide>
+                  </SwiperSlide> */}
                   <SwiperSlide>
                     <div className="flex justify-center place-items-center mb-8 h-[3.5rem] cursor-pointer">
                       <Image
@@ -202,7 +199,7 @@ const CardSlider = (props: Props) => {
                       />
                     </div>
                   </SwiperSlide>
-                  <SwiperSlide>
+                  {/* <SwiperSlide>
                     <div className="flex justify-center place-items-center  md:ml-8 mt-1 mb-8 h-[3.5rem] cursor-pointer">
                       <Image
                         src="/logos/takhleeq.png"
@@ -212,7 +209,7 @@ const CardSlider = (props: Props) => {
                         height={200}
                       />
                     </div>
-                  </SwiperSlide>
+                  </SwiperSlide> */}
                   <SwiperSlide>
                     <div className="flex justify-center place-items-center mb-8 h-[3.5rem] cursor-pointer">
                       <Image

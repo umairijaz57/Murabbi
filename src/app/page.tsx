@@ -11,7 +11,7 @@ import {
 } from "./homeComponents";
 import CenteredHeading from "./homeComponents/centeredHeading";
 import Footer from "./homeComponents/Footer";
-import Hero from "./homeComponents/Hero";
+import HeroSlider from "./homeComponents/HeroSlider";
 import InLayout from "./layouts/inlayout";
 import PageWrapper from "./layouts/pageLayout";
 
@@ -24,7 +24,8 @@ export default async function Home() {
     <div className="relative">
       {/* <Update /> */}
       <NavBar page="Home" home={true} />
-      <Hero />
+      {/* <Hero /> */}
+      <HeroSlider />
       <PageWrapper home={true}>
         <InLayout offer={true}>
           <CenteredHeading text="Events & Updates" />
