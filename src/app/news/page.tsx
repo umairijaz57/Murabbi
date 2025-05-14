@@ -4,7 +4,7 @@ import { CenteredHeading, NavBar } from "../homeComponents";
 import InLayout from "../layouts/inlayout";
 import PageWrapper from "../layouts/pageLayout";
 import Hero from "./components/Hero";
-import NewsList from "./components/News";
+import NewsList from "./components/NewsList";
 
 export default function page() {
   return (

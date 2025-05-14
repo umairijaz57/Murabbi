@@ -14,7 +14,7 @@ import Footer from "./homeComponents/Footer";
 import HeroSlider from "./homeComponents/HeroSlider";
 import InLayout from "./layouts/inlayout";
 import PageWrapper from "./layouts/pageLayout";
-import NewsList from "./news/components/News";
+import NewsList from "./news/components/NewsList";
 
 const CardSlider = dynamic(() => import("./homeComponents/CardSlide"), {
   suspense: true,
