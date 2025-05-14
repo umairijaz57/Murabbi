@@ -18,7 +18,7 @@ const links = [
   { href: "/", text: "Home" },
   { href: "/aboutus", text: "About Us" },
   { href: "/offer", text: "Trainings" },
-  { href: "/resources", text: "News" },
+  { href: "/news", text: "News" },
   { href: "/contactus", text: "Contact Us" },
 ];
 

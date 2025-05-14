@@ -51,14 +51,16 @@ export default function HeroSlider() {
               zIndex: currentSlide === idx ? 1 : 0,
             }}
           >
-            <Image
-              src={img}
-              alt={`Slide ${idx + 1}`}
-              fill
-              className={`object-cover`}
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/70 to-blue-600/50" />
+            <div className="relative w-full h-full">
+              <Image
+                src={img}
+                alt={`Slide ${idx + 1}`}
+                fill
+                className={`object-cover relative`}
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/70 to-blue-600/50" />
+            </div>
           </div>
         ))}
       </div>

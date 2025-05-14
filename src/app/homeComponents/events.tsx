@@ -77,25 +77,12 @@ const Events = (props: Props) => {
       <div
         className={`flex flex-row flex-wrap m-auto gap-8 items-center justify-center overflow-y-hidden p-6 relative `}
       >
+        s{" "}
         {props.home ? (
           <>
             {news?.slice(0, 3).map((item: any, index: number) => (
               <>
-                {index === 4 ? (
-                  <EventCard
-                    item={{
-                      _id: "0",
-                      Title:
-                        "Murabbi Successfully Concludes Winter STEM Camp in Collaboration with NCLS, NUST, and Elements Learning! 🚀",
-                      Image: "/news/0.JPG",
-                      Link: "/news/stem",
-                      Description: "string",
-                      Date: "30 January, 2024",
-                    }}
-                  />
-                ) : (
-                  <EventCard key={index} item={item} />
-                )}
+                <EventCard key={index} item={item} />
               </>
             ))}
           </>

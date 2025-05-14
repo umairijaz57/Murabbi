@@ -1,9 +1,9 @@
+"use client";
 import dynamic from "next/dynamic";
 import {
   Background,
   Courses,
   Description,
-  Events,
   Info,
   NavBar,
   Testimonials,
@@ -14,6 +14,7 @@ import Footer from "./homeComponents/Footer";
 import HeroSlider from "./homeComponents/HeroSlider";
 import InLayout from "./layouts/inlayout";
 import PageWrapper from "./layouts/pageLayout";
+import NewsList from "./news/components/News";
 
 const CardSlider = dynamic(() => import("./homeComponents/CardSlide"), {
   suspense: true,
@@ -29,7 +30,7 @@ export default async function Home() {
       <PageWrapper home={true}>
         <InLayout offer={true}>
           <CenteredHeading text="Events & Updates" />
-          <Events home />
+          <NewsList home />
         </InLayout>
         <InLayout>
           <Info />

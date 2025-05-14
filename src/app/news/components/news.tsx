@@ -1,35 +1,38 @@
-import { Description } from "@/app/homeComponents";
-import CenteredHeading from "@/app/homeComponents/centeredHeading";
-import useIntersectionObserver from "@/hooks/onViewPort";
-import Image from "next/image";
+import Link from "next/link";
+import { newsData } from "../constant/newsData";
+import NewsCard from "./NewsCard";
 
-type Props = {
-  title:string,
-  description:string,
-  link:string,
-  date:string
-};
-
-function News({title,description,link,date}: Props) {
-  const [headingRef, isVisible] = useIntersectionObserver();
-  return (
-    <>
-      <div
-      ref={headingRef}
-      className={`flex my-4 text-center justify-center text-3xl md:text-4xl text-gray-900/90 font-extrabold transition duration-1000  ${
-        isVisible ? "translate-y-0 opacity-100" : "translate-y-40 opacity-0"
-      }`}
-    >
-      "{title.replace(/#/g, '')}"
-    </div>
-      <Description
-        text={description}
-      />
-      <div className="text-sm text-gray-400 px-2 md:px-12">
-        Publish date: {date}
-      </div>
-    </>
-  );
+// ✅ Correct slug function
+function toSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
 }
 
-export default News;
+const NewsList = (props) => {
+  return (
+    <div className="">
+      <div className="flex flex-wrap gap-6 justify-center">
+        {(props.home ? newsData.slice(0, 3) : newsData).map((item) => {
+          const slug = toSlug(item.Title);
+          return <NewsCard key={slug} item={{ ...item, _id: slug }} />;
+        })}
+      </div>
+
+      {props.home && (
+        <div className="flex justify-center items-center mt-12">
+          <Link href="/resources">
+            <button className="py-3 px-6 w-36 md:mt-4 rounded-lg transition-all text-sm font-bold  duration-500 border-2 bg-blue-600 text-white hover:bg-blue-500 hover:border-blue-500 border-blue-600">
+              View More
+            </button>
+          </Link>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default NewsList;
