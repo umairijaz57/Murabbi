@@ -1,16 +1,6 @@
 import Link from "next/link";
-import { newsData } from "../constant/newsData";
+import { newsData, toSlug } from "../constant/newsData";
 import NewsCard from "./NewsCard";
-
-// ✅ Correct slug function
-function toSlug(title: string): string {
-  return title
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-");
-}
 
 const NewsList = (props) => {
   return (
