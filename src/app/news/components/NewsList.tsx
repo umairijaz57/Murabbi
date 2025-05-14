@@ -1,14 +1,24 @@
 import Link from "next/link";
-import { newsData, toSlug } from "../constant/newsData";
+import { newsData, NewsItem, toSlug } from "../constant/newsData";
 import NewsCard from "./NewsCard";
 
-const NewsList = (props) => {
+type NewsListProps = {
+  items: NewsItem[];
+  home?: boolean;
+};
+
+const NewsList = (props: NewsListProps) => {
   return (
     <div className="">
       <div className="flex flex-wrap gap-6 justify-center">
         {(props.home ? newsData.slice(0, 3) : newsData).map((item) => {
           const slug = toSlug(item.Title);
-          return <NewsCard key={slug} item={{ ...item, _id: slug }} />;
+          return (
+            <NewsCard
+              key={slug}
+              item={{ ...item, _id: slug, Link: `/news/${slug}` }}
+            />
+          );
         })}
       </div>
 
