@@ -2,8 +2,10 @@
 import { Description, NavBar } from "@/app/homeComponents";
 import InLayout from "@/app/layouts/inlayout";
 import PageWrapper from "@/app/layouts/pageLayout";
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import HImage from "../components/HImage";
 import ProjectGallery from "../components/ProjectGallery";
 import { newsData, toSlug } from "../constant/newsData";
@@ -13,14 +15,29 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
     null
   );
   const [showGallery, setShowGallery] = useState(false);
-  const scrollerRef = useRef<HTMLDivElement>(null);
 
-  // Find the news item based on the slug from the URL
   const currentNews = newsData.find(
     (item) => toSlug(item.Title) === params.slug
   );
 
-  // If news item is not found, show 404
+  const [sliderRef] = useKeenSlider<HTMLDivElement>({
+    loop: true,
+    renderMode: "performance",
+
+    slides: {
+      perView: "auto",
+      spacing: 12,
+    },
+    breakpoints: {
+      "(min-width: 640px)": {
+        slides: { perView: 2, spacing: 16 },
+      },
+      "(min-width: 1024px)": {
+        slides: { perView: 3, spacing: 24 },
+      },
+    },
+  });
+
   if (!currentNews) {
     return (
       <div className="flex items-center justify-center h-screen">
@@ -29,37 +46,6 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
     );
   }
 
-  // Handle project click
-  const handleProjectClick = (projectId: number) => {
-    setSelectedProjectId(projectId);
-    setShowGallery(true);
-  };
-
-  // Handle close gallery
-  const handleCloseGallery = () => {
-    setShowGallery(false);
-  };
-
-  // Enable smooth scrolling with mouse wheel
-  useEffect(() => {
-    const scrollContainer = scrollerRef.current;
-    if (!scrollContainer) return;
-
-    const handleWheel = (e: WheelEvent) => {
-      if (e.deltaY !== 0) {
-        e.preventDefault();
-        scrollContainer.scrollLeft += e.deltaY;
-      }
-    };
-
-    scrollContainer.addEventListener("wheel", handleWheel, { passive: false });
-
-    return () => {
-      scrollContainer.removeEventListener("wheel", handleWheel);
-    };
-  }, []);
-
-  // Get selected project
   const selectedProject = currentNews.projects?.find(
     (project) => project.id === selectedProjectId
   );
@@ -67,7 +53,6 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
   return (
     <div>
       <NavBar page="News" />
-      {/* Check if Image exists before rendering */}
       <HImage Image={currentNews.Image} />
       <PageWrapper>
         <InLayout>
@@ -83,84 +68,48 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
                 Sessions
               </h2>
 
-              {/* Marquee Style Scrollable Track with improved scrolling */}
-              <div
-                ref={scrollerRef}
-                className="overflow-x-auto whitespace-nowrap py-4 scroll-smooth hide-scrollbar"
-                style={{
-                  scrollbarWidth: "none" /* Firefox */,
-                  msOverflowStyle: "none" /* IE and Edge */,
-                }}
-              >
-                {/* Apply padding to create space at beginning */}
-                <div className="inline-block w-2"></div>
-
+              <div ref={sliderRef} className="keen-slider py-2">
                 {currentNews.projects.map((project) => (
                   <div
                     key={project.id}
-                    className="inline-block mx-4 group relative min-w-[280px] sm:min-w-[320px] bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer overflow-hidden"
-                    onClick={() => handleProjectClick(project.id)}
+                    className="keen-slider__slide w-[240px] sm:w-[280px] bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer overflow-hidden group"
+                    onClick={() => {
+                      setSelectedProjectId(project.id);
+                      setShowGallery(true);
+                    }}
                   >
-                    {/* Image */}
-                    <div className="relative h-48 w-full">
+                    {/* Image container with aspect ratio */}
+                    <div className="relative w-full aspect-video">
                       <Image
                         src={project.thumbnail || "/images/placeholder.jpg"}
                         alt={project.name}
                         fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
 
-                    {/* Overlay Text (only on hover, only for this card) */}
+                    {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 text-white p-4 transition-opacity duration-300 flex flex-col justify-end">
                       <h3 className="text-lg font-bold">{project.name}</h3>
-                      {/* <p className="text-sm text-gray-200 line-clamp-2">
-                        {project.description}
-                      </p> */}
                       <p className="text-sm text-blue-300 mt-1">
                         View gallery ({project.gallery.length})
                       </p>
                     </div>
                   </div>
                 ))}
-
-                {/* Apply padding to create space at end */}
-                <div className="inline-block w-2"></div>
               </div>
-
-              {/* Visual indicator for scrollability */}
-              {/* <div className="flex justify-center mt-4 items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-gray-300"></div>
-                <div className="w-2 h-2 rounded-full bg-gray-500"></div>
-                <div className="w-2 h-2 rounded-full bg-gray-300"></div>
-              </div> */}
             </div>
           )}
         </InLayout>
       </PageWrapper>
 
-      {/* Project Gallery Modal */}
+      {/* Modal */}
       {showGallery && selectedProject && (
         <ProjectGallery
           project={selectedProject}
-          onClose={handleCloseGallery}
+          onClose={() => setShowGallery(false)}
         />
       )}
-
-      <style jsx global>
-        {`
-          /* Hide scrollbar for Chrome, Safari and Opera */
-          .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-          }
-
-          /* Hide scrollbar for IE, Edge and Firefox */
-          .hide-scrollbar {
-            -ms-overflow-style: none; /* IE and Edge */
-            scrollbar-width: none; /* Firefox */
-          }
-        `}
-      </style>
     </div>
   );
 }
