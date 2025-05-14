@@ -198,36 +198,36 @@ export const newsData :NewsItem[] = [
         id: 104,
         name: "Closing Ceremony",
         description: "Learn beautiful handwriting techniques",
-        thumbnail: "/news/session/closing/thumb.jpg",
+        thumbnail: "/news/session/closing/thumb.JPG",
         gallery: [
           {
             id: 1041,
-            src: "/news/session/closing/0.jpg",
+            src: "/news/session/closing/0.JPG",
             alt: "Students practicing calligraphy"
           },
           {
             id: 1042,
-            src: "/news/session/closing/1.jpg",
+            src: "/news/session/closing/1.JPG",
             alt: "Calligraphy artwork samples"
           },
           {
             id: 1043,
-            src: "/news/session/closing/2.jpg",
+            src: "/news/session/closing/2.JPG",
             alt: "Calligraphy workshop"
           },
           {
             id: 1044,
-            src: "/news/session/closing/3.jpg",
+            src: "/news/session/closing/3.JPG",
             alt: "Calligraphy workshop"
           },
           {
             id: 1045,
-            src: "/news/session/closing/4.jpg",
+            src: "/news/session/closing/4.JPG",
             alt: "Calligraphy workshop"
           },
           {
             id: 1046,
-            src: "/news/session/closing/5.jpg",
+            src: "/news/session/closing/5.JPG",
             alt: "Calligraphy workshop"
           }
         ]
