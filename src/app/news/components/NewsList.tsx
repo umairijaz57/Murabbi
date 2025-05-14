@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { newsData, NewsItem, toSlug } from "../constant/newsData";
+import { newsData, toSlug } from "../constant/newsData";
 import NewsCard from "./NewsCard";
 
 type NewsListProps = {
-  items: NewsItem[];
   home?: boolean;
 };
 
