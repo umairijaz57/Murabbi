@@ -1,5 +1,5 @@
 "use client";
-import { Description, NavBar } from "@/app/homeComponents";
+import { NavBar } from "@/app/homeComponents";
 import InLayout from "@/app/layouts/inlayout";
 import PageWrapper from "@/app/layouts/pageLayout";
 import "keen-slider/keen-slider.min.css";
@@ -25,7 +25,7 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
     renderMode: "performance",
 
     slides: {
-      perView: "auto",
+      perView: 1,
       spacing: 12,
     },
     breakpoints: {
@@ -56,10 +56,10 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
       <HImage Image={currentNews.Image} />
       <PageWrapper>
         <InLayout>
-          <div className="mb-6">
+          <div className="mb-6 p-2 sm:p-4">
             <h1 className="text-3xl font-bold mb-4">{currentNews.Title}</h1>
             <p className="text-gray-500 mb-6">{currentNews.Date}</p>
-            <Description text={currentNews.Description} />
+            <p className="px-2">{currentNews.Description}</p>
           </div>
 
           {currentNews.projects && currentNews.projects.length > 0 && (
