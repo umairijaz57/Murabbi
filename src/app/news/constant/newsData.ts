@@ -1,7 +1,7 @@
 export interface ProjectImage {
   id: number;
   src: string;
-  alt?: string;
+  alt: string;
 }
 
 export interface Project {
@@ -9,6 +9,7 @@ export interface Project {
   name: string;
   description: string;
   thumbnail: string;
+  alt?: string;
   gallery: ProjectImage[];
 }
 
@@ -40,22 +41,27 @@ export const newsData :NewsItem[] = [
           {
             id: 1001,
             src: "/news/session/opening/0.jpg",
+            alt:""
           },
           {
             id: 1002,
             src: "/news/session/opening/1.jpg",
+            alt:""
           },
           {
             id: 1003,
             src: "/news/session/opening/2.jpg",
+            alt:""
           },
           {
             id: 1004,
             src: "/news/session/opening/3.jpg",
+            alt:""
           },
           {
             id: 1005,
             src: "/news/session/opening/4.jpg",
+            alt:""
           },
           
         ]
@@ -69,26 +75,32 @@ export const newsData :NewsItem[] = [
           {
             id: 1011,
             src: "/news/session/robotics/0.JPG",
+            alt:""
           },
           {
             id: 1012,
             src: "/news/session/robotics/1.JPG",
+            alt:""
           },
           {
             id: 1013,
             src: "/news/session/robotics/2.JPG",
+            alt:""
           },
           {
             id: 1014,
             src: "/news/session/robotics/3.JPG",
+            alt:""
           },
           {
             id: 1015,
             src: "/news/session/robotics/4.JPG",
+            alt:""
           },
           {
             id: 1016,
             src: "/news/session/robotics/5.JPG",
+            alt:""
           }
         ]
       },
@@ -101,26 +113,32 @@ export const newsData :NewsItem[] = [
           {
             id: 1021,
             src: "/news/session/science/0.jpg",
+            alt:""
           },
           {
             id: 1022,
             src: "/news/session/science/1.jpg",
+            alt:""
           },
           {
             id: 1023,
             src: "/news/session/science/2.jpg",
+            alt:""
           },
           {
             id: 1024,
             src: "/news/session/science/3.jpg",
+            alt:""
           },
           {
             id: 1025,
             src: "/news/session/science/4.jpg",
+            alt:""
           },
           {
             id: 1026,
             src: "/news/session/science/5.jpg",
+            alt:""
           }
         ]
       },
@@ -133,30 +151,37 @@ export const newsData :NewsItem[] = [
           {
             id: 1033,
             src: "/news/session/math/0.jpg",
+            alt:""
           },
           {
             id: 1032,
             src: "/news/session/math/1.jpg",
+            alt:""
           },
           {
             id: 1033,
             src: "/news/session/math/2.jpg",
+            alt:""
           },
           {
             id: 1034,
             src: "/news/session/math/3.jpg",
+            alt:""
           },
           {
             id: 1035,
             src: "/news/session/math/4.jpg",
+            alt:""
           },
           {
             id: 1036,
             src: "/news/session/math/5.jpg",
+            alt:""
           },
           {
             id: 1037,
             src: "/news/session/math/6.jpg",
+            alt:""
           }
         ]
       },
@@ -169,18 +194,22 @@ export const newsData :NewsItem[] = [
           {
             id: 1041,
             src: "/news/session/infosec/0.JPG",
+            alt:""
           },
           {
             id: 1042,
             src: "/news/session/infosec/1.JPG",
+            alt:""
           },
           {
             id: 1043,
             src: "/news/session/infosec/2.JPG",
+            alt:""
           },
           {
             id: 1044,
             src: "/news/session/infosec/3.JPG",
+            alt:""
           },
         ]
       },
@@ -193,26 +222,32 @@ export const newsData :NewsItem[] = [
           {
             id: 1051,
             src: "/news/session/caligraphy/0.jpg",
+            alt:""
           },
           {
             id: 1052,
             src: "/news/session/caligraphy/1.jpg",
+            alt:""
           },
           {
             id: 1053,
             src: "/news/session/caligraphy/2.jpg",
+            alt:""
           },
           {
             id: 1054,
             src: "/news/session/caligraphy/3.jpg",
+            alt:""
           },
           {
             id: 1055,
             src: "/news/session/caligraphy/4.jpg",
+            alt:""
           },
           {
             id: 1056,
             src: "/news/session/caligraphy/5.jpg",
+            alt:""
           },
         ]
       },
@@ -225,26 +260,32 @@ export const newsData :NewsItem[] = [
           {
             id: 1061,
             src: "/news/session/datasec/0.jpg",
+            alt:""
           },
           {
             id: 1062,
             src: "/news/session/datasec/1.jpg",
+            alt:""
           },
           {
             id: 1063,
             src: "/news/session/datasec/2.jpg",
+            alt:""
           },
           {
             id: 1064,
             src: "/news/session/datasec/3.jpg",
+            alt:""
           },
           {
             id: 1065,
             src: "/news/session/datasec/4.jpg",
+            alt:""
           },
           {
             id: 1066,
             src: "/news/session/datasec/6.jpg",
+            alt:""
           },
         ]
       },
@@ -256,38 +297,47 @@ export const newsData :NewsItem[] = [
           {
             id: 1071,
             src: "/news/session/sports/0.jpg",
+            alt:""
           },
           {
             id: 1072,
             src: "/news/session/sports/1.jpg",
+            alt:""
           },
           {
             id: 1073,
             src: "/news/session/sports/2.jpg",
+            alt:""
           },
           {
             id: 1074,
             src: "/news/session/sports/3.jpg",
+            alt:""
           },
           {
             id: 1075,
             src: "/news/session/sports/4.jpg",
+            alt:""
           },
           {
             id: 1076,
             src: "/news/session/sports/5.jpg",
+            alt:""
           },
           {
             id: 1077,
             src: "/news/session/sports/6.jpg",
+            alt:""
           },
           {
             id: 1078,
             src: "/news/session/sports/7.jpg",
+            alt:""
           },
           {
             id: 1079,
             src: "/news/session/sports/8.jpg",
+            alt:""
           }
         ]
       },
@@ -300,26 +350,32 @@ export const newsData :NewsItem[] = [
           {
             id: 1091,
             src: "/news/session/closing/0.JPG",
+            alt:""
           },
           {
             id: 1092,
             src: "/news/session/closing/1.JPG",
+            alt:""
           },
           {
             id: 1093,
             src: "/news/session/closing/2.JPG",
+            alt:""
           },
           {
             id: 1094,
             src: "/news/session/closing/3.JPG",
+            alt:""
           },
           {
             id: 1095,
             src: "/news/session/closing/4.JPG",
+            alt:""
           },
           {
             id: 1096,
             src: "/news/session/closing/5.JPG",
+            alt:""
           }
         ]
       },
