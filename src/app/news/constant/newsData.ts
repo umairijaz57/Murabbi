@@ -70,36 +70,36 @@ export const newsData :NewsItem[] = [
         id: 101,
         name: "Robotics",
         description: "Learn beautiful handwriting techniques",
-        thumbnail: "/news/session/robotics/thumb.JPG",
+        thumbnail: "/news/session/robotics/thumb.jpg",
         gallery: [
           {
             id: 1011,
-            src: "/news/session/robotics/0.JPG",
+            src: "/news/session/robotics/0.jpg",
             alt:""
           },
           {
             id: 1012,
-            src: "/news/session/robotics/1.JPG",
+            src: "/news/session/robotics/1.jpg",
             alt:""
           },
           {
             id: 1013,
-            src: "/news/session/robotics/2.JPG",
+            src: "/news/session/robotics/2.jpg",
             alt:""
           },
           {
             id: 1014,
-            src: "/news/session/robotics/3.JPG",
+            src: "/news/session/robotics/3.jpg",
             alt:""
           },
           {
             id: 1015,
-            src: "/news/session/robotics/4.JPG",
+            src: "/news/session/robotics/4.jpg",
             alt:""
           },
           {
             id: 1016,
-            src: "/news/session/robotics/5.JPG",
+            src: "/news/session/robotics/5.jpg",
             alt:""
           }
         ]
@@ -189,26 +189,26 @@ export const newsData :NewsItem[] = [
         id: 104,
         name: "Information Security",
         description: "Learn beautiful handwriting techniques",
-        thumbnail: "/news/session/infosec/thumb.JPG",
+        thumbnail: "/news/session/infosec/thumb.jpg",
         gallery: [
           {
             id: 1041,
-            src: "/news/session/infosec/0.JPG",
+            src: "/news/session/infosec/0.jpg",
             alt:""
           },
           {
             id: 1042,
-            src: "/news/session/infosec/1.JPG",
+            src: "/news/session/infosec/1.jpg",
             alt:""
           },
           {
             id: 1043,
-            src: "/news/session/infosec/2.JPG",
+            src: "/news/session/infosec/2.jpg",
             alt:""
           },
           {
             id: 1044,
-            src: "/news/session/infosec/3.JPG",
+            src: "/news/session/infosec/3.jpg",
             alt:""
           },
         ]
