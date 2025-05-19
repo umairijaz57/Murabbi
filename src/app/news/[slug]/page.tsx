@@ -7,12 +7,14 @@ import Image from "next/image";
 import { useState } from "react";
 import ProjectGallery from "../components/ProjectGallery";
 import { newsData, toSlug } from "../constant/newsData";
+import { ChevronLeft, ChevronRight } from "lucide-react"; // Import icons for navigation buttons
 
 export default function NewsDetail({ params }: { params: { slug: string } }) {
   const [selectedProjectId, setSelectedProjectId] = useState<number | null>(
     null
   );
   const [showGallery, setShowGallery] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const currentNews = newsData.find(
     (item) => toSlug(item.Title) === params.slug
@@ -32,8 +34,8 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
     visible: { y: 0, opacity: 1, transition: { duration: 0.3 } },
   };
 
-  // Fixed slider configuration
-  const [sliderRef] = useKeenSlider<HTMLDivElement>({
+  // Updated slider configuration
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     mode: "snap",
     slides: {
@@ -43,6 +45,9 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
     breakpoints: {
       "(min-width: 640px)": { slides: { perView: 2.2, spacing: 20 } },
       "(min-width: 1024px)": { slides: { perView: 3.2, spacing: 24 } },
+    },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
     },
   });
 
@@ -103,59 +108,84 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
               dangerouslySetInnerHTML={{ __html: paragraph }}
             />
           ))}
-
         </motion.article>
 
-        {/* Gallery Section - Fixed */}
+        {/* Gallery Section with Navigation Buttons */}
         {currentNews.projects && (
           <section className="mt-16">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-900">
               Sessions Gallery
             </h2>
+            
+            <div className="relative">
+              {/* Slider Container */}
+              <div ref={sliderRef} className="keen-slider pb-8">
+                {currentNews.projects.map((project) => (
+                  <div
+                    key={project.id}
+                    className="keen-slider__slide group relative"
+                    onClick={() => {
+                      setSelectedProjectId(project.id);
+                      setShowGallery(true);
+                    }}
+                  >
+                    <div className="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                      {/* Image Container */}
+                      <div className="relative aspect-video">
+                        <Image
+                          src={project.thumbnail}
+                          alt={project.name}
+                          fill
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </div>
 
-            <div ref={sliderRef} className="keen-slider pb-8">
-              {currentNews.projects.map((project) => (
-                <div
-                  key={project.id}
-                  className="keen-slider__slide group relative"
-                  onClick={() => {
-                    setSelectedProjectId(project.id);
-                    setShowGallery(true);
-                  }}
-                >
-                  <div className="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
-                    {/* Image Container */}
-                    <div className="relative aspect-video">
-                      <Image
-                        src={project.thumbnail}
-                        alt={project.name}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </div>
+                      {/* Info Overlay */}
+                      <div className="p-4 md:hidden">
+                        <h3 className="font-semibold text-gray-900">
+                          {project.name}
+                        </h3>
+                        <p className="text-sm text-gray-500 mt-2">
+                          View ({project.gallery.length}) Photos
+                        </p>
+                      </div>
 
-                    {/* Info Overlay */}
-                    <div className="p-4 md:hidden">
-                      <h3 className="font-semibold text-gray-900">
-                        {project.name}
-                      </h3>
-                      <p className="text-sm text-gray-500 mt-2">
-                        View ({project.gallery.length}) Photos
-                      </p>
-                    </div>
-
-                    {/* Hover Effect */}
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 hidden md:flex items-start rounded-md justify-end flex-col text-center p-4">
-                      <h1 className="text-white font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        {project.name}
-                      </h1>
-                      <p className="text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        View Gallery →
-                      </p>
+                      {/* Hover Effect */}
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 hidden md:flex items-start rounded-md justify-end flex-col text-center p-4">
+                        <h1 className="text-white font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          {project.name}
+                        </h1>
+                        <p className="text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          View Gallery →
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+
+              {/* Navigation Buttons */}
+              <button 
+                onClick={(e) => {
+                  e.stopPropagation();
+                  instanceRef.current?.prev();
+                }}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors z-10"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft className="w-6 h-6 text-gray-700" />
+              </button>
+              
+              <button 
+                onClick={(e) => {
+                  e.stopPropagation();
+                  instanceRef.current?.next();
+                }}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors z-10"
+                aria-label="Next slide"
+              >
+                <ChevronRight className="w-6 h-6 text-gray-700" />
+              </button>
             </div>
           </section>
         )}

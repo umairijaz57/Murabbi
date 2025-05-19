@@ -1,7 +1,6 @@
 export interface ProjectImage {
   id: number;
   src: string;
-  alt: string;
 }
 
 export interface Project {
@@ -26,209 +25,300 @@ export interface NewsItem {
 
 export const newsData :NewsItem[] = [
     {
-      Title: " Summer STEAM Camp 1 – Igniting Young Minds!",
+      Title: " Summer STEAM Camp 1 - Igniting Young Minds!",
       Image: "/news/summer-camp1.png",
-      Description: "Murabbi is thrilled to announce the successful completion of its inaugural Summer STEAM Camp 1, held from June 5th to June 9th, 2023. This exciting event brought together a diverse group of students aged 12-16 from various schools in Islamabad, including Roots International Schools, Beaconhouse School System, and SICAS. The camp aimed to ignite young minds and foster a passion for science, technology, engineering, arts, and mathematics (STEAM). Over the course of five days, participants engaged in hands-on activities and interactive sessions that encouraged creativity and critical thinking. The camp provided a unique platform for students to explore their interests in STEAM fields while developing essential skills for the future.",
-      Date: "May 14, 2025",
+      Description:"Murabbi successfully concluded its impactful Summer STEAM Camp, held exclusively at NUST Islamabad during June-July 2024. Designed for students aged 12 to 16, the camp ignited curiosity and passion across disciplines such as robotics, mathematics, science experiments, calligraphy, sports, and cybersecurity. Over the course of several immersive days, students engaged in hands-on learning, team-based challenges, and exposure to real-world problem-solving in a university setting. The experience fostered creativity, critical thinking, and digital awareness — shaping future-ready minds and reinforcing Murabbi's commitment to empowering the next generation of leaders and changemakers.",
+      Date: "July 17, 2024",
        projects: [
       {
-        id: 105,
+        id: 100,
         name: "Opening Ceremony",
         description: "Learn beautiful handwriting techniques",
         thumbnail: "/news/session/opening/thumb.jpg",
         gallery: [
           {
-            id: 1051,
+            id: 1001,
             src: "/news/session/opening/0.jpg",
-            alt: "Students practicing calligraphy"
           },
           {
-            id: 1052,
+            id: 1002,
             src: "/news/session/opening/1.jpg",
-            alt: "Calligraphy artwork samples"
           },
           {
-            id: 1053,
+            id: 1003,
             src: "/news/session/opening/2.jpg",
-            alt: "Calligraphy workshop"
           },
           {
-            id: 1054,
+            id: 1004,
             src: "/news/session/opening/3.jpg",
-            alt: "Calligraphy workshop"
           },
           {
-            id: 1055,
+            id: 1005,
             src: "/news/session/opening/4.jpg",
-            alt: "Calligraphy workshop"
           },
           
         ]
       },
       {
         id: 101,
-        name: "Science Tamasha",
+        name: "Robotics",
         description: "Learn beautiful handwriting techniques",
-        thumbnail: "/news/session/science/thumb.jpg",
+        thumbnail: "/news/session/robotics/thumb.JPG",
         gallery: [
           {
             id: 1011,
-            src: "/news/session/science/0.jpg",
-            alt: "Students practicing calligraphy"
+            src: "/news/session/robotics/0.JPG",
           },
           {
             id: 1012,
-            src: "/news/session/science/1.jpg",
-            alt: "Calligraphy artwork samples"
+            src: "/news/session/robotics/1.JPG",
           },
           {
             id: 1013,
-            src: "/news/session/science/2.jpg",
-            alt: "Calligraphy workshop"
+            src: "/news/session/robotics/2.JPG",
           },
           {
             id: 1014,
-            src: "/news/session/science/3.jpg",
-            alt: "Calligraphy workshop"
+            src: "/news/session/robotics/3.JPG",
           },
           {
             id: 1015,
-            src: "/news/session/science/4.jpg",
-            alt: "Calligraphy workshop"
+            src: "/news/session/robotics/4.JPG",
           },
           {
             id: 1016,
-            src: "/news/session/science/5.jpg",
-            alt: "Calligraphy workshop"
+            src: "/news/session/robotics/5.JPG",
           }
         ]
       },
       {
         id: 102,
-        name: "Math",
+        name: "Science Tamasha",
         description: "Learn beautiful handwriting techniques",
-        thumbnail: "/news/session/math/thumb.jpg",
+        thumbnail: "/news/session/science/thumb.jpg",
         gallery: [
           {
             id: 1021,
-            src: "/news/session/math/0.jpg",
-            alt: "Students practicing calligraphy"
+            src: "/news/session/science/0.jpg",
           },
           {
             id: 1022,
-            src: "/news/session/math/1.jpg",
-            alt: "Calligraphy artwork samples"
+            src: "/news/session/science/1.jpg",
           },
           {
             id: 1023,
-            src: "/news/session/math/2.jpg",
-            alt: "Calligraphy workshop"
+            src: "/news/session/science/2.jpg",
           },
           {
             id: 1024,
-            src: "/news/session/math/3.jpg",
-            alt: "Calligraphy workshop"
+            src: "/news/session/science/3.jpg",
           },
           {
             id: 1025,
-            src: "/news/session/math/4.jpg",
-            alt: "Calligraphy workshop"
+            src: "/news/session/science/4.jpg",
           },
           {
             id: 1026,
-            src: "/news/session/math/5.jpg",
-            alt: "Calligraphy workshop"
-          },
-          {
-            id: 1027,
-            src: "/news/session/math/6.jpg",
-            alt: "Calligraphy workshop"
+            src: "/news/session/science/5.jpg",
           }
         ]
       },
       {
         id: 103,
+        name: "Math",
+        description: "Learn beautiful handwriting techniques",
+        thumbnail: "/news/session/math/thumb.jpg",
+        gallery: [
+          {
+            id: 1033,
+            src: "/news/session/math/0.jpg",
+          },
+          {
+            id: 1032,
+            src: "/news/session/math/1.jpg",
+          },
+          {
+            id: 1033,
+            src: "/news/session/math/2.jpg",
+          },
+          {
+            id: 1034,
+            src: "/news/session/math/3.jpg",
+          },
+          {
+            id: 1035,
+            src: "/news/session/math/4.jpg",
+          },
+          {
+            id: 1036,
+            src: "/news/session/math/5.jpg",
+          },
+          {
+            id: 1037,
+            src: "/news/session/math/6.jpg",
+          }
+        ]
+      },
+       {
+        id: 104,
+        name: "Information Security",
+        description: "Learn beautiful handwriting techniques",
+        thumbnail: "/news/session/infosec/thumb.JPG",
+        gallery: [
+          {
+            id: 1041,
+            src: "/news/session/infosec/0.JPG",
+          },
+          {
+            id: 1042,
+            src: "/news/session/infosec/1.JPG",
+          },
+          {
+            id: 1043,
+            src: "/news/session/infosec/2.JPG",
+          },
+          {
+            id: 1044,
+            src: "/news/session/infosec/3.JPG",
+          },
+        ]
+      },
+      {
+        id: 105,
         name: "Caligraphy",
         description: "Learn beautiful handwriting techniques",
         thumbnail: "/news/session/caligraphy/thumb.jpg",
         gallery: [
           {
-            id: 1031,
+            id: 1051,
             src: "/news/session/caligraphy/0.jpg",
-            alt: "Students practicing calligraphy"
           },
           {
-            id: 1032,
+            id: 1052,
             src: "/news/session/caligraphy/1.jpg",
-            alt: "Calligraphy artwork samples"
           },
           {
-            id: 1033,
+            id: 1053,
             src: "/news/session/caligraphy/2.jpg",
-            alt: "Calligraphy workshop"
           },
           {
-            id: 1034,
+            id: 1054,
             src: "/news/session/caligraphy/3.jpg",
-            alt: "Calligraphy workshop"
           },
           {
-            id: 1035,
+            id: 1055,
             src: "/news/session/caligraphy/4.jpg",
-            alt: "Calligraphy workshop"
           },
           {
-            id: 1036,
+            id: 1056,
             src: "/news/session/caligraphy/5.jpg",
-            alt: "Calligraphy workshop"
+          },
+        ]
+      },
+      {
+        id: 106,
+        name: "Data Security",
+        description: "Learn beautiful handwriting techniques",
+        thumbnail: "/news/session/datasec/thumb.jpg",
+        gallery: [
+          {
+            id: 1061,
+            src: "/news/session/datasec/0.jpg",
           },
           {
-            id: 1037,
-            src: "/news/session/caligraphy/5.jpg",
-            alt: "Calligraphy workshop"
+            id: 1062,
+            src: "/news/session/datasec/1.jpg",
           },
           {
-            id: 1038,
-            src: "/news/session/caligraphy/5.jpg",
-            alt: "Calligraphy workshop"
+            id: 1063,
+            src: "/news/session/datasec/2.jpg",
+          },
+          {
+            id: 1064,
+            src: "/news/session/datasec/3.jpg",
+          },
+          {
+            id: 1065,
+            src: "/news/session/datasec/4.jpg",
+          },
+          {
+            id: 1066,
+            src: "/news/session/datasec/6.jpg",
+          },
+        ]
+      },
+      { id: 107,
+        name: "Sports",
+        description: "Learn beautiful handwriting techniques",
+        thumbnail: "/news/session/sports/thumb.jpg",
+        gallery: [
+          {
+            id: 1071,
+            src: "/news/session/sports/0.jpg",
+          },
+          {
+            id: 1072,
+            src: "/news/session/sports/1.jpg",
+          },
+          {
+            id: 1073,
+            src: "/news/session/sports/2.jpg",
+          },
+          {
+            id: 1074,
+            src: "/news/session/sports/3.jpg",
+          },
+          {
+            id: 1075,
+            src: "/news/session/sports/4.jpg",
+          },
+          {
+            id: 1076,
+            src: "/news/session/sports/5.jpg",
+          },
+          {
+            id: 1077,
+            src: "/news/session/sports/6.jpg",
+          },
+          {
+            id: 1078,
+            src: "/news/session/sports/7.jpg",
+          },
+          {
+            id: 1079,
+            src: "/news/session/sports/8.jpg",
           }
         ]
       },
       {
-        id: 104,
+        id: 109,
         name: "Closing Ceremony",
         description: "Learn beautiful handwriting techniques",
         thumbnail: "/news/session/closing/thumb.JPG",
         gallery: [
           {
-            id: 1041,
+            id: 1091,
             src: "/news/session/closing/0.JPG",
-            alt: "Students practicing calligraphy"
           },
           {
-            id: 1042,
+            id: 1092,
             src: "/news/session/closing/1.JPG",
-            alt: "Calligraphy artwork samples"
           },
           {
-            id: 1043,
+            id: 1093,
             src: "/news/session/closing/2.JPG",
-            alt: "Calligraphy workshop"
           },
           {
-            id: 1044,
+            id: 1094,
             src: "/news/session/closing/3.JPG",
-            alt: "Calligraphy workshop"
           },
           {
-            id: 1045,
+            id: 1095,
             src: "/news/session/closing/4.JPG",
-            alt: "Calligraphy workshop"
           },
           {
-            id: 1046,
+            id: 1096,
             src: "/news/session/closing/5.JPG",
-            alt: "Calligraphy workshop"
           }
         ]
       },
