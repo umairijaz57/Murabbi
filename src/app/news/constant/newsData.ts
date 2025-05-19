@@ -1,6 +1,7 @@
 export interface ProjectImage {
   id: number;
   src: string;
+  alt?: string;
 }
 
 export interface Project {
