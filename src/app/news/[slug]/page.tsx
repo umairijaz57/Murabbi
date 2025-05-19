@@ -100,10 +100,10 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
               key={index}
               variants={itemVariants}
               className="text-gray-700 mb-6"
-            >
-              {paragraph}
-            </motion.p>
+              dangerouslySetInnerHTML={{ __html: paragraph }}
+            />
           ))}
+
         </motion.article>
 
         {/* Gallery Section - Fixed */}

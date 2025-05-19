@@ -128,7 +128,7 @@ const Events = (props: Props) => {
       </div>
       {props.home ? (
         <div className="flex justify-center items-center mt-12">
-          <Link href="/resources">
+          <Link href="/news">
             <button className="py-3 px-6 w-36 md:mt-4 rounded-lg transition-all text-sm font-bold  duration-500 border-2 bg-blue-600 text-white hover:bg-blue-500 hover:border-blue-500 border-blue-600  ">
               {" "}
               View More
