@@ -1,5 +1,5 @@
 "use client";
-import { NavBar } from "@/app/homeComponents";
+import { Footer, NavBar } from "@/app/homeComponents";
 import { motion } from "framer-motion";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
@@ -15,6 +15,7 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
   );
   const [showGallery, setShowGallery] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [totalSlides, setTotalSlides] = useState(0);
 
   const currentNews = newsData.find(
     (item) => toSlug(item.Title) === params.slug
@@ -36,7 +37,7 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
 
   // Updated slider configuration
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
-    loop: true,
+    loop: false,
     mode: "snap",
     slides: {
       perView: 1.2,
@@ -45,6 +46,9 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
     breakpoints: {
       "(min-width: 640px)": { slides: { perView: 2.2, spacing: 20 } },
       "(min-width: 1024px)": { slides: { perView: 3.2, spacing: 24 } },
+    },
+    created(slider) {
+      setTotalSlides(slider.track.details.slides.length);
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
@@ -60,6 +64,7 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
   }
 
   return (
+    <>
     <div className="bg-gray-50 min-h-screen">
       <NavBar page="News" />
 
@@ -111,7 +116,7 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
         </motion.article>
 
         {/* Gallery Section with Navigation Buttons */}
-        {currentNews.projects && (
+        {currentNews.projects && currentNews.projects.length > 0 && (
           <section className="mt-16">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-900">
               Sessions Gallery
@@ -164,28 +169,33 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
                 ))}
               </div>
 
-              {/* Navigation Buttons */}
-              <button 
-                onClick={(e) => {
-                  e.stopPropagation();
-                  instanceRef.current?.prev();
-                }}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors z-10"
-                aria-label="Previous slide"
-              >
-                <ChevronLeft className="w-6 h-6 text-gray-700" />
-              </button>
+              {/* Back Button - Hidden on first slide */}
+              {currentSlide > 0 && (
+                <button 
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    instanceRef.current?.prev();
+                  }}
+                  className="absolute hidden md:block left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors z-10"
+                  aria-label="Previous slide"
+                >
+                  <ChevronLeft className="w-6 h-6 text-gray-700" />
+                </button>
+              )}
               
-              <button 
-                onClick={(e) => {
-                  e.stopPropagation();
-                  instanceRef.current?.next();
-                }}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors z-10"
-                aria-label="Next slide"
-              >
-                <ChevronRight className="w-6 h-6 text-gray-700" />
-              </button>
+              {/* Forward Button - Hidden on last slide */}
+              {currentSlide < totalSlides-2  && (
+                <button 
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    instanceRef.current?.next();
+                  }}
+                  className="absolute hidden md:block right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors z-10"
+                  aria-label="Next slide"
+                >
+                  <ChevronRight className="w-6 h-6 text-gray-700" />
+                </button>
+              )}
             </div>
           </section>
         )}
@@ -201,5 +211,10 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
         />
       )}
     </div>
+
+
+    <Footer />
+    </>
+    
   );
 }

@@ -3,7 +3,7 @@
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Project } from "../constant/newsData";
 
 interface ProjectGalleryProps {
@@ -25,10 +25,25 @@ export default function ProjectGallery({
     mode: "snap",
     renderMode: "performance",
   });
+useEffect(() => {
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      onClose();
+    }
+  };
 
+  // Add event listener when component mounts
+  window.addEventListener("keydown", handleKeyDown);
+
+  // Remove event listener when component unmounts
+  return () => {
+    window.removeEventListener("keydown", handleKeyDown);
+  };
+}, [onClose]);
+  
   return (
-    <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="relative w-full max-w-6xl h-[90vh] bg-white/10 rounded-2xl shadow-xl overflow-hidden border border-white/20">
+    <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4" onClick={onClose}>
+      <div className="relative w-full max-w-6xl h-[90vh] bg-white/10 rounded-2xl shadow-xl overflow-hidden border border-white/20" onClick={(e) => e.stopPropagation()}>
         {/* Close */}
         <button
           onClick={onClose}
