@@ -1,6 +1,6 @@
 "use client";
 import NewsLetter from "../contactus/components/newLetter";
-import { CenteredHeading, NavBar } from "../homeComponents";
+import { CenteredHeading, Footer, NavBar } from "../homeComponents";
 import InLayout from "../layouts/inlayout";
 import PageWrapper from "../layouts/pageLayout";
 import Hero from "./components/Hero";
@@ -20,6 +20,7 @@ export default function page() {
           <NewsLetter />
         </InLayout>
       </PageWrapper>
+      <Footer />
     </>
   );
 }
