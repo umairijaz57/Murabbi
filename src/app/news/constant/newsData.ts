@@ -43,45 +43,250 @@ export const newsData :NewsItem[] = [
     {
       Title: "Murabbi Expands Nationwide – Punjab and Khyber Pakhtunkhwa Embrace Tech Revolution",
       Image: "https://placehold.co/600x400",
-      Description:`<div style="padding: 20px; margin-bottom: 20px;"><p style="margin: 0; font-size: 16px;">Murabbi has expanded its initiative to <strong>50 schools in Punjab</strong> and <strong>30 in Khyber Pakhtunkhwa (KP)</strong>, adapting its model to diverse geographic and cultural landscapes.</p></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Punjab's Urban-Rural Strategy</h2><div style="padding: 20px 0;"><p style="margin: 0; font-size: 16px;">In Lahore, students developed e-commerce chatbots, while rural areas like <strong>Chakwal</strong> and <strong>Mianwali</strong> saw <strong>Tech Caravans</strong> deliver week-long coding camps. Murabbi's LMS now hosts Urdu-language modules for farming communities, enabling projects like AI-driven crop disease predictors.</p></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">KP's Mountain Challenges</h2><div style="padding: 20px 0;"><p style="margin: 0; font-size: 16px;">In Swat and Dir, Murabbi distributed <strong>offline tablets</strong> preloaded with coding tutorials. Students at <strong>IMCB Mingora</strong> built a landslide warning system using Arduino sensors, later adopted by KP's Disaster Management Authority.</p></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Cross-Province Collaboration</h2><div style="padding: 20px 0;"><div style="padding: 10px 0; margin-bottom: 10px;"><strong>Shared LMS Library:</strong> Punjab and KP schools contribute Urdu and Pashto coding modules.</div><div style="padding: 10px 0; margin-bottom: 15px;"><strong>Gender Equity:</strong> KP reserved 30% of Coding Fellow roles for women, doubling female participation.</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Quote</h2><div style="padding: 20px 0;"><div style="padding: 15px; margin: 15px 0;"><p style="margin: 0; font-style: italic; font-size: 16px;"><em>"Murabbi's model bends but doesn't break—it thrives in cities and mountains alike."</em></p><div style="text-align: right; margin-top: 10px; font-weight: bold;">– Dr. Nazir Perwaiz, CEO, Murabbi</div></div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Impact Metrics</h2><div style="padding: 20px 0;"><div style="padding: 10px 0; margin-bottom: 10px;"><strong>78% enrollment surge</strong> in Punjab's rural schools.</div><div style="padding: 10px 0; margin-bottom: 15px;"><strong>45 female Fellows</strong> recruited in KP.</div></div></div></div>`,
+      Description:`<div style="padding: 20px; margin-bottom: 20px;">
+  <p style="margin: 0; font-size: 16px;">Murabbi continues to implement its tech education program within Islamabad schools.</p>
+</div>
+
+<div style="margin-bottom: 30px;">
+  <h2 style="font-size: 20px; margin-bottom: 15px;">Program Implementation</h2>
+  <div style="padding: 20px 0;">
+    <div style="padding: 10px 0; margin-bottom: 10px;">
+      • Maintaining focus on urban and peri-urban schools in Islamabad
+    </div>
+    <div style="padding: 10px 0; margin-bottom: 15px;">
+      • Utilizing existing learning management system (LMS) for curriculum delivery
+    </div>
+  </div>
+</div>
+
+<div style="margin-bottom: 30px;">
+  <h2 style="font-size: 20px; margin-bottom: 15px;">Key Focus Areas</h2>
+  <div style="padding: 20px 0;">
+    <div style="padding: 10px 0; margin-bottom: 15px;">
+      • Sustaining gender-inclusive participation through established placement strategies
+    </div>
+  </div>
+</div>`,
       Date: "7 October, 2024"
     },
     {
       Title: "Murabbi Bridges the Digital Divide – Tech Education Reaches Rural Islamabad",
       Image: "https://placehold.co/600x400",
-      Description:`<div style="padding: 20px 0;"><div style="padding: 20px; margin-bottom: 20px;"><p style="margin: 0; font-size: 16px;">Murabbi has launched its <strong>Rural Tech Initiative</strong>, bringing coding, robotics, and AI education to underserved communities in Islamabad's outskirts. Targeting villages like <strong>Bara Kau</strong>, <strong>Sohan</strong>, and <strong>Tarnol</strong>, the program leverages low-cost solutions to overcome infrastructure challenges.</p></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Key Strategies</h2><div style="padding: 20px 0;"><p style="margin: 0; font-size: 16px;">Murabbi introduced <strong>unplugged coding kits</strong> using board games and storytelling to teach algorithms without electricity. In schools with intermittent power, solar-powered tech hubs equipped with refurbished laptops and Murabbi's offline LMS modules ensure continuous learning. Students in agrarian communities designed practical projects, such as AI models predicting crop diseases and chatbots sharing farming tips in local dialects.</p></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Impact</h2><div style="padding: 20px 0;"><div style="padding: 10px 0; margin-bottom: 10px;"><strong>45% enrollment increase</strong> in tech classes across rural schools.</div><div style="padding: 10px 0; margin-bottom: 10px;"><strong>60% female participation</strong> in robotics clubs, with girls leading 12 of 20 teams.</div><div style="padding: 10px 0; margin-bottom: 15px;"><strong>200+ parents</strong> trained in digital literacy through Murabbi's community workshops.</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Quote</h2><div style="padding: 20px 0;"><div style="padding: 15px; margin: 15px 0;"><p style="margin: 0; font-style: italic; font-size: 16px;"><em>"Murabbi taught us to innovate with what we have. My students built robots from cardboard—it's magical!"</em></p><div style="text-align: right; margin-top: 10px; font-weight: bold;">– Hafeez Ahmad, Murabbi Fellow in Sohan</div></div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Next Steps</h2><div style="padding: 20px 0;"><p style="margin: 0; font-size: 16px;">Murabbi will deploy <strong>Mobile Tech Vans</strong> in 2025—solar-equipped vehicles with devices and Fellows—to reach remote villages like <strong>Malpur</strong>.</p></div></div></div>`,
-      Date: "2 October, 2024",
+      Description:`<div style="padding: 20px 0;">
+  <div style="padding: 20px; margin-bottom: 20px;">
+    <p style="margin: 0; font-size: 16px;">Murabbi has expanded its tech education program to underserved communities in Islamabad's rural areas, implementing low-cost teaching solutions.</p>
+  </div>
+
+  <div style="margin-bottom: 30px;">
+    <h2 style="font-size: 20px; margin-bottom: 15px;">Implementation Strategy</h2>
+    <div style="padding: 20px 0;">
+      <div style="padding: 10px 0; margin-bottom: 10px;">
+        • Adapted curriculum for low-resource environments
+      </div>
+      <div style="padding: 10px 0; margin-bottom: 15px;">
+        • Deployed offline learning tools through Murabbi's LMS
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 30px;">
+    <h2 style="font-size: 20px; margin-bottom: 15px;">Program Focus</h2>
+    <div style="padding: 20px 0;">
+      <div style="padding: 10px 0; margin-bottom: 15px;">
+        • Maintained gender inclusivity through urban-rural placement strategies
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 30px;">
+    <h2 style="font-size: 20px; margin-bottom: 15px;">Next Phase</h2>
+    <div style="padding: 20px 0;">
+      <div style="padding: 10px 0; margin-bottom: 15px;">
+        • Continued expansion within Islamabad's underserved communities
+      </div>
+    </div>
+  </div>
+</div>`,
+      Date: "February 18, 2025",
     },
     {
       Title: "Murabbi’s National Tech Olympiad – A Celebration of Student Innovation",
       Image: "https://placehold.co/600x400",
-      Description:`<div style="padding: 20px 0;"><div style="padding: 20px; margin-bottom: 20px;"><p style="margin: 0; font-size: 16px;"><strong>Islamabad, Pakistan</strong> — On December 15, 2024, <strong>Murabbi</strong> hosted Pakistan's first <strong>National Tech Olympiad</strong> at the FDE Auditorium, showcasing 200+ student projects from across Islamabad. The event, attended by the Federal Education Minister and global EdTech leaders, crowned Murabbi's inaugural year by proving tech education's transformative power.</p></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's Olympiad Highlights</h2><div style="padding: 20px 0;"><div style="margin-bottom: 15px;"><strong>Categories:</strong></div><div style="padding-left: 20px; margin-bottom: 15px;"><div style="padding: 8px 0; margin-bottom: 8px;"><strong>1. AI for Good:</strong> Urdu chatbots for mental health (ICB G-9/4).</div><div style="padding: 8px 0; margin-bottom: 8px;"><strong>2. Low-Cost Robotics:</strong> Solar-powered crop drones (IMSB Tarnol).</div><div style="padding: 8px 0; margin-bottom: 8px;"><strong>3. Cyber Safety:</strong> Games detecting fake news (IMCG F-6/2).</div></div><div style="margin-bottom: 15px;"><strong>Winners:</strong></div><div style="padding-left: 20px; margin-bottom: 15px;"><div style="padding: 8px 0; margin-bottom: 8px;"><strong>Grand Prize:</strong> A landslide warning system by Swat students, mentored by Murabbi Fellow <strong>Ahmed Khan</strong>.</div><div style="padding: 8px 0; margin-bottom: 8px;"><strong>Community Impact Award:</strong> Menstrual health awareness animations by Kasur girls.</div></div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's Global Partnerships Shine</h2><div style="padding: 20px 0;"><div style="padding: 10px 0; margin-bottom: 10px;"><strong>IBM:</strong> Provided judges and API access for AI projects.</div><div style="padding: 10px 0; margin-bottom: 10px;"><strong>Google:</strong> Funded cybersecurity awards and <em>"Be Internet Awesome"</em> certifications.</div><div style="padding: 10px 0; margin-bottom: 15px;"><strong>UNESCO:</strong> Announced plans to replicate Murabbi's model in Nepal and Bangladesh.</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Quotes of Pride</h2><div style="padding: 20px 0;"><div style="padding: 15px; margin: 15px 0;"><p style="margin: 0; font-style: italic; font-size: 16px;"><strong>Dr. Nazir Perwaiz, Murabbi CEO:</strong> <em>"Today, Pakistan's children proved they're not just tech users—they're problem-solvers."</em></p></div><div style="padding: 15px; margin: 15px 0;"><p style="margin: 0; font-style: italic; font-size: 16px;"><strong>Student Winner, Amina (Grade 5):</strong> <em>"Murabbi's LMS let me learn AI without internet. Now, I'm teaching my village!"</em></p></div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's 2025 Vision</h2><div style="padding: 20px 0;"><div style="padding: 10px 0; margin-bottom: 10px;"><strong>Scale:</strong> Reach 200 schools nationally.</div><div style="padding: 10px 0; margin-bottom: 10px;"><strong>Deepen Impact:</strong> Partner with hospitals for student-led health-tech solutions.</div><div style="padding: 10px 0; margin-bottom: 15px;"><strong>Globalize:</strong> Host a <strong>South Asian Tech Summit</strong> with delegates from 6 countries.</div></div></div></div>`,
-      Date: "29 September, 2024",
+      Description:`<div style="padding: 20px 0;">
+  <div style="padding: 20px; margin-bottom: 20px;">
+    <p style="margin: 0; font-size: 16px;"><strong>Islamabad, Pakistan</strong> — <strong>Murabbi</strong> continues to implement its tech education program across Islamabad schools, with students developing projects aligned with the curriculum's focus on coding, robotics, and practical applications.</p>
+  </div>
+
+  <div style="margin-bottom: 30px;">
+    <h2 style="font-size: 20px; margin-bottom: 15px;">Student Achievements</h2>
+    <div style="padding: 20px 0;">
+      <div style="padding: 10px 0; margin-bottom: 10px;">
+        • Projects demonstrate competency in Scratch, Python, and AI fundamentals
+      </div>
+      <div style="padding: 10px 0; margin-bottom: 15px;">
+        • Practical applications of Murabbi's open-source robotics curriculum
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 30px;">
+    <h2 style="font-size: 20px; margin-bottom: 15px;">Program Partnerships</h2>
+    <div style="padding: 20px 0;">
+      <div style="padding: 10px 0; margin-bottom: 15px;">
+        • Continued collaboration with IBM for AI education components
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 30px;">
+    <h2 style="font-size: 20px; margin-bottom: 15px;">Next Steps</h2>
+    <div style="padding: 20px 0;">
+      <div style="padding: 10px 0; margin-bottom: 15px;">
+        • Ongoing implementation within Islamabad partner schools
+      </div>
+    </div>
+  </div>
+</div>`,
+      Date: "January 15, 2025",
     },
     {
       Title: "Murabbi in Action – Tech Education Ignites Islamabad’s Classrooms",
       Image: "https://placehold.co/600x400",
-      Description:`<div style="max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif; line-height: 1.6; padding: 20px;"><div style="text-align: center; padding: 20px 0; margin-bottom: 30px;"><h1 style="font-size: 24px; font-weight: bold; margin: 0;">Murabbi's EdTech Revolution Update</h1><p style="margin: 10px 0 0 0; font-size: 16px;">November 2024 Impact Report</p></div><div style="padding: 20px 0;"><div style="padding: 20px; margin-bottom: 20px;"><p style="margin: 0; font-size: 16px;"><strong>Islamabad, Pakistan</strong> — By November 2024, <strong>Murabbi's</strong> Coding Fellows had brought tech education to life in 150 schools, impacting 12,000+ students. Through Murabbi's hybrid model—combining its LMS, low-cost tools, and community partnerships—classrooms from G-10 to rural Tarnol buzzed with coding clubs, AI projects, and robotics competitions.</p></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's Urban-Rural Strategy</h2><div style="padding: 20px 0;"><div style="padding: 10px 0 10px 15px; margin-bottom: 10px;"><strong>Urban Hubs:</strong> In sectors like F-7 and G-8, students used Murabbi's LMS to design chatbots addressing civic issues (e.g., <em>"Clean Islamabad"</em> waste-management bots).</div><div style="padding: 10px 0 10px 15px; margin-bottom: 10px;"><strong>Rural Innovation:</strong> In Bara Kau and Sohan, fellows deployed Murabbi's <em>"Unplugged Coding Kits"</em>—using board games and storytelling to teach algorithms without electricity.</div><div style="padding: 10px 0 10px 15px; margin-bottom: 15px;"><strong>Gender Equity:</strong> At IMCG Golra, girls comprised 70% of a robotics team that built a water-purification model, mentored by Murabbi's female fellows.</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's LMS: Real-Time Impact Tracking</h2><div style="padding: 20px 0;"><div style="padding: 10px 0; margin-bottom: 10px;"><strong>Student Progress:</strong> Auto-graded quizzes showed 85% mastery in Scratch basics after 8 weeks.</div><div style="padding: 10px 0; margin-bottom: 10px;"><strong>Teacher Support:</strong> Fellows used Murabbi's dashboard to share challenges and solutions, like adapting lessons for Urdu-medium schools.</div><div style="padding: 10px 0; margin-bottom: 15px;"><strong>Parent Engagement:</strong> 500+ families attended Murabbi's <em>"Tech Open Houses"</em> to witness student projects.</div><div style="padding: 15px; margin: 15px 0;"><p style="margin: 0; font-style: italic; font-size: 16px;">"My son debugged a robot's pathfinding code—I never imagined he'd learn this in Grade 4!"</p><div style="text-align: right; margin-top: 10px; font-weight: bold;">— Parent from IMSB Bhara Kau</div></div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's Community Partnerships</h2><div style="padding: 20px 0;"><div style="padding: 10px 0; margin-bottom: 10px;"><strong>PakTech Foundation:</strong> Donated 100 refurbished laptops to rural Murabbi Tech Hubs.</div><div style="padding: 10px 0; margin-bottom: 10px;"><strong>Farmers United:</strong> Sponsored agri-tech challenges where students coded soil-analysis tools.</div><div style="padding: 10px 0; margin-bottom: 15px;"><strong>PTCL:</strong> Provided subsidized internet for LMS access in 30 remote schools.</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Challenges & Murabbi's Solutions</h2><div style="padding: 20px 0;"><div style="padding: 10px 0; margin-bottom: 10px;"><strong>Power Outages:</strong> Distributed Murabbi's solar-powered Raspberry Pi devices to 20 schools.</div><div style="padding: 10px 0; margin-bottom: 10px;"><strong>Teacher Training:</strong> Monthly upskilling webinars hosted on Murabbi's LMS.</div><div style="padding: 10px 0; margin-bottom: 15px;"><strong>Cultural Resistance:</strong> Community demo days eased skepticism, with 60% of hesitant parents now advocating for tech classes.</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">What's Next?</h2><div style="padding: 20px 0;"><div style="padding: 10px 0; margin-bottom: 10px;"><strong>December 2024:</strong> Murabbi's <em>"National Tech Olympiad"</em> will spotlight top student innovations.</div><div style="padding: 10px 0; margin-bottom: 15px;"><strong>2025 Expansion:</strong> 50 new schools in Punjab, leveraging Islamabad's success.</div></div></div></div>`,
-      Date: "24 September, 2024",
+      Description:`<div style="max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif; line-height: 1.6; padding: 20px;">
+  <div style="text-align: center; padding: 20px 0; margin-bottom: 30px;">
+    <h1 style="font-size: 24px; font-weight: bold; margin: 0;">Murabbi's EdTech Implementation Update</h1>
+    <p style="margin: 10px 0 0 0; font-size: 16px;">November 2024 Progress Report</p>
+  </div>
+
+  <div style="padding: 20px 0;">
+    <div style="padding: 20px; margin-bottom: 20px;">
+      <p style="margin: 0; font-size: 16px;"><strong>Islamabad, Pakistan</strong> — As of November 2024, <strong>Murabbi's</strong> Coding Fellows had implemented tech education programs in schools across Islamabad. The initiative combined digital tools with practical teaching strategies.</p>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+      <h2 style="font-size: 20px; margin-bottom: 15px;">Implementation Strategy</h2>
+      <div style="padding: 20px 0;">
+        <div style="padding: 10px 0; margin-bottom: 10px;">
+          • Urban schools utilized Murabbi's learning management system (LMS) for coding instruction
+        </div>
+        <div style="padding: 10px 0; margin-bottom: 15px;">
+          • Rural areas received adapted teaching approaches for low-resource environments
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+      <h2 style="font-size: 20px; margin-bottom: 15px;">System Monitoring</h2>
+      <div style="padding: 20px 0;">
+        <div style="padding: 10px 0; margin-bottom: 10px;">
+          • Student progress tracked through Murabbi's LMS platform
+        </div>
+        <div style="padding: 10px 0; margin-bottom: 15px;">
+          • Fellows participated in ongoing professional development
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+      <h2 style="font-size: 20px; margin-bottom: 15px;">Program Outcomes</h2>
+      <div style="padding: 20px 0;">
+        <div style="padding: 10px 0; margin-bottom: 10px;">
+          • Established tech education programs in multiple Islamabad schools
+        </div>
+        <div style="padding: 10px 0; margin-bottom: 15px;">
+          • Maintained gender-inclusive participation through targeted outreach
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+      <h2 style="font-size: 20px; margin-bottom: 15px;">Operational Challenges</h2>
+      <div style="padding: 20px 0;">
+        <div style="padding: 10px 0; margin-bottom: 15px;">
+          • Implemented ongoing technical support for fellows through Murabbi's systems
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+      <h2 style="font-size: 20px; margin-bottom: 15px;">Next Phase</h2>
+      <div style="padding: 20px 0;">
+        <div style="padding: 10px 0; margin-bottom: 15px;">
+          • Continued implementation across existing partner schools
+        </div>
+      </div>
+    </div>
+  </div>
+</div>`,
+      Date: " December 10, 2024",
     },
     {
       Title:"Murabbi’s Training Bootcamp – Forging Tech Educators of Tomorrow",
       Image: "/75coding/3.jpg",
-      Description:`<div style="max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 20px;"><div style="text-align: center; padding: 20px 0;"><h1 style="font-size: 24px; font-weight: bold; margin: 0;">Murabbi's 5-Day Bootcamp: Forging Pakistan's Tech Education Pioneers</h1></div><div style="padding: 20px 0;"><div style="padding: 20px 0; margin-bottom: 20px;"><p style="margin: 0; font-size: 16px;">In <strong>September 2024</strong>, <strong>Murabbi</strong> conducted its inaugural <strong>5-Day Tech Educator Bootcamp</strong> at NUST's SEECS campus, transforming <strong>75 Coding Fellows</strong> into pioneers of primary-level tech education. Designed entirely by Murabbi's curriculum team, the program blended hands-on coding, AI ethics, and low-resource teaching strategies, setting a new standard for STEM pedagogy in Pakistan.</p></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's Curriculum: From Scratch to Robotics</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;"><strong>Day 1–2: Scratch Programming</strong></p><p style="margin-bottom: 15px; font-size: 16px;">Fellows mastered Murabbi's gamified lesson plans, creating interactive stories and calculators. A highlight was the <strong>"Scratch Olympics"</strong>, where teams competed to design educational games aligned with Pakistan's national curriculum.</p><p style="margin-bottom: 15px; font-size: 16px;"><strong>Day 3: AI for Young Minds</strong></p><p style="margin-bottom: 15px; font-size: 16px;">Using Murabbi's partnership with IBM, fellows trained child-friendly AI models, including Urdu chatbots and image classifiers. A session on <strong>"Ethical AI"</strong> addressed bias and data privacy—cornerstones of Murabbi's inclusive approach.</p><p style="margin-bottom: 15px; font-size: 16px;"><strong>Day 4–5: Open-Source Robotics</strong></p><p style="margin-bottom: 15px; font-size: 16px;">Murabbi's engineers demonstrated how to replicate Lego-like robotics projects using recycled materials and free software. Fellows built solar-powered robots and competed in a <strong>"Sumo Bot Challenge"</strong> judged by NUST faculty.</p><div style="padding: 20px 0; margin-top: 15px;"><p style="margin: 0; font-style: italic; font-size: 16px;">"Murabbi taught us to turn constraints into creativity—like using cardboard for robots when schools lack funds."</p><div style="text-align: right; margin-top: 10px; font-weight: bold;">— Talha Hassan<br><small>Fellow deployed in Rawat</small></div></div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's Pedagogical Innovations</h2><div style="padding: 20px 0;"><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>Child-Centric Methodology:</strong> Training emphasized Murabbi's "Learn-Play-Innovate" framework, encouraging curiosity over rote learning</div><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>LMS Integration:</strong> Fellows rehearsed using Murabbi's platform to track student progress and auto-grade quizzes</div><div style="padding: 10px 0; margin-bottom: 15px;">• <strong>Inclusivity Workshops:</strong> Sessions on teaching students with disabilities, developed with Special Talent Exchange Program (STEP)</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Certification and Launch</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;">The bootcamp concluded with a ceremony led by <strong>Dr. Nazir Perwaiz</strong>, Murabbi's CEO, who emphasized:</p><div style="padding: 20px 0; margin-top: 15px;"><p style="margin: 0; font-style: italic; font-size: 16px;">"You're not just teachers—you're architects of Pakistan's digital destiny."</p><div style="text-align: right; margin-top: 10px; font-weight: bold;">— Dr. Nazir Perwaiz<br><small>CEO, Murabbi</small></div></div><p style="margin-bottom: 15px; font-size: 16px;">Fellows received <strong>Murabbi Certified Tech Educator</strong> badges, along with toolkits containing:</p><div style="padding: 10px 0; margin-bottom: 10px;">• Murabbi's offline coding apps</div><div style="padding: 10px 0; margin-bottom: 10px;">• Open-source robotics guides</div><div style="padding: 10px 0; margin-bottom: 15px;">• LMS login credentials</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Impact Preview</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;">By <strong>October 2024</strong>, Murabbi's fellows had:</p><div style="padding: 10px 0; margin-bottom: 10px;">• Trained <strong>5,000+ students</strong> in Islamabad</div><div style="padding: 10px 0; margin-bottom: 10px;">• Reduced tech-class gender gaps by <strong>40%</strong> in pilot schools</div><div style="padding: 10px 0; margin-bottom: 15px;">• Leveraged the LMS to share <strong>200+ student projects</strong> nationally</div><p style="margin: 0; font-size: 16px;">This comprehensive bootcamp established Murabbi as a leader in educational innovation, demonstrating how strategic training and resource optimization can transform Pakistan's approach to technology education at the grassroots level.</p></div></div></div></div>`,
-      Date: "10 September, 2024",
+      Description:`<div style="max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 20px;"><div style="text-align: center; padding: 20px 0;"><h1 style="font-size: 24px; font-weight: bold; margin: 0;">Murabbi\'s 5-Day Bootcamp: Training Pakistan\'s Tech Educators</h1></div><div style="padding: 20px 0;"><div style="padding: 20px 0; margin-bottom: 20px;"><p style="margin: 0; font-size: 16px;">From <strong>September 23–28, 2024</strong>, <strong>Murabbi</strong> conducted its technical training program at NUST\'s SEECS campus, preparing <strong>75 Coding Fellows</strong> to teach coding, robotics, and AI. The curriculum combined practical skills with pedagogical strategies for primary-level education.</p></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi\'s Bootcamp Curriculum</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;"><strong>Scratch & Python Fundamentals:</strong></p><div style="padding: 10px 0; margin-bottom: 10px;">• Hands-on sessions creating educational projects</div><div style="padding: 10px 0; margin-bottom: 15px;">• Lesson plan development aligned with national standards</div><p style="margin-bottom: 15px; font-size: 16px;"><strong>AI Education Modules:</strong></p><div style="padding: 10px 0; margin-bottom: 15px;">• Ethics training developed with IBM\'s EdTech team</div><p style="margin-bottom: 15px; font-size: 16px;"><strong>Robotics Instruction:</strong></p><div style="padding: 10px 0; margin-bottom: 15px;">• Implementation of open-source lesson plans</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi\'s Training Components</h2><div style="padding: 20px 0;"><div style="padding: 10px 0; margin-bottom: 10px;">• Practical classroom management strategies</div><div style="padding: 10px 0; margin-bottom: 10px;">• LMS training for progress tracking and assessments</div><div style="padding: 10px 0; margin-bottom: 15px;">• Resource optimization techniques for low-budget schools</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Certification</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;">The program concluded with a ceremony awarding <strong>Murabbi Certified Tech Educator</strong> credentials. Participants received:</p><div style="padding: 10px 0; margin-bottom: 10px;">• Curriculum materials for Scratch, Python, and robotics</div><div style="padding: 10px 0; margin-bottom: 15px;">• Access to Murabbi\'s learning management system</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Next Steps</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;">Fellows began deployments in October 2024, equipped with:</p><div style="padding: 10px 0; margin-bottom: 10px;">• Standardized teaching kits</div><div style="padding: 10px 0; margin-bottom: 15px;">• Technical support channels</div><p style="margin: 0; font-size: 16px;">This training initiative demonstrated Murabbi\'s capacity to develop practical tech education frameworks for Pakistani schools.</p></div></div></div></div>`,
+      Date: " November 26, 2024",
 
     },
     {
       Title: "Murabbi’s Recruitment Revolution – Selecting Pakistan’s Tech Educators",
       Image: "/75coding/2.jpg",
-      Description:`<div style="max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 20px;"><div style="text-align: center; padding: 20px 0;"><h1 style="font-size: 24px; font-weight: bold; margin: 0;">Murabbi's Innovation in Talent Recruitment: Building Pakistan's Tech Teaching Force</h1></div><div style="padding: 20px 0;"><div style="padding: 20px 0; margin-bottom: 20px;"><p style="margin: 0; font-size: 16px;"><strong>Murabbi</strong>, in collaboration with NUST and the Federal Ministry, spearheaded a transparent, tech-forward recruitment drive to select <strong>75 Coding Fellows</strong> for its flagship "Coding, Robotics, and AI Learning" initiative. With <strong>121 applicants</strong> vetted through Murabbi's proprietary assessment platform, the process set new standards for fairness and innovation in educational hiring.</p></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's Two-Phase Selection Strategy</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;"><strong>Phase 1 – NUST Talent Pipeline:</strong></p><div style="padding: 10px 0; margin-bottom: 10px;">• Murabbi targeted postgraduate students from NUST's School of Electrical Engineering and Computer Science (SEECS), leveraging the university's tech expertise</div><div style="padding: 10px 0; margin-bottom: 10px;">• Ads on Murabbi's social channels and NUST partnerships yielded <strong>55 candidates</strong>, who underwent a <strong>30-minute automated test</strong> designed by Murabbi's curriculum team</div><div style="padding: 10px 0; margin-bottom: 15px;">• <strong>Safe Exam Browser:</strong> Murabbi's anti-cheating tool ensured test integrity, with instant results shared via its LMS</div><p style="margin-bottom: 15px; font-size: 16px;"><strong>Phase 2 – Nationwide Outreach:</strong></p><div style="padding: 10px 0; margin-bottom: 10px;">• Expanded to non-NUST applicants, attracting <strong>67 candidates</strong> from Lahore, Karachi, and Peshawar</div><div style="padding: 10px 0; margin-bottom: 15px;">• Murabbi's interview panels assessed teaching aptitude, with final offers sent via its digital onboarding portal</div><p style="margin-bottom: 15px; font-size: 16px;"><strong>Result:</strong> 80 offers extended, 65 accepted, with <strong>15 waitlisted candidates</strong> finalized by September 2024.</p></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's Gender Equity Triumph</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;">Of the <strong>73 Coding Fellows</strong> deployed:</p><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>26% Female Representation:</strong> Murabbi prioritized women through urban placements, flexible hours, and mentorship from its Women-in-Tech Advisory Board</div><div style="padding: 10px 0; margin-bottom: 15px;">• <strong>Safe Spaces:</strong> Female fellows like Areeba Riaz (Islamabad College for Girls F-6/2) received training in Murabbi's gender-sensitive pedagogy</div><div style="padding: 20px 0; margin-top: 15px;"><p style="margin: 0; font-style: italic; font-size: 16px;">"Murabbi didn't just hire us—they built a support system to help us thrive."</p><div style="text-align: right; margin-top: 10px; font-weight: bold;">— Javeriya Yasin<br><small>Coding Fellow, I-14</small></div></div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Tech Innovations by Murabbi</h2><div style="padding: 20px 0;"><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>Automated Grading:</strong> Eliminated bias in MCQ assessments for Scratch, Python, and AI fundamentals</div><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>Digital Onboarding:</strong> Offer letters and agreements signed via Murabbi's secure portal, reducing paperwork delays</div><div style="padding: 10px 0; margin-bottom: 15px;">• <strong>LMS Integration:</strong> Fellows pre-registered on Murabbi's platform before training, streamlining progress tracking</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's Training Blueprint</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;">Selected fellows underwent a <strong>5-day bootcamp</strong> at NUST, fully designed and funded by Murabbi:</p><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>Scratch & Python:</strong> Led by Murabbi's lead educator, Mr. Azhaan</div><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>AI Ethics:</strong> Modules co-developed with IBM's EdTech team</div><div style="padding: 10px 0; margin-bottom: 15px;">• <strong>Low-Cost Robotics:</strong> Using Murabbi's open-source lesson plans</div><p style="margin-bottom: 15px; font-size: 16px;">Certificates were awarded by <strong>Dr. Nazir Perwaiz</strong>, Murabbi's CEO, who stated:</p><div style="padding: 20px 0; margin-top: 15px;"><p style="margin: 0; font-style: italic; font-size: 16px;">"Our fellows aren't just teachers—they're innovators shaping Pakistan's digital future."</p><div style="text-align: right; margin-top: 10px; font-weight: bold;">— Dr. Nazir Perwaiz<br><small>CEO, Murabbi</small></div></div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">What's Next?</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;">Murabbi's fellows began deployments in <strong>October 2024</strong>, equipped with:</p><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>Murabbi LMS Access:</strong> Real-time student progress dashboards</div><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>Mentorship Hotline:</strong> 24/7 support from Murabbi's technical team</div><div style="padding: 10px 0; margin-bottom: 15px;">• <strong>Community Kits:</strong> Offline coding activities for rural schools</div><p style="margin: 0; font-size: 16px;">This innovative recruitment approach by Murabbi has established a new benchmark for educational technology hiring in Pakistan, demonstrating how technology can enhance both fairness and efficiency in talent selection.</p></div></div></div></div>`,
-      Date: "07 September, 2024",
+      Description:`<div style="max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 20px;"><div style="text-align: center; padding: 20px 0;"><h1 style="font-size: 24px; font-weight: bold; margin: 0;">Murabbi\'s Innovation in Talent Recruitment: Building Pakistan\'s Tech Teaching Force</h1></div><div style="padding: 20px 0;"><div style="padding: 20px 0; margin-bottom: 20px;"><p style="margin: 0; font-size: 16px;"><strong>Murabbi</strong>, in collaboration with NUST and the Federal Ministry, conducted a recruitment drive to select <strong>75 Coding Fellows</strong> for its "Coding, Robotics, and AI Learning" initiative. <strong>121 applicants</strong> were assessed through Murabbi\'s proprietary platform.</p></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi\'s Two-Phase Selection Strategy</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;"><strong>Phase 1 – NUST Talent Pipeline:</strong></p><div style="padding: 10px 0; margin-bottom: 10px;">• Targeted postgraduate students from NUST\'s School of Electrical Engineering and Computer Science (SEECS)</div><div style="padding: 10px 0; margin-bottom: 10px;">• 55 candidates completed a 30-minute automated test designed by Murabbi\'s curriculum team</div><div style="padding: 10px 0; margin-bottom: 15px;">• Used Safe Exam Browser for test integrity with instant LMS results</div><p style="margin-bottom: 15px; font-size: 16px;"><strong>Phase 2 – Nationwide Outreach:</strong></p><div style="padding: 10px 0; margin-bottom: 10px;">• Expanded recruitment to 67 non-NUST applicants</div><div style="padding: 10px 0; margin-bottom: 15px;">• Final offers distributed through Murabbi\'s digital portal</div><p style="margin-bottom: 15px; font-size: 16px;"><strong>Result:</strong> 80 candidates shortlisted, 65 accepted, with 15 waitlisted candidates finalized by September 2024.</p></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi\'s Gender Equity Achievement</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;">Of the <strong>75 Coding Fellows</strong> deployed:</p><div style="padding: 10px 0; margin-bottom: 10px;">• Achieved 26% female participation through urban placements and flexible schedules</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Tech Innovations by Murabbi</h2><div style="padding: 20px 0;"><div style="padding: 10px 0; margin-bottom: 10px;">• Automated MCQ grading system for Scratch, Python, and AI assessments</div><div style="padding: 10px 0; margin-bottom: 10px;">• Digital onboarding portal for document processing</div><div style="padding: 10px 0; margin-bottom: 15px;">• LMS integration for fellow progress tracking</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi\'s Training Program</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;">5-day bootcamp at NUST:</p><div style="padding: 10px 0; margin-bottom: 10px;">• Scratch & Python instruction led by Murabbi\'s educators</div><div style="padding: 10px 0; margin-bottom: 10px;">• AI Ethics modules developed with IBM\'s EdTech team</div><div style="padding: 10px 0; margin-bottom: 15px;">• Open-source robotics lesson plans</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Next Steps</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;">Deployments began in <strong>October 2024</strong> with:</p><div style="padding: 10px 0; margin-bottom: 10px;">• Murabbi LMS access for progress monitoring</div><div style="padding: 10px 0; margin-bottom: 10px;">• Technical support hotline</div><div style="padding: 10px 0; margin-bottom: 15px;">• Offline coding kits for rural schools</div><p style="margin: 0; font-size: 16px;">This initiative established new benchmarks for educational technology recruitment in Pakistan.</p></div></div></div></div>`,
+      Date: "November 5, 2024",
     },
     {
       Title:"Murabbi Launches Pakistan’s First Primary Tech Education Initiative",
       Image: "/heroslider/hero_3.jpg",
-      Description: `<div style="max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 20px;"><div style="text-align: center; padding: 20px 0;"><h1 style="font-size: 24px; font-weight: bold; margin: 0;">Murabbi Partnership: Pioneering Pakistan's EdTech Revolution</h1></div><div style="padding: 20px 0;"><div style="padding: 20px 0; margin-bottom: 20px;"><p style="margin: 0; font-size: 16px;"><strong>Murabbi</strong>, a leading EdTech innovator, has partnered with the <strong>Ministry of Federal Education</strong> and <strong>NUST</strong> to launch a groundbreaking initiative: "Coding, Robotics, and AI Learning for Primary Students." Signed on <strong>August 29, 2024</strong>, this program deploys <strong>75 Murabbi-trained Coding Fellows</strong> across <strong>155 Islamabad schools</strong>, marking a transformative step in Pakistan's education landscape.</p></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's Vision: Sustainable, Scalable Tech Literacy</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;">Murabbi's curriculum, designed by its team of educators and technologists, integrates:</p><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>Open-Source Tools:</strong> Replacing expensive robotics kits with affordable, locally adaptable resources</div><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>IBM & Google Collaborations:</strong> AI modules and cyber-safety games tailored for young learners</div><div style="padding: 10px 0; margin-bottom: 15px;">• <strong>NUST's Expertise:</strong> Blending academic rigor with Murabbi's innovative pedagogy</div><div style="padding: 20px 0; margin-top: 15px;"><p style="margin: 0; font-style: italic; font-size: 16px;">"Our goal is to make tech education accessible to every child, whether in Islamabad's sectors or remote villages."</p><div style="text-align: right; margin-top: 10px; font-weight: bold;">— Dr. Nazir Perwaiz<br><small>CEO of Murabbi</small></div></div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's Recruitment Strategy</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;">The organization led the recruitment of Coding Fellows, prioritizing:</p><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>Merit-Based Selection:</strong> Automated tests via Murabbi's secure platform</div><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>Gender Equity:</strong> 26% female fellows, mentored by Murabbi's women-in-tech leaders</div><div style="padding: 10px 0; margin-bottom: 15px;">• <strong>Flexible Timings:</strong> Aligning teaching roles with postgraduate studies for talent retention</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Key Features of Murabbi's Program</h2><div style="padding: 20px 0;"><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>Custom LMS:</strong> Murabbi's Learning Management System tracks student progress, trainer performance, and school engagement in real time</div><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>Community Impact:</strong> Partnerships with NGOs like PakTech Foundation to equip rural schools with devices</div><div style="padding: 10px 0; margin-bottom: 15px;">• <strong>Teacher Training:</strong> Murabbi's 5-day bootcamp at NUST, featuring modules on Scratch, AI, and low-resource robotics</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's Early Milestones</h2><div style="padding: 20px 0;"><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>Pilot Success:</strong> A demo session at Islamabad College for Girls F-6/2 saw 98% student engagement</div><div style="padding: 10px 0; margin-bottom: 10px;">• <strong>Rural Expansion:</strong> 30 schools in regions like Bara Kau adopted Murabbi's hybrid (online/offline) curriculum</div><div style="padding: 10px 0; margin-bottom: 15px;">• <strong>Global Recognition:</strong> UNESCO has invited Murabbi to present its model at the 2025 Global EdTech Summit</div></div></div><div style="margin-bottom: 30px;"><h2 style="font-size: 20px; margin-bottom: 15px;">What's Next?</h2><div style="padding: 20px 0;"><p style="margin-bottom: 15px; font-size: 16px;">In <strong>October 2024</strong>, Murabbi will:</p><div style="padding: 10px 0; margin-bottom: 10px;">• Launch <strong>Tech Hubs</strong> in 20 rural communities</div><div style="padding: 10px 0; margin-bottom: 10px;">• Host a <strong>Parent Awareness Campaign</strong> to bridge the digital divide</div><div style="padding: 10px 0; margin-bottom: 15px;">• Begin phase two in Punjab, leveraging lessons from Islamabad</div><p style="margin: 0; font-size: 16px;">This partnership between Murabbi, the Ministry, and NUST represents a paradigm shift in Pakistan's approach to educational technology, setting the foundation for a digitally literate generation.</p></div></div></div></div>`,
-      Date: "05 September, 2024",
+      Description: `<div style="max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 20px;">
+  <div style="text-align: center; padding: 20px 0;">
+    <h1 style="font-size: 24px; font-weight: bold; margin: 0;">Murabbi Partnership: Pioneering Pakistan's EdTech Revolution</h1>
+  </div>
+
+  <div style="padding: 20px 0;">
+    <div style="padding: 20px 0; margin-bottom: 20px;">
+      <p style="margin: 0; font-size: 16px;"><strong>Murabbi</strong>, in partnership with the <strong>Ministry of Federal Education</strong> and <strong>NUST</strong>, has launched the "Coding, Robotics, and AI Learning for Primary Students" initiative across <strong>155 Islamabad schools</strong>.</p>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+      <h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's Vision: Sustainable Tech Literacy</h2>
+      <div style="padding: 20px 0;">
+        <div style="padding: 10px 0; margin-bottom: 10px;">• Open-source tools for affordable robotics education</div>
+        <div style="padding: 10px 0; margin-bottom: 10px;">• AI curriculum components developed with industry partners</div>
+        <div style="padding: 10px 0; margin-bottom: 15px;">• Integration of NUST's technical expertise</div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+      <h2 style="font-size: 20px; margin-bottom: 15px;">Murabbi's Recruitment Strategy</h2>
+      <div style="padding: 20px 0;">
+        <div style="padding: 10px 0; margin-bottom: 10px;">• Merit-based selection through secure automated testing</div>
+        <div style="padding: 10px 0; margin-bottom: 15px;">• 26% female representation among Coding Fellows</div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+      <h2 style="font-size: 20px; margin-bottom: 15px;">Program Components</h2>
+      <div style="padding: 20px 0;">
+        <div style="padding: 10px 0; margin-bottom: 10px;">• Custom LMS for progress tracking and management</div>
+        <div style="padding: 10px 0; margin-bottom: 15px;">• 5-day training bootcamp at NUST covering core technical competencies</div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+      <h2 style="font-size: 20px; margin-bottom: 15px;">Implementation Progress</h2>
+      <div style="padding: 20px 0;">
+        <div style="padding: 10px 0; margin-bottom: 15px;">• Successful pilot demonstration at Islamabad College for Girls F-6/2</div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+      <h2 style="font-size: 20px; margin-bottom: 15px;">Next Steps</h2>
+      <div style="padding: 20px 0;">
+        <p style="margin: 0; font-size: 16px;">Continued implementation across designated Islamabad schools under the Federal Directorate of Education.</p>
+      </div>
+    </div>
+  </div>
+</div>`,
+      Date: "October 2, 2024",
 
     },
     {
