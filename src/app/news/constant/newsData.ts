@@ -67,7 +67,7 @@ export const newsData :NewsItem[] = [
     </div>
   </div>
 </div>`,
-      Date: "April 10, 2024"
+      Date: "April 10, 2025"
     },
     {
       Title: "Murabbi Bridges the Digital Divide – Tech Education Reaches Rural Islamabad",
