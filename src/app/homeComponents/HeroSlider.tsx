@@ -7,12 +7,12 @@ import { useEffect, useState } from "react";
 import { BsArrowRightShort } from "react-icons/bs";
 
 const images = [
-  "/heroslider/hero_1.jpg",
-  "/heroslider/hero2.jpg",
-  "/heroslider/hero4.jpg",
-  "/heroslider/hero_3.jpg",
   "/heroslider/hero_2.jpg",
   "/heroslider/hero_4.jpg",
+  "/heroslider/hero2.jpg",
+  "/heroslider/hero_1.jpg",
+  "/heroslider/hero4.jpg",
+  "/heroslider/hero_3.jpg",
 ];
 
 export default function HeroSlider() {
