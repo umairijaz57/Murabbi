@@ -90,11 +90,11 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
           transition={{ duration: 0.5 }}
           className="mb-8 space-y-4"
         >
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
             {currentNews.Title}
           </h1>
-          <div className="bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-medium w-fit">
-            {currentNews.Date}
+          <div className="text-gray-600 font-bold  px-4 py-1 rounded-full text-sm font-medium w-fit text-center mx-auto ">
+            {currentNews.Date} | Islamabad, Pakistan
           </div>
         </motion.header>
 
