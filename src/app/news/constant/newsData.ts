@@ -47,30 +47,252 @@ export const newsData :NewsItem[] = [
     //   Date: "April 10, 2025"
     // },
     {
+      Title: "Coding Fellows Prepare Islamabad Students for Landmark Tech Titan Competition",
+      Image: "/news/school/11.jpg",
+      Description:`<div style="max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; font-family: Arial, sans-serif;"><h1 style="margin-bottom: 10px; font-size: 1.5em; text-align: center;"><strong>Coding Fellows Prepare Islamabad Students for Landmark Tech Titan Competition</strong></h1><p style="text-align: center; margin-bottom: 25px; font-weight: bold; font-size: 0.9em; color: #666;"><strong>Islamabad, Pakistan</strong></p><p style="margin-bottom: 20px; text-align: justify;">Under the federal <em>"Coding, Robotics, and AI Learning"</em> initiative, <strong>73 Coding Fellows</strong> are training students across 155 Islamabad schools for the inaugural <strong>Tech Titan Competition</strong>, launching this March. The event applies the project's curriculum developed by <strong>Murabbi, NUST, and the Ministry of Federal Education</strong>.</p><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Inside the Training</strong></h3><ol style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 15px;"><strong>Scratch Programming Drills</strong><br>Students at schools like <strong>IMSG G-7/3-2</strong> fix errors in animated historical games during "Code Races".</li><li style="margin-bottom: 15px;"><strong>Robotics Challenges</strong><br>At <strong>IMSB Tarnol</strong>, learners build flood-detection bots using sensors and recycled materials.</li><li style="margin-bottom: 15px;"><strong>AI Ethics Clinics</strong><br><strong>IMCG Golra</strong> students train Urdu chatbots to advise farmers on crop diseases.</li></ol><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Competition Structure</strong></h3><ul style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 10px;"><strong>Code Sprint</strong>: Debugging Pakistan-themed games</li><li style="margin-bottom: 10px;"><strong>AI Challenge</strong>: Training practical chatbots</li><li style="margin-bottom: 10px;"><strong>Robotics Gauntlet</strong>: Navigating obstacle courses</li></ul><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Student Progress</strong></h3><ul style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 10px;"><strong>89% mastery</strong> in core coding/robotics skills per Murabbi's LMS.</li><li style="margin-bottom: 10px;"><strong>46% of registrants</strong> are female students.</li></ul><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Quotes</strong></h3><p style="margin: 15px 0; padding: 15px; border-left: 4px solid #333; font-style: italic; background-color: #f9f9f9;"><em>"Students debug robots that solve real problems – like our flood sensor alerting Rawal Dam communities."</em><br><strong>– Hafeez Ahmad</strong>, Coding Fellow</p><p style="margin: 15px 0; padding: 15px; border-left: 4px solid #333; font-style: italic; background-color: #f9f9f9;"><em>"When government-school students out-innovate expectations, Pakistan wins."</em><br><strong>– Dr. Javed Iqbal</strong>, Federal Directorate of Education</p></div>`,
+      Date: "December 23, 2024",
+       projects:[
+        {
+          id: 200,
+          name: "",
+          description: "Students built a chatbot to report broken streetlights, reducing neighborhood repair time by 48 hours.",
+          thumbnail: "/news/school/0.jpg",
+          gallery: [
+            {
+              id: 21,
+              src: "/news/school/0.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 22,
+              src: "/news/school/01.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 23,
+              src: "/news/school/02.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 24,
+              src: "/news/school/03.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            }
+            
+          ]
+        },
+        {
+          id: 201,
+          name: "",
+          description: "Students built a chatbot to report broken streetlights, reducing neighborhood repair time by 48 hours.",
+          thumbnail: "/news/school/1.jpg",
+          gallery: [
+            {
+              id: 2011,
+              src: "/news/school/1.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2012,
+              src: "/news/school/11.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2013,
+              src: "/news/school/12.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2014,
+              src: "/news/school/13.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            }
+            
+          ]
+        },
+        {
+          id: 202,
+          name: "",
+          description: "Students built a chatbot to report broken streetlights, reducing neighborhood repair time by 48 hours.",
+          thumbnail: "/news/school/3.jpg",
+          gallery: [
+            {
+              id: 2021,
+              src: "/news/school/3.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2022,
+              src: "/news/school/31.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2023,
+              src: "/news/school/32.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2024,
+              src: "/news/school/33.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            }
+            
+          ]
+        },
+        {
+          id: 203,
+          name: "",
+          description: "Students built a chatbot to report broken streetlights, reducing neighborhood repair time by 48 hours.",
+          thumbnail: "/news/school/2.jpg",
+          gallery: [
+            {
+              id: 2031,
+              src: "/news/school/2.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2032,
+              src: "/news/school/21.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2033,
+              src: "/news/school/22.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2034,
+              src: "/news/school/23.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            }
+            
+          ]
+        }
+      ]
+    },
+    {
       Title: "Murabbi Bridges the Digital Divide – Tech Education Reaches Rural Islamabad",
       Image: "/SchoolProgress/title.jpg",
       Description:`<div style="max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; font-family: Arial, sans-serif;"></p><p style="margin-bottom: 20px; text-align: justify;">Just weeks after deployment, Murabbi's <strong>75 Coding Fellows</strong> have ignited a tech education revolution across Islamabad's schools, with students as young as Grade 4 building <strong>AI models</strong>, coding <strong>interactive games</strong>, and solving <strong>community problems</strong>. These breakthroughs – captured in real-time classroom moments – validate the initiative's transformative impact.</p><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Classroom Breakthroughs: From Theory to Tangible Impact</strong></h3><h4 style="margin: 25px 0 10px 0; font-size: 1.1em;"><strong>1. Scratch Programming in Action</strong></h4><ul style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 10px;">At <strong>IMSG G-7/3-2</strong>, Grade 4 students designed Pakistan-themed animations and math quiz games using Scratch, with one team creating a <em>"Digital Independence Day Parade"</em> featuring animated floats and national songs.</li><li style="margin-bottom: 10px;"><em>"They grasped loops and conditionals by coding dancing characters – learning was pure joy!"</em> – Fellow <strong>Manahil Fatima</strong>.</li></ul><h4 style="margin: 25px 0 10px 0; font-size: 1.1em;"><strong>2. Real-World AI Projects</strong></h4><ul style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 10px;"><strong>Bara Kau Rural School</strong>: Students built an AI crop-disease predictor using 200+ local farm images, achieving <strong>89% accuracy</strong> in early tests.</li><li style="margin-bottom: 10px;"><strong>IMCG Golra</strong>: Girls developed a chatbot to report broken streetlights, reducing neighborhood repair time by 48 hours.</li></ul><h4 style="margin: 25px 0 10px 0; font-size: 1.1em;"><strong>3. Robotics Ingenuity</strong></h4><ul style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 10px;">Using cardboard, motors, and Murabbi's open-source guides, <strong>IMSB Tarnol</strong> students engineered flood-detection robots that alerted communities during recent rains.</li></ul><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Behind the Scenes: Fellow Strategies</strong></h3><ul style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 10px;"><strong>Adaptive Teaching</strong>: In Urdu-medium schools like <strong>IMCB G-13/2</strong>, Fellows used storytelling (<em>"The Clever Fox Algorithm"</em>) to explain loops.</li><li style="margin-bottom: 10px;"><strong>Low-Tech Solutions</strong>: At <strong>IMSB Sohan</strong> (limited power), students debugged code on paper grids before transferring to tablets.</li><li style="margin-bottom: 10px;"><strong>Parental Engagement</strong>: Demo days saw <strong>72% attendance increase</strong> after students showcased Scratch games predicting monsoon patterns.</li></ul><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Progress Metrics</strong></h3><h4 style="margin: 25px 0 10px 0; font-size: 1.1em;"><strong>Student Mastery</strong></h4><p style="margin-bottom: 15px; text-align: justify;">LMS data shows <strong>85%</strong> of Grade 5 students can now:</p><ul style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 10px;">Create variables in Python</li><li style="margin-bottom: 10px;">Design obstacle-avoidance robotics logic</li></ul><h4 style="margin: 25px 0 10px 0; font-size: 1.1em;"><strong>Gender Gap Closed</strong></h4><p style="margin-bottom: 20px; text-align: justify;"><strong>48%</strong> of competition winners are girls, surpassing the 45% participation target.</p><p style="margin: 30px 0 20px 0; padding: 20px; border: 2px solid #ddd; text-align: center; font-size: 1.1em; font-weight: bold;"><strong>Quote</strong>: <em>"When children code solutions for their communities, education transcends classrooms. That's Murabbi's real victory."</em><br><span style="margin-top: 10px; display: inline-block; font-size: 0.9em; font-weight: normal;">– <strong>Hafeez Ahmad</strong>, Coding Fellow, IMSB Sohan</span></p></div>`,
-      Date: "November 28, 2025",
-      // projects:[
-      //   {
-      //     id: 200,
-      //     name: "IMCG,G-10/2, Islamabad",
-      //     description: "Students built a chatbot to report broken streetlights, reducing neighborhood repair time by 48 hours.",
-      //     thumbnail: "/SchoolProgress/0.jpg",
-      //     gallery: [
-      //       {
-      //         id: 1,
-      //         src: "/SchoolProgress/0.jpg",
-      //         alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
-      //       },
-      //       {
-      //         id: 2,
-      //         src: "/SchoolProgress/1.jpg",
-      //         alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
-      //       }
-      //     ]
-      //   }
-      // ]
+      Date: "November 28, 2024",
+      projects:[
+        {
+          id: 200,
+          name: "",
+          description: "Students built a chatbot to report broken streetlights, reducing neighborhood repair time by 48 hours.",
+          thumbnail: "/news/school/0.jpg",
+          gallery: [
+            {
+              id: 21,
+              src: "/news/school/0.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 22,
+              src: "/news/school/01.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 23,
+              src: "/news/school/02.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 24,
+              src: "/news/school/03.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            }
+            
+          ]
+        },
+        {
+          id: 201,
+          name: "",
+          description: "Students built a chatbot to report broken streetlights, reducing neighborhood repair time by 48 hours.",
+          thumbnail: "/news/school/1.jpg",
+          gallery: [
+            {
+              id: 2011,
+              src: "/news/school/1.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2012,
+              src: "/news/school/11.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2013,
+              src: "/news/school/12.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2014,
+              src: "/news/school/13.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            }
+            
+          ]
+        },
+        {
+          id: 202,
+          name: "",
+          description: "Students built a chatbot to report broken streetlights, reducing neighborhood repair time by 48 hours.",
+          thumbnail: "/news/school/3.jpg",
+          gallery: [
+            {
+              id: 2021,
+              src: "/news/school/3.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2022,
+              src: "/news/school/31.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2023,
+              src: "/news/school/32.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2024,
+              src: "/news/school/33.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            }
+            
+          ]
+        },
+        {
+          id: 203,
+          name: "",
+          description: "Students built a chatbot to report broken streetlights, reducing neighborhood repair time by 48 hours.",
+          thumbnail: "/news/school/2.jpg",
+          gallery: [
+            {
+              id: 2031,
+              src: "/news/school/2.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2032,
+              src: "/news/school/21.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2033,
+              src: "/news/school/22.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2034,
+              src: "/news/school/23.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            }
+            
+          ]
+        }
+      ]
     },
     // {
     //   Title: "Murabbi’s National Tech Olympiad – A Celebration of Student Innovation",
