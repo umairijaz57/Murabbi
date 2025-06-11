@@ -243,7 +243,7 @@ const RightComp = (props: Props) => {
             </div>
           </div>
         </Link>
-        <Link href="/trainings/summer-courses">
+        <Link href="/trainings/summer-winter-camps">
           <div className="flex flex-row gap-4 cursor-pointer items-center justify-between  sm:p-2 hover:bg-gray-300/20">
             <div className="w-40 h-20 bg-gray-400 relative">
               <Image

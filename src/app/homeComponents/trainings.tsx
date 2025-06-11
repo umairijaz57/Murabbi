@@ -140,7 +140,7 @@ const Trainings = (props: Props) => {
           </div>
         </Link>
 
-        <Link href="/trainings/summer-courses">
+        <Link href="/trainings/summer-winter-camps">
           <div
             className={`flex flex-col gap-2 items-start justify-start shadow-lg shadow-gray-600/10  cursor-pointer px-6 py-4 w-72 h-96  rounded-lg bg-white border-2 hover:border-blue-600 hover:bg-blue-600 hover:text-white hover:shadow-gray-600/50 transition transform  duration-500  hover:-translate-y-2`}
           >
@@ -158,7 +158,7 @@ const Trainings = (props: Props) => {
               Murabbi's Summer Schools.
             </div>
             <div>
-              <Link href="/trainings/summer-courses">
+              <Link href="/trainings/summer-winter-camps">
                 <button className=" md:mt-2 rounded-lg transition-all text-sm font-bold duration-500 text-blue-500 ">
                   {" "}
                   View More

@@ -21,7 +21,6 @@ export interface NewsItem {
   Description: string;
   Image: string;
   Link?: string;
-  // Projects are optional as requested
   projects?: Project[];
 }
 

@@ -33,7 +33,7 @@ async function getData() {
     {
       id: 4,
       Title: "Summer Schools",
-      Link: "/trainings/summer-courses",
+      Link: "/trainings/summer-winter-camps",
       Image: "/offers/offer-5.png",
       Description:
         "Expand your technical expertise with cutting-edge courses covering emerging technologies, such as blockchain development, machine learning, embedded software, and deep learning, to stay ahead in the fast-paced world of high technology",
@@ -41,7 +41,7 @@ async function getData() {
     {
       id: 4,
       Title: "Workshops",
-      Link: "/trainings/summer-courses",
+      Link: "/trainings/summer-winter-camps",
       Image: "/offers/offer-5.png",
       Description:
         "Expand your technical expertise with cutting-edge courses covering emerging technologies, such as blockchain development, machine learning, embedded software, and deep learning, to stay ahead in the fast-paced world of high technology",
