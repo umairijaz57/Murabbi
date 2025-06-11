@@ -28,24 +28,143 @@ export interface NewsItem {
 
 
 export const newsData :NewsItem[] = [
-    // {
-    //   Title: "Empowering Women in Tech: 20 Female Coding Fellows Take the Lead in Islamabad Classrooms",
-    //   Image: "/news/0.JPG",
-    //   Description:"<p>In a country where women in tech often struggle for visibility and access, this project made sure they didn't just participate — they <strong>led from the front</strong>.</p><p>Out of 73 deployed Coding Fellows, <strong>20 were women</strong> — handpicked, trained, and strategically deployed to schools where they could <strong>thrive and inspire</strong>.</p><p>But it wasn't just about numbers.</p><p>The deployment strategy was built with care:</p><ul><li>Female Fellows were placed in <strong>mainstream, accessible sectors</strong></li><li>Assignments considered <strong>safe commute routes</strong></li><li><strong>Supportive school environments</strong> were prioritized</li><li>Some were given <strong>lighter loads</strong> to balance travel and family constraints</li></ul><blockquote><em>“This was my first teaching role,”</em> said one Fellow. <br>  <em>“And I felt heard, supported, and respected from day one.”</em></blockquote><p>In return, these women are now leading classrooms, teaching kids how to build games, program robots, and explore AI — sometimes in schools that have <strong>never had a tech teacher before</strong>.</p><p>They're not just teaching code.<br>They're breaking stereotypes.<br>They're showing young girls — <em>“you belong here too.”</em></p>",
-    //   Date:"31 October, 2024"
-    // },
-    // {
-    //   Title: "Murabbi’s Global Footprint – South Asia Adopts the Tech Education Model",
-    //   Image: "https://placehold.co/600x400",
-    //   Description: "<p>Any good system listens. And this one? It listens deeply — to students, school principals, and education monitors alike.</p><br><p>As part of the ongoing Coding, Robotics & AI Fellowship Project, a <strong>360-degree feedback mechanism</strong> was launched using the project’s Learning Management System (LMS).</p><p>Every stakeholder was given a voice — and that voice matters.</p><br><h3>🎒 <strong>Students said things like:</strong></h3><ul>  <li>“Our trainer makes learning fun.”</li>  <li>“We built our own game today!”</li>  <li>“We wish these classes happened every day.”</li></ul><p>They were asked to rate their trainer on punctuality, friendliness, teaching style, and subject knowledge. The results? Quantified instantly on the LMS dashboard.</p><h3>🏫<br> <strong>Principals and school heads added:</strong></h3><ul>  <li>“Our trainer is professional and disciplined.”</li>  <li>“Staff loves working with them.”</li>  <li>“Students are fully engaged — that’s rare!”</li></ul><p>They gave ratings on conduct, attendance, and interaction with faculty.</p><h3>👥<br> <strong>Project Monitors (Murabbi Management) observed:</strong></h3><ul>  <li>How well the fellows were performing inside the classrooms</li>  <li>How school management responded to their presence</li>  <li>Whether kids were truly learning — or just being occupied</li></ul><p>All of this feedback was <strong>converted into live data dashboards</strong> — highlighting top performers, identifying gaps, and helping the NUST team offer targeted support.</p><br><blockquote>  “<em>This system isn’t about policing,</em>” one admin shared.<br>  <em>“It’s about <strong>making good teachers great</strong> — by helping them see what’s working, and what’s not.”</em></blockquote><p>In an education system often run on assumptions — this feedback system brings <strong>clarity, honesty, and constant growth</strong>.</p>",
-    //   Date:"17 October, 2024"
-    // },
-    // {
-    //   Title: "Murabbi Expands Nationwide – Punjab and Khyber Pakhtunkhwa Embrace Tech Revolution",
-    //   Image: "/news/coding8.jpg",
-    //   Description:`<div style="max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; font-family: Arial, sans-serif;"><p style="margin-bottom: 20px; text-align: justify;">Murabbi's <em>"Coding, Robotics, and AI Learning"</em> initiative continues to deliver tech education across <strong>155 primary schools</strong> in Islamabad, with a renewed focus on sustaining quality and inclusivity in urban and peri-urban areas.</p><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Program Implementation</strong></h3><ol style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 15px;"><strong>Urban & Peri-Urban Focus</strong>:<ul style="margin: 8px 0; padding-left: 20px;"><li style="margin-bottom: 6px;">Schools in sectors like <strong>G-7</strong>, <strong>F-6</strong>, and <strong>I-8</strong> utilize Murabbi's <strong>Learning Management System (LMS)</strong> for real-time progress tracking and auto-graded quizzes.</li><li style="margin-bottom: 6px;"><strong>Hands-on Activities</strong>: Students code interactive Scratch games, AI chatbots, and low-cost robotics projects using open-source tools.</li></ul></li><li style="margin-bottom: 15px;"><strong>Rural Expansion</strong>:<ul style="margin: 8px 0; padding-left: 20px;"><li style="margin-bottom: 6px;"><strong>30 rural schools</strong> in areas like <strong>Bara Kau</strong> and <strong>Sohan</strong> now access offline LMS modules and solar-powered devices.</li><li style="margin-bottom: 6px;"><strong>Unplugged Coding</strong>: Storytelling and board games teach algorithms in schools with limited electricity.</li></ul></li></ol><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Key Focus Areas</strong></h3><ol style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 15px;"><strong>Gender Inclusivity</strong>:<ul style="margin: 8px 0; padding-left: 20px;"><li style="margin-bottom: 6px;"><strong>26% female Coding Fellows</strong> maintained through urban placements and flexible schedules.</li><li style="margin-bottom: 6px;">Girls represent <strong>40% of participants</strong> in robotics clubs at schools like <strong>IMCG Golra</strong>.</li></ul></li><li style="margin-bottom: 15px;"><strong>Curriculum Consistency</strong>:<ul style="margin: 8px 0; padding-left: 20px;"><li style="margin-bottom: 6px;">LMS modules updated monthly with feedback from Fellows and teachers.</li><li style="margin-bottom: 6px;">IBM's AI ethics content and Google's cyber-safety games integrated into lessons.</li></ul></li></ol><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Impact Metrics</strong></h3><ul style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 10px;"><strong>Student Proficiency</strong>: 82% mastery in basic coding concepts (LMS data).</li><li style="margin-bottom: 10px;"><strong>Community Engagement</strong>: 600+ parents attended Murabbi's <em>"Tech Open Houses"</em> in Q1 2025.</li><li style="margin-bottom: 10px;"><strong>Teacher Feedback</strong>: 90% of Fellows report improved student problem-solving skills.</li></ul><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Challenges & Solutions</strong></h3><ul style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 10px;"><strong>Device Shortages</strong>: Shared coding stations (1 device per 5 students) in rural schools.</li><li style="margin-bottom: 10px;"><strong>Power Outages</strong>: Solar panels installed in 15 schools, with plans to cover all 30 rural sites by June 2025.</li></ul><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Next Steps</strong></h3><ul style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 10px;"><strong>Deepen Impact</strong>: Partner with hospitals for student-led health-tech projects (e.g., hygiene chatbots).</li><li style="margin-bottom: 10px;"><strong>LMS Upgrades</strong>: Add Urdu voice-command features for non-literate parents.</li><li style="margin-bottom: 10px;"><strong>Sustainability</strong>: Train school staff to maintain solar-powered tech hubs independently.</li></ul><p style="margin: 30px 0 20px 0; padding: 20px; border: 2px solid #ddd; text-align: center; font-size: 1.1em; font-weight: bold;"><strong>Quote</strong>: <em>"Islamabad's classrooms are now labs for innovation. We're not just teaching code—we're nurturing problem-solvers."</em><br><span style="margin-top: 10px; display: inline-block; font-size: 0.9em; font-weight: normal;">– <strong>Dr. Nazir Perwaiz</strong>, CEO, Murabbi</span></p></div>`,
-    //   Date: "April 10, 2025"
-    // },
+    {
+      Title: "Tech Titan 2 Champions Crowned – A Celebration of Innovation and Excellence Under the 75 Coding Fellows Project",
+      Image: "/news/tt1/thumb2.jpg",
+      Description: `<article style="padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; max-width: 100%;"><div style="margin-bottom: 2rem;"><p style="font-size: 1.1rem; margin-bottom: 1.5rem; text-align: justify;">The <strong>Tech Titan 2 Competition</strong> has officially concluded with an electrifying final showdown between the top two teams—delivering a spectacle of skill, strategy, and cutting-edge innovation. This thrilling finale, held under the banner of the <strong>75 Coding Fellows Project</strong>, once again proved that the future of tech is bright in the hands of our young visionaries.</p><p style="font-size: 1.1rem; margin-bottom: 2rem; text-align: justify;">From intense robot-building sessions to problem-solving challenges, students showcased their <strong>coding expertise, collaborative spirit, and creative thinking</strong>. The competition highlighted how far these students have come through this initiative, which is proudly powered by <strong>Murabbi</strong>, <strong>Federal Directorate of Education (FDE)</strong>, and <strong>NUST</strong>.</p></div><section style="margin: 2.5rem 0; padding: 1.5rem; border: 1px solid #ddd; background: #f9f9f9;"><h2 style="font-size: 1.4rem; font-weight: bold; margin-bottom: 1.5rem;">Championship Highlights</h2><div style="padding: 1rem; border-left: 4px solid #000; background: white; margin-bottom: 1.2rem;"><p style="margin: 0; font-size: 1.1rem; text-align: justify;">The champions of Tech Titan 2 rose to the occasion with remarkable performance, combining <strong>technical mastery with effective teamwork</strong>—setting a high bar for what's to come in the tech education space.</p></div><div style="padding: 1rem; border-left: 4px solid #000; background: white;"><p style="margin: 0; font-size: 1.1rem; text-align: justify;">Yesterday's final face-off was more than just a competition—it was a <strong>celebration of empowerment</strong>, where passion met purpose, and learning transformed into real-world innovation.</p></div></section><footer style="margin-top: 3rem; padding: 1.5rem; border: 2px solid #000; background: #f5f5f5;"><p style="font-size: 1.2rem; font-weight: bold; margin: 0; text-align: center;">Congratulations to all participants, and especially to our new champions—you are the pride of the 75 Coding Fellows Project! 🚀</p></footer></article>`,
+      Date: "April 9, 2025",
+
+    },
+    {
+      Title: "Chromebooks Distributed to FDE Students – A Leap Towards Digital Empowerment Under the 75 Coding",
+      Image: "/news/chromebooks.jpg",
+      Description:  `<article style="padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; max-width: 100%;"><div style="margin-bottom: 2rem;"><p style="font-size: 1.1rem; margin-bottom: 1.5rem; text-align: justify;">In a powerful move to accelerate digital learning across public schools, <strong>Mr. Mohyuddin Wani</strong>, Secretary of the <strong>Federal Directorate of Education (FDE)</strong>, has generously facilitated the distribution of <strong>Chromebooks</strong> among students enrolled in the <strong>75 Coding Fellows Project</strong>—a groundbreaking collaboration between <strong>Murabbi</strong>, <strong>NUST</strong>, and <strong>FDE</strong>.</p><p style="font-size: 1.1rem; margin-bottom: 2rem; text-align: justify;">This initiative marks a significant milestone in the journey of transforming education through technology. The distributed Chromebooks are more than just devices; they represent <strong>opportunity, access, and empowerment</strong>—giving students the tools to explore <strong>coding, AI, and digital innovation</strong> hands-on.</p></div><section style="margin: 2.5rem 0; padding: 1.5rem; border: 1px solid #ddd; background: #f9f9f9;"><h2 style="font-size: 1.4rem; font-weight: bold; margin-bottom: 1.5rem;">Impact and Vision</h2><div style="padding: 1rem; border-left: 4px solid #000; background: white; margin-bottom: 1.2rem;"><p style="margin: 0; font-size: 1.1rem; text-align: justify;">Speaking about the impact, Murabbi emphasized how essential it is for students to engage with real-world tools as part of their learning experience. These Chromebooks will enable FDE students to continue practicing the skills they've learned during training, fostering a culture of continuous growth and curiosity.</p></div><div style="padding: 1rem; border-left: 4px solid #000; background: white;"><p style="margin: 0; font-size: 1.1rem; text-align: justify;">By placing cutting-edge technology directly into the hands of young learners, this step ensures that <strong>no student is left behind in the race toward a tech-driven future</strong>. It also reflects a strong commitment from all partners involved—Murabbi, FDE, and NUST—to create an inclusive, skill-oriented educational ecosystem.</p></div></section><footer style="margin-top: 3rem; padding: 1.5rem; border: 2px solid #000; background: #f5f5f5;"><p style="font-size: 1.2rem; font-weight: bold; margin: 0; text-align: center;">Thank you to Mr. Wani and the leadership at FDE for believing in the potential of our youth and investing in their future. The digital revolution in education has truly begun!</p></footer></article>`,
+      Date: "Febuary 7, 2025",
+    },
+    {
+      Title:"Tech Titan Robotics Competition: Igniting Innovation Under the 75 Coding Fellows Project",
+      Image: "/news/tt1/tech (7).jpg",
+      Description: `<article style="padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; max-width: 100%;"><div style="margin-bottom: 2rem;"><p style="font-size: 1.1rem; margin-bottom: 1.5rem; text-align: justify;">An electrifying wave of innovation took over the National University of Sciences and Technology (NUST) as the much-awaited <strong>Tech Titan Robotics Competition</strong> officially kicked off under the umbrella of the <strong>75 Coding Fellows Project</strong>. This initiative, powered by <strong>Murabbi</strong>, <strong>Federal Directorate of Education (FDE)</strong>, and <strong>NUST</strong>, brought together the brightest young minds from FDE institutions across Islamabad.</p><p style="font-size: 1.1rem; margin-bottom: 2rem; text-align: justify;">From the very first day, students enthusiastically immersed themselves in robot assembly, advanced coding, and real-time problem-solving. Guided by mentors and inspired by their own creativity, these future tech leaders showcased a perfect blend of <strong>teamwork, innovation, and passion</strong>.</p></div><section style="margin: 2.5rem 0; padding: 1.5rem; border: 1px solid #ddd; background: #f9f9f9;"><h2 style="font-size: 1.4rem; font-weight: bold; margin-bottom: 1.5rem;">Competition Timeline</h2><ul style="list-style: none; padding: 0; margin: 0;"><li style="margin-bottom: 1.2rem; padding: 1rem; border-left: 4px solid #000; background: white;"><strong style="font-size: 1.1rem;">Day 1:</strong> Students began transforming their ideas into bots, laying the foundation with smart code and strategic thinking.</li><li style="margin-bottom: 1.2rem; padding: 1rem; border-left: 4px solid #000; background: white;"><strong style="font-size: 1.1rem;">Day 2:</strong> Intense training sessions and hands-on practice helped refine their skills under the expert guidance of NUST instructors.</li><li style="margin-bottom: 0; padding: 1rem; border-left: 4px solid #000; background: white;"><strong style="font-size: 1.1rem;">Day 3:</strong> With adrenaline rising, students prepared for the final showdown, driven by ambition and determination to succeed.</li></ul></section><div style="margin: 2rem 0;"><p style="font-size: 1.1rem; margin-bottom: 1.5rem; text-align: justify;">One of the highlights was an insightful reflection shared by a teacher from Islamabad Model College for Girls, who praised the dedication and curiosity displayed by the students. Their feedback echoed a common sentiment: <strong>this project is shaping the tech leaders of tomorrow</strong>.</p><p style="font-size: 1.1rem; margin-bottom: 2rem; text-align: justify;">As the grand finale approached, excitement reached new heights. The competition became not just a test of coding and robotics skills, but a <strong>celebration of creativity, collaboration, and futuristic learning</strong>.</p></div><footer style="margin-top: 3rem; padding: 1.5rem; border: 2px solid #000; background: #f5f5f5;"><p style="font-size: 1.2rem; font-weight: bold; margin: 0; text-align: center;">Let the best bot win – but in truth, every student walked away as a winner, equipped with confidence, competence, and a clearer vision for their future in tech.</p></footer></article>`,
+      Date: "January 15, 2025",
+      projects: [
+        {
+          id: 200,
+          name: "",
+          description: "Students built a chatbot to report broken streetlights, reducing neighborhood repair time by 48 hours.",
+          thumbnail: "/news/tt1/thumb.jpg",
+          gallery: [
+            {
+              id: 21,
+              src: "/news/tt1/thumb.jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 22,
+              src: "/news/tt1/tech (1).jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 23,
+              src: "/news/tt1/tech (2).jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 24,
+              src: "/news/tt1/tech (3).jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            }
+
+          ]
+        },
+        {
+          id: 201,
+          name: "",
+          description: "Students built a chatbot to report broken streetlights, reducing neighborhood repair time by 48 hours.",
+          thumbnail: "/news/tt1/tech (4).jpg",
+          gallery: [
+            {
+              id: 2011,
+              src: "/news/tt1/tech (4).jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2012,
+              src: "/news/tt1/tech (5).jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2013,
+              src: "/news/tt1/tech (6).jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2014,
+              src: "/news/tt1/tech (7).jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            }
+
+          ]
+        },
+        {
+          id: 202,
+          name: "",
+          description: "Students built a chatbot to report broken streetlights, reducing neighborhood repair time by 48 hours.",
+          thumbnail: "/news/tt1/tech (8).jpg",
+          gallery: [
+            {
+              id: 2021,
+              src: "/news/tt1/tech (8).jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2022,
+              src: "/news/tt1/tech (9).jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2023,
+              src: "/news/tt1/tech (10).jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2024,
+              src: "/news/tt1/tech (11).jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            }
+
+          ]
+        },
+        {
+          id: 203,
+          name: "",
+          description: "Students built a chatbot to report broken streetlights, reducing neighborhood repair time by 48 hours.",
+          thumbnail: "/news/tt1/tech (12).jpg",
+          gallery: [
+            {
+              id: 2031,
+              src: "/news/tt1/tech (12).jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2032,
+              src: "/news/tt1/tech (13).jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2033,
+              src: "/news/tt1/tech (14).jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            },
+            {
+              id: 2034,
+              src: "/news/tt1/tech (15).jpg",
+              alt: "IMCG,G-10/2, Islamabad - Chatbot Project"
+            }
+
+          ]
+        }
+      ]
+    },
     {
       Title: "Coding Fellows Prepare Islamabad Students for Landmark Tech Titan Competition",
       Image: "/news/school/11.jpg",
@@ -294,12 +413,6 @@ export const newsData :NewsItem[] = [
         }
       ]
     },
-    // {
-    //   Title: "Murabbi’s National Tech Olympiad – A Celebration of Student Innovation",
-    //   Image: "/news/codin7.jpg",
-    //   Description:`<div style="max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; font-family: Arial, sans-serif;"><p style="margin-bottom: 20px; text-align: justify;">Murabbi, in partnership with the <strong>Ministry of Federal Education</strong> and <strong>NUST</strong>, hosted Pakistan's first <strong>National Tech Olympiad</strong> on December 15, 2024, at the Federal Directorate of Education (FDE) Auditorium. The event showcased projects from <strong>5,000+ students</strong> across 155 Islamabad schools participating in the <em>"Coding, Robotics, and AI Learning"</em> initiative.</p><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Student Achievements: Curriculum in Action</strong></h3><p style="margin-bottom: 15px; text-align: justify;">Projects aligned with Murabbi's open-source curriculum, designed using Oxford International's framework and IBM's AI tools:</p><ol style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 15px;"><strong>Coding & AI</strong>:<ul style="margin: 8px 0; padding-left: 20px;"><li style="margin-bottom: 6px;"><strong>Urdu Chatbots</strong>: Students from <em>Islamabad Model College for Girls F-6/2</em> built chatbots to teach Urdu grammar.</li><li style="margin-bottom: 6px;"><strong>Math Quiz Games</strong>: Scratch-based games by Grade 3 students in G-7/3 schools.</li></ul></li><li style="margin-bottom: 15px;"><strong>Robotics</strong>:<ul style="margin: 8px 0; padding-left: 20px;"><li style="margin-bottom: 6px;"><strong>Low-Cost Innovations</strong>: Solar-powered crop monitoring robots by students in rural <strong>Bara Kau</strong>, using Murabbi's open-source guides.</li><li style="margin-bottom: 6px;"><strong>Disaster Tech</strong>: Landslide detection models from <em>IMCB Mingora</em> (Swat), later adopted by local authorities.</li></ul></li><li style="margin-bottom: 15px;"><strong>Cyber Safety</strong>:<ul style="margin: 8px 0; padding-left: 20px;"><li style="margin-bottom: 6px;">Interactive games detecting fake news, inspired by Google's <em>"Be Internet Awesome"</em> modules.</li></ul></li></ol><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Program Partnerships</strong></h3><ul style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 10px;"><strong>IBM</strong>: Provided API access for AI projects and judging support.</li><li style="margin-bottom: 10px;"><strong>NUST</strong>: Technical mentorship for robotics entries.</li><li style="margin-bottom: 10px;"><strong>Federal Ministry</strong>: Funded awards and logistics.</li></ul><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Judging & Recognition</strong></h3><ul style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 10px;"><strong>Panel</strong>: NUST faculty, Ministry officials, and IBM's EdTech advisors.</li><li style="margin-bottom: 10px;"><strong>Awards</strong>:<ul style="margin: 8px 0; padding-left: 20px;"><li style="margin-bottom: 6px;"><strong>Grand Prize</strong>: <em>IMSB Tarnol</em> for a water purification robot using Arduino sensors.</li><li style="margin-bottom: 6px;"><strong>Community Impact</strong>: <em>IMCG Golra</em> girls' team for menstrual health awareness animations.</li></ul></li></ul><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Key Metrics</strong></h3><ul style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 10px;"><strong>Participation</strong>: 200+ projects submitted via Murabbi's LMS.</li><li style="margin-bottom: 10px;"><strong>Gender Equity</strong>: 40% of winning teams led by female students.</li><li style="margin-bottom: 10px;"><strong>Rural Reach</strong>: 15% of entries from schools like <strong>Sohan</strong> and <strong>Bara Kau</strong>.</li></ul><h3 style="margin: 30px 0 15px 0; font-size: 1.3em; border-bottom: 2px solid #333; padding-bottom: 5px;"><strong>Next Steps</strong></h3><ol style="margin: 15px 0; padding-left: 25px;"><li style="margin-bottom: 10px;"><strong>Curriculum Refinement</strong>: Update LMS modules based on Olympiad feedback.</li><li style="margin-bottom: 10px;"><strong>Rural Expansion</strong>: Deploy solar-powered LMS hubs to 30 additional Islamabad schools by June 2025.</li><li style="margin-bottom: 10px;"><strong>Teacher Training</strong>: Host advanced workshops for Fellows on AI/robotics pedagogy.</li></ol><p style="margin: 30px 0 20px 0; padding: 20px; border: 2px solid #ddd; text-align: center; font-size: 1.1em; font-weight: bold;"><strong>Quote</strong>: <em>"These projects prove tech education isn't about gadgets—it's about solving real-world problems."</em><br><span style="margin-top: 10px; display: inline-block; font-size: 0.9em; font-weight: normal;">– <strong>Dr. Nazir Perwaiz</strong>, CEO, Murabbi</span></p></div>`,
-    //   Date: "January 15, 2025",
-    // },
     {
       Title: "Murabbi in Action – Tech Education Ignites Islamabad’s Classrooms",
       Image: "/SchoolProgress/murabbi.jpg",
