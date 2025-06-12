@@ -144,7 +144,7 @@ const SummerCampSection = () => {
             {/* CTA Button */}
             <a
               target="_blank"
-              href="https://mail.google.com/mail/?view=cm&to=murabbi.socials@gmail.com&su=Event%20Registration&body=I%20would%20like%20to%20register."
+              href="https://forms.gle/nw5d9cefwNWadNzx8"
               className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm"
             >
               Register Now
