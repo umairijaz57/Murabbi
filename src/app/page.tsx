@@ -15,6 +15,7 @@ import HeroSlider from "./homeComponents/HeroSlider";
 import InLayout from "./layouts/inlayout";
 import PageWrapper from "./layouts/pageLayout";
 import NewsList from "./news/components/NewsList";
+import UpcomingEvent from "./homeComponents/upcomingevent";
 
 const CardSlider = dynamic(() => import("./homeComponents/CardSlide"), {
   suspense: true,
@@ -28,6 +29,10 @@ export default async function Home() {
       {/* <Hero /> */}
       <HeroSlider />
       <PageWrapper home={true}>
+        <InLayout upcoming={true}>
+          <CenteredHeading text="Upcoming Event" />
+          <UpcomingEvent />
+        </InLayout>
         <InLayout offer={true}>
           <CenteredHeading text="Events & Updates" />
           <NewsList home />

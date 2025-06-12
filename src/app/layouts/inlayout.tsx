@@ -8,6 +8,7 @@ interface Props {
   upper?: boolean;
   prereq?: boolean;
   events?: boolean;
+  upcoming?: boolean;
 }
 
 const InLayout = (props: Props) => {
@@ -16,14 +17,14 @@ const InLayout = (props: Props) => {
       <div
         id={props.id}
         className={`${
-          props.offer ? "bg-gray-200" : props.events ? "bg-white" : "bg-white"
+          props.offer ? "bg-gray-200" : props.events ? "bg-white" :  props.upcoming ? "bg-white": "bg-white"
         }`}
       >
         <main
           className={`grid overflow-hidden gap-4 md:gap-8  m-auto  ${
             props.events ? "relative overflow-y-hidden" : ""
           }  ${
-            props.offer ? "bg-gray-200" : props.events ? "bg-white" : "bg-white"
+            props.offer ? "bg-gray-200" : props.events ? "bg-white" : props.upcoming ? "bg-white" : "bg-white"
           } ${
             props.upper
               ? "px-2 md:px-20 lg:px-32 pt-8  main-ini bg-white "
