@@ -148,7 +148,7 @@ const SummerCampSection = () => {
             </a>
           </div>
 
-         <Tabs>
+         <Tabs defaultValue="age">
             <TabsList className="flex justify-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-500 p-1 rounded-full shadow-lg w-fit mx-auto">
               <TabsTrigger value="age" className="px-5 py-2 text-sm font-semibold text-white data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-xl rounded-full transition-all duration-300">Age 4-16</TabsTrigger>
               <TabsTrigger value="olevel" className="px-5 py-2 text-sm font-semibold text-white data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-xl rounded-full transition-all duration-300">O-Level</TabsTrigger>
