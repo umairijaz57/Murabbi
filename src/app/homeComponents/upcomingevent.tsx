@@ -36,7 +36,7 @@ const SummerCampSection = () => {
     "Arts & Crafts",
   ];
 
-  const renderPosters = (list) => (
+  const renderPosters = (list: typeof posters) => (
     <div className="relative">
       <div className="relative mb-4">
         <div className="aspect-[4/5] rounded-lg overflow-hidden shadow-lg bg-white max-w-sm mx-auto">
