@@ -80,7 +80,7 @@ const SummerCampSection = () => {
     <section className="py-12 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <div className="flex justify-center gap-2 text-3xl font-bold text-blue-600 mb-2">
+          <div className="flex flex-col md:flex-row item-center justify-center gap-2 text-3xl font-bold text-blue-600 mb-2">
             <h2 className="">{campData.title}</h2>
             <Typewriter
               options={{
