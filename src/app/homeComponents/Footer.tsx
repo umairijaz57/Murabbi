@@ -69,10 +69,10 @@ const Footer = (props: Props) => {
                     Resources
                   </a>
                 </li>
-                <Link href="/resources#New">
+                <Link href="/news">
                   <li className="mb-4 text-sm">News</li>
                 </Link>
-                <Link href="/resources#New">
+                <Link href="/news">
                   <li className="mb-4 text-sm">Blog</li>
                 </Link>
                 <Link href="/aboutus#faq">
