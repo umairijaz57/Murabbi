@@ -1,49 +1,46 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
+    darkMode: ['class'],
+    content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-    },
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      'white': '#ffffff',
-      'black': '#000000',
-      // 'gray': {
-      //   50:'#f9fafb',
-      //   100: '#f9fafb',
-      //   200: '#e5e7eb',
-      //   300: '#d1d5db',
-      //   400: '#9ca3af',
-      //   500: '#6b7280',
-      //   600: '#4b5563',
-      //   700: '#374151',
-      //   800: '#374151',
-      //   900: '#111827',
-      // },
-      // 'blue':{
-      //   50:'#eff6ff',
-      //   100: '#eff6ff',
-      //   200: '#bfdbfe',
-      //   300: '#bfdbfe',
-      //   400: '#60a5fa',
-      //   500: '#3b82f6',
-      //   600: '#000000',
-      //   700: '#1d4ed8',
-      //   800: '#1e40af',
-      //   900: '#1e3a8a',
-      // }
-      // ...
-    },
+  	extend: {
+  		backgroundImage: {
+  			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+  			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
+  		},
+  		keyframes: {
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
+  		}
+  	},
+  	colors: {
+  		transparent: 'transparent',
+  		current: 'currentColor',
+  		white: '#ffffff',
+  		black: '#000000'
+  	}
   },
   theme: {
     boxShadow: {
