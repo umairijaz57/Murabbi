@@ -25,7 +25,7 @@ export default async function Home() {
   return (
     <div className="relative">
       {/* <Update /> */}
-      <NavBar page="Home" home={true} />
+      <NavBar />
       {/* <Hero /> */}
       <HeroSlider />
       <PageWrapper home={true}>
@@ -40,9 +40,9 @@ export default async function Home() {
         <InLayout>
           <Info />
         </InLayout>
-        <InLayout offer={true}>
+        {/* <InLayout offer={true}>
           <Trainings />
-        </InLayout>
+        </InLayout> */}
         <InLayout>
           <CenteredHeading text="Best Courses" />
           <Description
