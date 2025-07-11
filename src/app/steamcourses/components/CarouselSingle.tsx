@@ -43,6 +43,7 @@ export const CarouselSingle: React.FC<CarouselSingleProps> = ({
 
 
   return (
+    <>
     <div
       className={`relative w-full h-full overflow-hidden ${containerClass}`}
       onMouseEnter={() => setPaused(true)}
@@ -56,7 +57,7 @@ export const CarouselSingle: React.FC<CarouselSingleProps> = ({
       >
         {items.map((item, i) => (
           <div
-            key={i}
+          key={i}
             className="w-full h-full flex-shrink-0 flex justify-center items-center"
             style={{ minWidth: '100%' }}
           >
@@ -65,13 +66,16 @@ export const CarouselSingle: React.FC<CarouselSingleProps> = ({
         ))}
       </div>
 
-      {/* Next Button */}
-      <div 
-          className="absolute top-1/2 right-0 -translate-y-1/2  z-[9999]" 
-          onClick={handleNext}
-        >
-          <CustomButton />
-        </div>
+      {items.length > 1 &&(
+        <div 
+  className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-3/2 z-10" 
+  onClick={handleNext}
+>
+  <CustomButton />
+</div>
+      )}
       </div>
+
+          </>
   );
 };

@@ -40,11 +40,7 @@ export const CourseDetailContent = () => {
           <Image alt="" width={10000} height={1000} src={"/steamgallery/ai/2.jpg" } />,
           <Image alt="" width={10000} height={1000} src={"/steamgallery/ai/3.jpg" } />,
       ]}
-      nextButton={
-        <div className="size-10 lg:size-16 pr-2 xs:pr-0 flex item-center justify-center">
-          <CustomButton outerColor={"#FCBA42"} innerColor={"#FFFFFF"}/>
-        </div>
-      } />
+      />
     </>,
 
     "CYBER SECURITY": <>
@@ -53,11 +49,7 @@ export const CourseDetailContent = () => {
           <Image alt="" width={10000} height={1000} src={"/steamgallery/cybersec/2.jpg" } />,
           <Image alt="" width={10000} height={1000} src={"/steamgallery/cybersec/3.jpg" } />,
       ]}
-      nextButton={
-        <div className="size-10 lg:size-16 pr-2 xs:pr-0 flex item-center justify-center">
-          <CustomButton outerColor={"#FCBA42"} innerColor={"#FFFFFF"}/>
-        </div>
-      } />
+      />
     </>,
 
     "ROBOTICS": <>
@@ -67,16 +59,11 @@ export const CourseDetailContent = () => {
          <Image alt="" width={10000} height={1000} src={"/steamgallery/robotics/2.jpg" } />,
          <Image alt="" width={10000} height={1000} src={"/steamgallery/robotics/3.jpg" } />,
       ]}
-      nextButton={
-        <div className="size-10 lg:size-16 pr-2 xs:pr-0">
-          <CustomButton outerColor={"#FCBA42"} innerColor={"#FFFFFF"} />
-        </div>
-      } />
+      />
     </>,
 
   }
 
-  // Get the two courses that are not currently opened
   const getOtherCourses = () => {
     const allCourses = ["ROBOTICS", "CYBER SECURITY", "ARTIFICIAL INTELEGENCE"] as const
     return allCourses.filter(course => course !== opened)
