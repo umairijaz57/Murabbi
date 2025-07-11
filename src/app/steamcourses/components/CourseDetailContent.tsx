@@ -62,7 +62,7 @@ export const CourseDetailContent = () => {
 
     "ROBOTICS": <>
       <CarouselSingle containerClass={"size-full"} items={[
-        <video src="/video.mp4" autoPlay loop ></video>,
+        <video src="/video.mp4" autoPlay loop muted></video>,
          <Image alt="" width={10000} height={1000} src={"/steamgallery/robotics/1.jpg" } />,
          <Image alt="" width={10000} height={1000} src={"/steamgallery/robotics/2.jpg" } />,
          <Image alt="" width={10000} height={1000} src={"/steamgallery/robotics/3.jpg" } />,
