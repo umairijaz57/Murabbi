@@ -57,7 +57,7 @@ const Ambition = (props: Props) => {
         <div className=" w-[80%] sm:w-[110%] h-[95%]  sm:h-[115%] absolute border-8 border-blue-600 z-40 top-[3rem] sm:top-[2rem] left-[2rem] sm:-left-[4rem] "></div>
         <div className=" absolute w-[90%] h-[80%] sm:h-full border border-blue-600 -bottom-[0rem]  sm:-bottom-[4rem] overflow-hidden -left-[0rem]  sm:-left-[6rem] ">
           <Image
-            src="/aboutus/ambition2.jpg"
+            src="/aboutus/DrNazia.jpg"
             alt=""
             layout="fill"
             style={{ objectFit: "cover", objectPosition: "25% 0%" }}
