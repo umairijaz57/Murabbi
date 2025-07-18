@@ -16,6 +16,7 @@ import InLayout from "./layouts/inlayout";
 import PageWrapper from "./layouts/pageLayout";
 import NewsList from "./news/components/NewsList";
 import UpcomingEvent from "./homeComponents/upcomingevent";
+import Testimonial from "./homeComponents/Testimonial";
 
 const CardSlider = dynamic(() => import("./homeComponents/CardSlide"), {
   suspense: true,
@@ -57,7 +58,8 @@ export default async function Home() {
         </InLayout>
         <Background bg={true} />
         <InLayout offer={true}>
-          <Testimonials />
+          {/* <Testimonials /> */}
+          <Testimonial />
         </InLayout>
       </PageWrapper>
       <Footer />
