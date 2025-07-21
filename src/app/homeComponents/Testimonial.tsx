@@ -41,6 +41,12 @@ export default function Testimonial() {
           containerClass={"w-full h-full"}
           items={[
             <video
+              src="/testimonials/p0.mp4"
+              className="rounded-lg shadow-md"
+              autoPlay
+              loop
+            ></video>,
+             <video
               src="/testimonials/p1.mp4"
               className="rounded-lg shadow-md"
               autoPlay

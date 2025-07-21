@@ -6,8 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState, useCallback } from "react"
 import { BsArrowRightShort, BsPlay, BsPause, BsChevronLeft, BsChevronRight } from "react-icons/bs"
-import { motion } from "framer-motion"
-import { Repeat } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
 
 // Types
 interface SlideImages {
@@ -19,61 +18,53 @@ interface SlideImages {
 interface SlideData {
   title: string
   subtitle: string
-  highlight: string
+  description: string
+  badge: string
 }
 
 // Main slider images
-const images: string[] = [
-  "/heroslider/hero_1",
-  "/heroslider/hero_2",
-  "/heroslider/hero_3",
-  "/heroslider/hero_4",
-]
+const images: string[] = ["/heroslider/hero_1", "/heroslider/hero_2", "/heroslider/hero_3"]
 
 // Different images for staggered layout
 const staggeredImages: SlideImages[] = [
   {
-    main: "/heroslider/hero_1.jpg",
-    top: "/heroslider/hero_2.jpg",
-    bottom: "/heroslider/hero_3.jpg",
+    main: "/heroslider/heroS2.jpg",
+    top: "/heroslider/heroS5.jpg",
+    bottom: "/heroslider/heroS2.jpeg",
   },
   {
-    main: "/heroslider/hero_2.jpg",
-    top: "/heroslider/hero_4.jpg",
-    bottom: "/heroslider/hero_1.jpg",
-  },
-  {
-    main: "/heroslider/hero_4.jpg",
-    top: "/heroslider/hero_3.jpg",
-    bottom: "/heroslider/hero_2.jpg",
+    main: "/heroslider/heroS3.jpg",
+    top: "/heroslider/heroS1.jpg",
+    bottom: "/heroslider/hero10.jpg",
   },
   {
     main: "/heroslider/hero_3.jpg",
-    top: "/heroslider/hero_1.jpg",
-    bottom: "/heroslider/hero_4.jpg",
+    top: "/heroslider/hero4.jpg",
+    bottom: "/heroslider/hero2.jpg",
   },
 ]
 
 const slideData: SlideData[] = [
   {
-    title: "Advanced Learning",
-    subtitle: "Next-gen education technology",
-    highlight: "AI-Powered",
+    title: "Welcoming Young Minds from China",
+    subtitle: "Learning, Laughing & Growing Together at Murabbi",
+    description:
+      "This summer, we welcomed amazing students from China to our Murabbi family. Their journey has been full of joy, exploration, and cross-cultural bonding. Together, we’ve built memories that go beyond language — proving that friendship and learning have no borders.",
+    badge: "INNOVATION LEADER",
   },
   {
-    title: "Expert Instructors",
-    subtitle: "Industry professionals guide you",
-    highlight: "World-Class",
+    title: "Murabbi Summer Camp",
+    subtitle: "Big Dreams. Bright Minds. Beautiful Moments.",
+    description:
+      "This summer at Murabbi, young minds came together to explore, create, and grow. From hands-on STEAM activities to teamwork and fun-filled challenges, every day was a new adventure. We believe in building confident, curious learners — and this camp was a joyful step in that journey.",
+    badge: "Summer Camp",
   },
   {
-    title: "Interactive Sessions",
-    subtitle: "Engaging and dynamic learning",
-    highlight: "Live Classes",
-  },
-  {
-    title: "Career Growth",
-    subtitle: "Skills that advance your future",
-    highlight: "Job-Ready",
+    title: "Learn, Grow & Succeed",
+    subtitle: "with Murabbi",
+    description:
+      "Are you ready to take your career to the next level? Look no further than Murabbi, where our state-of-the-art training solutions will revolutionize the way you learn.",
+    badge: "EDUCATION SOLUTION",
   },
 ]
 
@@ -85,6 +76,33 @@ const containerVariants = {
     transition: {
       staggerChildren: 0.1,
       delayChildren: 0.2,
+    },
+  },
+}
+
+const slideInVariants = {
+  hidden: {
+    opacity: 0,
+    x: -50,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 15,
+      duration: 0.6,
+    },
+  },
+  exit: {
+    opacity: 0,
+    x: 50,
+    y: -20,
+    transition: {
+      duration: 0.3,
     },
   },
 }
@@ -106,32 +124,12 @@ const headingVariants = {
       duration: 0.8,
     },
   },
-}
-
-const staggerTextVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.08,
-    },
-  },
-}
-
-const letterVariants = {
-  hidden: {
+  exit: {
     opacity: 0,
-    x: -50,
-    y: 20,
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    y: 0,
+    x: 100,
+    scale: 0.8,
     transition: {
-      type: "spring",
-      stiffness: 120,
-      damping: 12,
+      duration: 0.4,
     },
   },
 }
@@ -149,7 +147,15 @@ const fadeInVariants = {
     transition: {
       duration: 0.8,
       ease: "easeOut",
-      delay: 0.4,
+      delay: 0.2,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -30,
+    filter: "blur(10px)",
+    transition: {
+      duration: 0.3,
     },
   },
 }
@@ -167,7 +173,15 @@ const buttonVariants = {
     transition: {
       duration: 0.6,
       ease: "easeOut",
-      delay: 0.6,
+      delay: 0.4,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: 20,
+    scale: 0.9,
+    transition: {
+      duration: 0.3,
     },
   },
 }
@@ -227,27 +241,8 @@ export default function HeroSlider() {
     instanceRef.current?.prev()
   }, [instanceRef])
 
-  const AnimatedText = ({ text, className, shouldAnimate = true }: { text: string; className?: string; shouldAnimate?: boolean }) => {
-    return (
-      <motion.div 
-        variants={staggerTextVariants} 
-        initial={shouldAnimate ? "hidden" : "visible"} 
-        animate="visible" 
-        className={className}
-      >
-        {text.split("").map((char, index) => (
-          <motion.span
-            key={index}
-            variants={letterVariants}
-            className="inline-block"
-            style={{ whiteSpace: char === " " ? "pre" : "normal" }}
-          >
-            {char}
-          </motion.span>
-        ))}
-      </motion.div>
-    )
-  }
+  // Get current slide data
+  const currentSlideData = slideData[currentSlide]
 
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 overflow-hidden">
@@ -255,7 +250,6 @@ export default function HeroSlider() {
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.08),transparent_50%)]" />
-
         {/* Animated circles - responsive sizes */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-10 left-4 sm:top-20 sm:left-20 w-16 h-16 sm:w-32 sm:h-32 border border-blue-200/50 rounded-full animate-pulse" />
@@ -274,79 +268,90 @@ export default function HeroSlider() {
       <div className="min-h-screen flex flex-col lg:grid lg:grid-cols-2 gap-0">
         {/* Text Content */}
         <div className="relative z-10 flex flex-col justify-center px-4 sm:px-6 lg:px-16 py-8 sm:py-12 lg:py-0 order-2 lg:order-1">
-          <motion.div 
-            className="max-w-xl mx-auto lg:mx-0 space-y-4 sm:space-y-6 lg:space-y-8 text-center lg:text-left" 
-            variants={containerVariants} 
-            initial={!hasAnimated ? "hidden" : "visible"} 
-            animate="visible"
-          >
-            {/* Badge */}
-            <motion.div className="inline-flex items-center justify-center space-x-2 sm:space-x-3 px-3 sm:px-6 py-2 sm:py-3 bg-white/80 backdrop-blur-sm border border-blue-200/60 rounded-full transition-all duration-300 shadow-sm">
-              <div className="relative">
-                <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
-                <div className="w-2 h-2 bg-blue-500 rounded-full absolute top-0 animate-ping" />
-              </div>
-              <span className="text-xs sm:text-sm font-semibold text-blue-600 tracking-wide">EDUCATION SOLUTION</span>
-            </motion.div>
-
-            {/* Heading */}
-            <div className="space-y-3 sm:space-y-4 lg:space-y-6">
-              <div className="overflow-hidden">
-                <motion.h1
-                  variants={headingVariants}
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight text-gray-900"
-                >
-                  <AnimatedText text="Learn, Grow &" className="block" shouldAnimate={!hasAnimated} />
-                  <motion.span
-                    variants={headingVariants}
-                    className="block text-transparent bg-gradient-to-r from-blue-600 via-blue-400 to-pink-600 bg-clip-text"
-                  >
-                    <AnimatedText text="Succeed" shouldAnimate={!hasAnimated} />
-                  </motion.span>
-                </motion.h1>
-              </div>
-              <motion.div variants={fadeInVariants} className="space-y-2">
-                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
-                  with <span className="text-blue-600">Murabbi</span>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Description */}
-            <motion.p variants={fadeInVariants} className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed px-4 sm:px-0">
-              Are you ready to take your career to the next level? Look no further than Murabbi, where our
-              state-of-the-art training solutions will revolutionize the way you learn.
-            </motion.p>
-
-            {/* Buttons */}
-            <motion.div variants={buttonVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6 px-4 sm:px-0">
-              <Link href="/aboutus" className="w-full sm:w-auto">
-                <motion.button
-                  className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-blue-900 text-white font-bold rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="relative flex items-center justify-center gap-2">
-                    Get Started Now
-                    <BsArrowRightShort
-                      size={20}
-                      className="group-hover:translate-x-1 transition-transform duration-300"
-                    />
-                  </span>
-                </motion.button>
-              </Link>
-              <motion.button
-                onClick={togglePlayPause}
-                className="w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 bg-white/80 backdrop-blur-sm border border-blue-900 text-gray-700 rounded-2xl hover:bg-gray-50/80 transition-all duration-300 shadow-sm hover:shadow-md"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+          <div className="max-w-xl mx-auto lg:mx-0 space-y-4 sm:space-y-6 lg:space-y-8 text-center lg:text-left">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentSlide}
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                className="space-y-4 sm:space-y-6 lg:space-y-8"
               >
-                {isPlaying ? <BsPause size={18} /> : <BsPlay size={18} />}
-                <span className="font-medium text-sm sm:text-base">{isPlaying ? "Pause" : "Play"} Tour</span>
-              </motion.button>
-            </motion.div>
-          </motion.div>
+                {/* Badge */}
+                <motion.div
+                  variants={slideInVariants}
+                  className="inline-flex items-center justify-center space-x-2 sm:space-x-3 px-3 sm:px-6 py-2 sm:py-3 bg-white/80 backdrop-blur-sm border border-blue-200/60 rounded-full transition-all duration-300 shadow-sm"
+                >
+                  <div className="relative">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+                    <div className="w-2 h-2 bg-blue-500 rounded-full absolute top-0 animate-ping" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-semibold text-blue-600 tracking-wide">
+                    {currentSlideData.badge}
+                  </span>
+                </motion.div>
+
+                {/* Heading */}
+                <div className="space-y-3 sm:space-y-4 lg:space-y-6">
+                  <div className="overflow-hidden">
+                    <motion.h1
+                      variants={headingVariants}
+                      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight text-gray-900"
+                    >
+                      <span className="block text-transparent bg-gradient-to-r from-blue-600  to-blue-900 bg-clip-text">
+                        {currentSlideData.title}
+                      </span>
+                    </motion.h1>
+                  </div>
+                  <motion.div variants={fadeInVariants} className="space-y-2">
+                    <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">{currentSlideData.subtitle}
+                    </div>
+                  </motion.div>
+                </div>
+
+                {/* Description */}
+                <motion.p
+                  variants={fadeInVariants}
+                  className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed px-4 sm:px-0"
+                >
+                  {currentSlideData.description}
+                </motion.p>
+
+                {/* Buttons */}
+                <motion.div
+                  variants={buttonVariants}
+                  className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6 px-4 sm:px-0"
+                >
+                  <Link href="/aboutus" className="w-full sm:w-auto">
+                    <motion.button
+                      className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-blue-900 text-white font-bold rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <span className="relative flex items-center justify-center gap-2">
+                        Get Started Now
+                        <BsArrowRightShort
+                          size={20}
+                          className="group-hover:translate-x-1 transition-transform duration-300"
+                        />
+                      </span>
+                    </motion.button>
+                  </Link>
+                  <motion.button
+                    onClick={togglePlayPause}
+                    className="w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 bg-white/80 backdrop-blur-sm border border-blue-900 text-gray-700 rounded-2xl hover:bg-gray-50/80 transition-all duration-300 shadow-sm hover:shadow-md"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {isPlaying ? <BsPause size={18} /> : <BsPlay size={18} />}
+                    <span className="font-medium text-sm sm:text-base">{isPlaying ? "Pause" : "Play"} Tour</span>
+                  </motion.button>
+                </motion.div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
 
         {/* Image Slider */}
@@ -413,13 +418,19 @@ export default function HeroSlider() {
                 onClick={prevSlide}
                 className="group w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-white/80 backdrop-blur-sm border border-gray-200/60 rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-50/80 transition-all duration-300 hover:scale-110 shadow-md"
               >
-                <BsChevronLeft size={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:-translate-x-1 transition-transform duration-300" />
+                <BsChevronLeft
+                  size={16}
+                  className="sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:-translate-x-1 transition-transform duration-300"
+                />
               </button>
               <button
                 onClick={nextSlide}
                 className="group w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-white/80 backdrop-blur-sm border border-gray-200/60 rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-50/80 transition-all duration-300 hover:scale-110 shadow-md"
               >
-                <BsChevronRight size={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform duration-300" />
+                <BsChevronRight
+                  size={16}
+                  className="sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform duration-300"
+                />
               </button>
             </div>
 
@@ -437,11 +448,15 @@ export default function HeroSlider() {
                     onClick={togglePlayPause}
                     className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-500 to-blue-900 rounded-full flex items-center justify-center text-white hover:shadow-lg transition-all duration-300 hover:scale-110"
                   >
-                    {isPlaying ? <BsPause size={12} className="sm:w-4 sm:h-4" /> : <BsPlay size={12} className="sm:w-4 sm:h-4" />}
+                    {isPlaying ? (
+                      <BsPause size={12} className="sm:w-4 sm:h-4" />
+                    ) : (
+                      <BsPlay size={12} className="sm:w-4 sm:h-4" />
+                    )}
                   </button>
                 </div>
               </div>
-            </div>            
+            </div>
           </div>
         </div>
       </div>
