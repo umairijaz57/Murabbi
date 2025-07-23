@@ -1,7 +1,7 @@
 import React from "react";
-import { SlidingDiv } from "../steamcourses/components/SlidingDiv";
-import { FadeIn } from "../steamcourses/components/FadeIn";
-import { CarouselSingle } from "../steamcourses/components/CarouselSingle";
+import { SlidingDiv } from "../whatweoffer/components/SlidingDiv";
+import { FadeIn } from "../whatweoffer/components/FadeIn";
+import { CarouselSingle } from "../whatweoffer/components/CarouselSingle";
 
 export default function Testimonial() {
   return (

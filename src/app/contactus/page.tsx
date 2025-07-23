@@ -6,13 +6,14 @@ import InLayout from "@/app/layouts/inlayout";
 import Info from "./components/info";
 import Form from "./components/Form";
 import NewsLetter from "./components/newLetter";
+import { Navbar } from "../homeComponents/NavbarL";
 
 type Props = {};
 
 const Page = (props: Props) => {
   return (
     <div>
-      <NavBar page="Contact Us" />
+      <Navbar />
       <PageWrapper>
         <InLayout>
           <Info />

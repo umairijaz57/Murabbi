@@ -12,6 +12,7 @@ import {
   Heading,
   NavBar,
 } from "@/app/homeComponents";
+import { Navbar } from "@/app/homeComponents/NavbarL";
 
 async function getData() {
   return courses;
@@ -21,7 +22,7 @@ async function Page() {
   const courses: CourseDB[] = await getData();
   return (
     <div>
-      <NavBar about />
+      <Navbar />
       <Hero
         image="/hero/hightech.jpg"
         heading="High Tech Trainings"

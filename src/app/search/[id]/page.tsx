@@ -7,6 +7,7 @@ import PageWrapper from "../../layouts/pageLayout";
 import CenteredHeading from "../../homeComponents/centeredHeading";
 import Results from "../components/results";
 import courses from "@/app/data/courses";
+import { Navbar } from "@/app/homeComponents/NavbarL";
 
 type Props = {};
 
@@ -27,7 +28,7 @@ const Page = ({ params }: any) => {
 
   return (
     <>
-      <NavBar />
+    <Navbar />
       <PageWrapper>
         <CompLayout>
           <CenteredHeading text={`${searchResults.length} results for "${decodeURIComponent(id)}"`} />

@@ -5,11 +5,12 @@ import PageWrapper from "../layouts/pageLayout";
 import InLayout from "../layouts/inlayout";
 import Hero from "./components/hero";
 import NewsLetter from "../contactus/components/newLetter";
+import { Navbar } from "../homeComponents/NavbarL";
 
 const page = () => {
   return (
     <div>
-      <NavBar about page="News" />
+      <Navbar />
       <Hero />
       <PageWrapper>
         <InLayout>

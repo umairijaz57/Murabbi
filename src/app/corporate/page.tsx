@@ -7,13 +7,14 @@ import Criteria from "./components/Criteria";
 import CenteredHeading from "../homeComponents/centeredHeading";
 import Benefits from "./components/Benefits";
 import Footer from "../homeComponents/Footer";
+import { Navbar } from "../homeComponents/NavbarL";
 
 type Props = {};
 
 function page({}: Props) {
   return (
     <>
-      <NavBar />
+      <Navbar />
       <div className="h-20"></div>  
       <PageWrapper>
         <div></div>

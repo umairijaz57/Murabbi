@@ -11,6 +11,7 @@ import {
 import InLayout from "../layouts/inlayout";
 import PageWrapper from "../layouts/pageLayout";
 import Grid from "./components/Grid";
+import { Navbar } from "../homeComponents/NavbarL";
 
 async function getData() {
   const offers: Offer[] = [
@@ -67,7 +68,7 @@ function page() {
   }, []);
   return (
     <div>
-      <NavBar page="Trainings" />
+      <Navbar />
       <Grid />
       <PageWrapper>
         <InLayout>

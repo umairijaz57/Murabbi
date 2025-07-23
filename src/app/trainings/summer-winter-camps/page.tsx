@@ -6,6 +6,7 @@ import Hero from "../components/hero";
 import { Courses, Description, Footer, Heading, NavBar, } from "@/app/homeComponents";
 import courses from "../../../utils/courses.json";
 import { CourseDB } from "@/types/propsType";
+import { Navbar } from "@/app/homeComponents/NavbarL";
 
 async function getData() {
   return courses;
@@ -16,7 +17,7 @@ async function Page() {
 
   return (
     <div>
-      <NavBar about />
+      <Navbar />
       <Hero
       image="/hero/summer.jpg"
         heading="Summer/ Winter Camps"

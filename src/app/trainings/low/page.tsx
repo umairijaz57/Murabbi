@@ -6,6 +6,7 @@ import Hero from "../components/hero";
 import { Courses, Description, Footer, Heading, NavBar, } from "@/app/homeComponents";
 import courses from "../../../utils/courses.json";
 import { CourseDB } from "@/types/propsType";
+import { Navbar } from "@/app/homeComponents/NavbarL";
 
 async function getData() {
   return courses;
@@ -16,7 +17,7 @@ async function Page() {
 
   return (
     <div>
-      <NavBar about />
+      <Navbar />
       <Hero image="/hero/low-tech.jpg" heading="Low Tech Trainings" text="Unlock your creative potential with Murabbi's hands-on courses. Explore graphic design, UI/UX, video production, social media marketing, and more. Become a master in creativity and digital marketing, and open doors to new opportunities for success. Whether you're troubleshooting PCBs or delving into mechanical design, our courses equip you to make a real impact in the digital realm." />
       <PageWrapper>
       <InLayout>

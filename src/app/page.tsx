@@ -17,6 +17,7 @@ import PageWrapper from "./layouts/pageLayout";
 import NewsList from "./news/components/NewsList";
 import UpcomingEvent from "./homeComponents/upcomingevent";
 import Testimonial from "./homeComponents/Testimonial";
+import { Navbar } from "./homeComponents/NavbarL";
 
 const CardSlider = dynamic(() => import("./homeComponents/CardSlide"), {
   suspense: true,
@@ -26,7 +27,7 @@ export default async function Home() {
   return (
     <div className="relative">
       {/* <Update /> */}
-      <NavBar />
+      <Navbar />
       {/* <Hero /> */}
       <HeroSlider />
       <PageWrapper home={true}>

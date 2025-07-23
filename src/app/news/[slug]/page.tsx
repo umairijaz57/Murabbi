@@ -8,6 +8,7 @@ import { useState } from "react";
 import ProjectGallery from "../components/ProjectGallery";
 import { newsData, toSlug } from "../constant/newsData";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // Import icons for navigation buttons
+import { Navbar } from "@/app/homeComponents/NavbarL";
 
 export default function NewsDetail({ params }: { params: { slug: string } }) {
   const [selectedProjectId, setSelectedProjectId] = useState<number | null>(
@@ -66,8 +67,7 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
   return (
     <>
     <div className="bg-gray-50 min-h-screen">
-      <NavBar page="News" />
-
+      <Navbar />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Image */}
         <motion.div

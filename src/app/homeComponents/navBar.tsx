@@ -17,7 +17,7 @@ type Props = {
 const links = [
   { href: "/", text: "Home" },
   { href: "/aboutus", text: "About Us" },
-  { href: "/offer", text: "Trainings" },
+  { href: "/whatweoffer", text: "What We Offer" },
   { href: "/news", text: "News" },
   { href: "/contactus", text: "Contact Us" },
 ];
@@ -344,7 +344,7 @@ const NavBar = (props: Props) => {
               {links.map((link, index) => {
                 return (
                   <div key={index}>
-                    {link.text === "Trainings" ? (
+                    {link.text === "What We Offer" ? (
                       <>
                         <li className="relative">
                           <button
@@ -354,7 +354,7 @@ const NavBar = (props: Props) => {
                             onMouseEnter={openDropdown}
                             onMouseLeave={setTimer}
                           >
-                            Trainings{" "}
+                            What We Offer{" "}
                             <svg
                               className="w-2.5 h-2.5 ml-2.5"
                               aria-hidden="true"
@@ -394,7 +394,7 @@ const NavBar = (props: Props) => {
                             >
                               <li>
                                 <Link
-                                  href="/trainings/high"
+                                  href="/whatweoffer/robotics"
                                   className={`block px-4 py-2 ${
                                     isNavbarFixed
                                       ? " hover:text-white hover:bg-blue-500"
@@ -403,7 +403,7 @@ const NavBar = (props: Props) => {
                                       : "hover:text-white hover:bg-blue-500"
                                   }     border-b-2 m-2 border-gray-400/50 `}
                                 >
-                                  High Tech
+                                  Robotics
                                 </Link>
                               </li>
                               <li>
@@ -417,7 +417,7 @@ const NavBar = (props: Props) => {
                                       : "hover:text-white hover:bg-blue-500"
                                   }     border-b-2 m-2 border-gray-400/50 `}
                                 >
-                                  Low Tech
+                                  Artificial Intelligence
                                 </Link>
                               </li>
                               <li>
@@ -431,7 +431,7 @@ const NavBar = (props: Props) => {
                                       : "hover:text-white hover:bg-blue-500"
                                   }     border-b-2 m-2 border-gray-400/50 `}
                                 >
-                                  Summer/Winter Camps
+                                  Cyber Security
                                 </Link>
                               </li>
 
@@ -446,7 +446,37 @@ const NavBar = (props: Props) => {
                                       : "hover:text-white hover:bg-blue-500"
                                   }     border-b-2 m-2 border-gray-400/50 mb-4 `}
                                 >
-                                  Workshops
+                                  Game Development
+                                </Link>
+                              </li>
+
+                              <li>
+                                <Link
+                                  href="/trainings/workshops"
+                                  className={`block px-4 py-2 ${
+                                    isNavbarFixed
+                                      ? " hover:text-white hover:bg-blue-500"
+                                      : props.home || props.about
+                                      ? "hover:bg-blue-500 "
+                                      : "hover:text-white hover:bg-blue-500"
+                                  }     border-b-2 m-2 border-gray-400/50 mb-4 `}
+                                >
+                                  Dare2Lead
+                                </Link>
+                              </li>
+
+                              <li>
+                                <Link
+                                  href="/trainings/workshops"
+                                  className={`block px-4 py-2 ${
+                                    isNavbarFixed
+                                      ? " hover:text-white hover:bg-blue-500"
+                                      : props.home || props.about
+                                      ? "hover:bg-blue-500 "
+                                      : "hover:text-white hover:bg-blue-500"
+                                  }     border-b-2 m-2 border-gray-400/50 mb-4 `}
+                                >
+                                  STEAM Camp
                                 </Link>
                               </li>
                             </ul>

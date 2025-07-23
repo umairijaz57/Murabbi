@@ -20,6 +20,7 @@ import Hero from "./components/hero";
 import FaqLayout from "../resources/layout/faq";
 import Faq from "../resources/components/Faq";
 import Ambition from "./components/Ambition";
+import { Navbar } from "../homeComponents/NavbarL";
 
 type Props = {};
 
@@ -64,7 +65,7 @@ const items = [
 const AboutUs = (props: Props) => {
   return (
     <div>
-      <NavBar about page="About Us" />
+      <Navbar />
       <Hero />
       <PageWrapper>
         <InLayout offer>

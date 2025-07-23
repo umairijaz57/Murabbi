@@ -10,6 +10,7 @@ import LeftComp from "../components/LeftComp";
 import RightComp from "../components/RightComp";
 import { useParams } from "next/navigation";
 import courses from "../../../utils/courses.json";
+import { Navbar } from "@/app/homeComponents/NavbarL";
 
 type Props = {};
 
@@ -29,7 +30,7 @@ async function Course({ params }: { params: { courseid: string } }) {
 
   return (
     <div>
-      <NavBar />
+      <Navbar />
       <PageWrapper>
         <InLayout>
           <CourseLayout>
