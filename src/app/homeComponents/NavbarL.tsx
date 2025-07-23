@@ -198,29 +198,6 @@ export const Navbar = () => {
                 >
                   What We Offer
                 </Link>
-                <div className="ml-4 mt-2 space-y-2">
-                  <Link 
-                    href="/whatweoffer/robotics" 
-                    className="block text-gray-600 hover:text-blue-900 transition-colors py-1"
-                    onClick={() => setOpened(false)}
-                  >
-                    Robotics
-                  </Link>
-                  <Link 
-                    href="/whatweoffer/#s" 
-                    className="block text-gray-600 hover:text-blue-900 transition-colors py-1"
-                    onClick={() => setOpened(false)}
-                  >
-                    Artificial Intelligence
-                  </Link>
-                  <Link 
-                    href="/services/cybersecurity" 
-                    className="block text-gray-600 hover:text-blue-900 transition-colors py-1"
-                    onClick={() => setOpened(false)}
-                  >
-                    Cyber Security
-                  </Link>
-                </div>
               </div>
               
              
@@ -234,7 +211,7 @@ export const Navbar = () => {
               </Link>
               
               <Link 
-                href="/contact" 
+                href="/contactus" 
                 className="text-lg font-medium text-gray-700 hover:text-blue-900 transition-colors py-2"
                 onClick={() => setOpened(false)}
               >
