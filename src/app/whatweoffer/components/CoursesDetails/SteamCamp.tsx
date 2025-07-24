@@ -66,7 +66,7 @@ export default function SteamCamp() {
           </div>
           <div>
             <p className="text-sm text-gray-500">Venue</p>
-            <p className="font-medium">NUST-SEECS Campus & Sports Complex</p>
+            <p className="font-medium">NUST-SEECS Campus</p>
           </div>
         </div>
       </div>
@@ -220,18 +220,6 @@ export default function SteamCamp() {
             </div>
           </div>
         </div>
-      </div>
-
-
-      {/* Prerequisites */}
-      <div className="bg-blue-50 rounded-lg p-4">
-        <h4 className="font-medium text-blue-900 mb-2">Prerequisites & Requirements</h4>
-        <ul className="text-sm space-y-1 text-gray-700">
-          <li>• Basic programming knowledge (Python preferred)</li>
-          <li>• Enthusiasm for learning and creativity</li>
-          <li>• Sports attire and equipment</li>
-          <li>• Laptop, notebook, and art supplies</li>
-        </ul>
       </div>
 
       {/* Special Features */}

@@ -26,7 +26,7 @@ export default function page() {
             <div className="w-full lg:w-1/2 flex justify-center">
               <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-md xl:max-w-lg aspect-square rounded-lg overflow-hidden shadow-lg">
                 <video
-                  src="/videosq.mp4"
+                  src="/robotics.mp4"
                   className="w-full h-full object-cover"
                   autoPlay
                   muted
