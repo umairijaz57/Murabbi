@@ -59,20 +59,20 @@ export default function page() {
         contentClass="text-sm sm:text-base md:text-lg lg:text-base xl:text-lg 2xl:text-xl leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-relaxed text-gray-700"
         list={[
           {
-            title: "Build & Train:",
-            content:
-              "Create chatbots, emoji detectors, and AI voice changers", 
+            title: "Day 1: AI Awakening – Python & Rule-Based Bots",
           },
           {
-            title: "Detect & Analyze",
-            content:
-              "Spot fake audio, analyze emotions, and explore fake news",
+            title: "Day 2: AI Vision – Image Recognition & Filters",
           },
           {
-            title: "Create & Compete",
-            content:
-              "Join a mini-AI hackathon and develop your own smart project",
+            title: "Day 3: AI Ears – Voice Cloning & Deepfake Detectives",
           },
+          {
+            title: "Day 4: AI Writers – Sentiment Analysis & Fake News",
+          },
+          {
+            title: "Day 5: AI Showdown – Hackathon & Career Paths",
+          }
         ]}
       />
     </div>

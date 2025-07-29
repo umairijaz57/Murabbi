@@ -47,21 +47,21 @@ const Ambition = (props: Props) => {
         <div className="absolute bottom-[0%] hidden sm:block -left-[5rem] h-20 w-20 rounded-tl-[3rem] rounded-bl-[1.5rem] bg-blue-600 animation-about"></div>
         <div className=" w-[90%] h-[70%] sm:w-full m-auto sm:h-full relative overflow-hidden borderx` border-blue-600 ">
           <Image
-            src="/aboutus/ambition1.jpg"
+            src="/aboutus/DrNazia.jpg"
             alt=""
             layout="fill"
             style={{ objectFit: "cover", objectPosition: "50% 30%" }}
-            className=" w-full z-20 "
+            className=" w-full z-20"
           />
         </div>
         <div className=" w-[80%] sm:w-[110%] h-[95%]  sm:h-[115%] absolute border-8 border-blue-600 z-40 top-[3rem] sm:top-[2rem] left-[2rem] sm:-left-[4rem] "></div>
         <div className=" absolute w-[90%] h-[80%] sm:h-full border border-blue-600 -bottom-[0rem]  sm:-bottom-[4rem] overflow-hidden -left-[0rem]  sm:-left-[6rem] ">
           <Image
-            src="/aboutus/DrNazia.jpg"
+            src="/aboutus/ambition1.jpg"
             alt=""
             layout="fill"
             style={{ objectFit: "cover", objectPosition: "25% 0%" }}
-            className=" w-full z-20"
+            className=" w-full z-20 "
           />
         </div>
       </div>

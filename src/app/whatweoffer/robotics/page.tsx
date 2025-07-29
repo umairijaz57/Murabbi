@@ -59,33 +59,33 @@ export default function page() {
           </div>
 
           {/* Bullet points section */}
-          {/* <SlidingDiv
+          <SlidingDiv
     direction={"top"}
     className="py-4 sm:py-6 md:py-8 lg:py-6 xl:py-8 mt-4 sm:mt-6 lg:mt-8"
   >
     <div className="max-w-4xl mx-auto">
-      <BulletList
-        contentClass="text-sm sm:text-base md:text-lg lg:text-base xl:text-lg 2xl:text-xl leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-relaxed text-gray-700"
-        list={[
-          {
-            title: "Hands-On Learning",
-            content:
-              "Kids build robots, explore AI, and learn by doing — sparking curiosity and confidence.",
-          },
-          {
-            title: "Future-Ready Skills",
-            content:
-              "We introduce age-appropriate concepts in AI, Robotics, and Cybersecurity.",
-          },
-          {
-            title: "Creative Expression",
-            content:
-              "From digital art to calligraphy, kids express themselves and grow in confidence.",
-          },
-        ]}
-      />
-    </div>
-  </SlidingDiv> */}
+          <BulletList
+            contentClass="text-sm sm:text-base md:text-lg lg:text-base xl:text-lg 2xl:text-xl leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-relaxed text-gray-700"
+            list={[
+              {
+                title: "Day 1: Kickoff + Intro to Robotics & ROS",
+              },
+              {
+                title: "Day 2: ROS Packages and Sensor Integration",
+              },
+              {
+                title: "Day 3: Robot Control and Navigation",
+              },
+              {
+                title: "Day 4: Computer Vision with OpenCV + ROS",
+              },
+              {
+                title: "Day 5: Mini Project + Demos",
+              }
+            ]}
+          />
+        </div>
+  </SlidingDiv>
         </div>
 
         <CustomAccordion

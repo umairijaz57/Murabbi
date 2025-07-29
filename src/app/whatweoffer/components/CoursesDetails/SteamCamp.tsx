@@ -5,7 +5,7 @@ import React from 'react'
 export default function SteamCamp() {
   return (
     <div className="space-y-8">
-      {/* Course Title */}
+      {/* Course Txitle */}
       <div>
         <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-blue-900 mb-2">
           STEAM Summer Camp: Complete Innovation Experience
@@ -32,7 +32,7 @@ export default function SteamCamp() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="flex items-center gap-3">
           <div className="bg-blue-100 p-2 rounded-full">
-            <UserCircle2 className="h-5 w-5 text-blue-700" />
+            <User className="h-5 w-5 text-blue-700" />
           </div>
           <div>
             <p className="text-sm text-gray-500">Audience</p>
@@ -66,7 +66,7 @@ export default function SteamCamp() {
           </div>
           <div>
             <p className="text-sm text-gray-500">Venue</p>
-            <p className="font-medium">NUST-SEECS Campus</p>
+            <p className="font-medium">NUST-SEECS Campus & Sports Complex</p>
           </div>
         </div>
       </div>
@@ -76,47 +76,47 @@ export default function SteamCamp() {
         <h3 className="text-lg font-semibold text-blue-900 mb-4">3-Week Program Structure</h3>
 
         <div className="space-y-6">
-          {/* Week 1 */}
+          {/* Week 1 - Robotics */}
           <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
-            <div className="bg-blue-600  text-white px-4 py-3">
-              <h4 className="font-bold text-lg">Week 1: Technology Foundation</h4>
-              <p className="text-sm opacity-90">Robotics, AI Basics, and Digital Creativity</p>
+            <div className=" bg-blue-600  text-white px-4 py-3">
+              <h4 className="font-bold text-lg">Week 1: Robotics & Computer Vision</h4>
+              <p className="text-sm opacity-90">CODE.MOVE.SENSE: Robots in Action</p>
             </div>
             <div className="p-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-3">
                   <div className="bg-blue-50 p-3 rounded">
-                    <p className="font-medium text-sm mb-2 text-blue-900">Days 1-2: Robotics Fundamentals</p>
+                    <p className="font-medium text-sm mb-2 text-blue-900">Days 1-2: ROS & Robotics Fundamentals</p>
                     <ul className="text-sm space-y-1 text-gray-700">
-                      <li>• Introduction to ROS and robot programming</li>
-                      <li>• Build and control basic robots</li>
-                      <li>• Sensor integration and navigation</li>
+                      <li>• Introduction to robotics and ROS architecture</li>
+                      <li>• Linux basics and sensor integration</li>
+                      <li>• Publisher/subscriber nodes</li>
                     </ul>
                   </div>
                   <div className="bg-green-50 p-3 rounded">
-                    <p className="font-medium text-sm mb-2 text-green-900">Days 3-4: AI & Machine Learning</p>
+                    <p className="font-medium text-sm mb-2 text-green-900">Days 3-4: Robot Control & Navigation</p>
                     <ul className="text-sm space-y-1 text-gray-700">
-                      <li>• Python programming and AI basics</li>
-                      <li>• Build chatbots and image recognition</li>
-                      <li>• Computer vision projects</li>
+                      <li>• Real-time robot control and motion</li>
+                      <li>• Computer vision with OpenCV + ROS</li>
+                      <li>• Obstacle avoidance and navigation</li>
                     </ul>
                   </div>
                 </div>
                 <div className="space-y-3">
                   <div className="bg-purple-50 p-3 rounded">
-                    <p className="font-medium text-sm mb-2 text-purple-900">Day 5: Creative Arts Integration</p>
+                    <p className="font-medium text-sm mb-2 text-purple-900">Day 5: Mini Robotics Project</p>
                     <ul className="text-sm space-y-1 text-gray-700">
-                      <li>• Digital art and design principles</li>
-                      <li>• 3D modeling and printing basics</li>
-                      <li>• Tech-art fusion projects</li>
+                      <li>• Team project development</li>
+                      <li>• Robot demos and presentations</li>
+                      <li>• Peer feedback sessions</li>
                     </ul>
                   </div>
                   <div className="bg-orange-50 p-3 rounded">
-                    <p className="font-medium text-sm mb-2 text-orange-900">Daily Activities</p>
+                    <p className="font-medium text-sm mb-2 text-orange-900">Special Activities</p>
                     <ul className="text-sm space-y-1 text-gray-700">
-                      <li>• Morning sports (30 mins)</li>
-                      <li>• Afternoon team building</li>
-                      <li>• Evening reflection sessions</li>
+                      <li>• Day 2: Sports session (Cricket/Football)</li>
+                      <li>• Day 4: Calligraphy workshop</li>
+                      <li>• Daily: Morning assembly & team building</li>
                     </ul>
                   </div>
                 </div>
@@ -124,47 +124,47 @@ export default function SteamCamp() {
             </div>
           </div>
 
-          {/* Week 2 */}
+          {/* Week 2 - Cybersecurity */}
           <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
-            <div className="bg-blue-600  text-white px-4 py-3">
-              <h4 className="font-bold text-lg">Week 2: Security & Creative Expression</h4>
-              <p className="text-sm opacity-90">Cybersecurity, Arts, and Physical Activities</p>
+            <div className="bg-blue-600 text-white px-4 py-3">
+              <h4 className="font-bold text-lg">Week 2: Cybersecurity & Digital Defense</h4>
+              <p className="text-sm opacity-90">Digital Defenders: Information Security Adventure</p>
             </div>
             <div className="p-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-3">
                   <div className="bg-red-50 p-3 rounded">
-                    <p className="font-medium text-sm mb-2 text-red-900">Days 6-8: Cybersecurity Deep Dive</p>
+                    <p className="font-medium text-sm mb-2 text-red-900">Days 6-7: Classical & Modern Encryption</p>
                     <ul className="text-sm space-y-1 text-gray-700">
-                      <li>• Classical and modern encryption</li>
-                      <li>• Network security and ethical hacking</li>
-                      <li>• Cryptocurrency and blockchain</li>
+                      <li>• Historical ciphers and codebreaking</li>
+                      <li>• Modern encryption and virus lab</li>
+                      <li>• Cryptography mathematics</li>
                     </ul>
                   </div>
-                  <div className="bg-pink-50 p-3 rounded">
-                    <p className="font-medium text-sm mb-2 text-pink-900">Days 9-10: Arts & Calligraphy</p>
+                  <div className="bg-amber-50 p-3 rounded">
+                    <p className="font-medium text-sm mb-2 text-amber-900">Days 8-9: Network Security & Hacking</p>
                     <ul className="text-sm space-y-1 text-gray-700">
-                      <li>• Traditional calligraphy techniques</li>
-                      <li>• Digital typography and design</li>
-                      <li>• Cultural art exploration</li>
+                      <li>• Network protocols and packet sniffing</li>
+                      <li>• WiFi security and ethical hacking</li>
+                      <li>• Hash functions and digital fingerprints</li>
                     </ul>
                   </div>
                 </div>
                 <div className="space-y-3">
                   <div className="bg-yellow-50 p-3 rounded">
-                    <p className="font-medium text-sm mb-2 text-yellow-900">Sports & Physical Activities</p>
+                    <p className="font-medium text-sm mb-2 text-yellow-900">Day 10: Cryptocurrency & Blockchain</p>
                     <ul className="text-sm space-y-1 text-gray-700">
-                      <li>• Cricket and football sessions</li>
-                      <li>• Swimming and fitness training</li>
-                      <li>• Team sports tournaments</li>
+                      <li>• Bitcoin and blockchain technology</li>
+                      <li>• Cryptocurrency transactions</li>
+                      <li>• Cybersecurity career paths</li>
                     </ul>
                   </div>
-                  <div className="bg-indigo-50 p-3 rounded">
-                    <p className="font-medium text-sm mb-2 text-indigo-900">Leadership Development</p>
+                  <div className="bg-pink-50 p-3 rounded">
+                    <p className="font-medium text-sm mb-2 text-pink-900">Special Activities</p>
                     <ul className="text-sm space-y-1 text-gray-700">
-                      <li>• Public speaking workshops</li>
-                      <li>• Project management basics</li>
-                      <li>• Peer mentoring activities</li>
+                      <li>• Day 7: Art & Design workshop</li>
+                      <li>• Day 9: Swimming & fitness session</li>
+                      <li>• Daily: Leadership development activities</li>
                     </ul>
                   </div>
                 </div>
@@ -172,47 +172,47 @@ export default function SteamCamp() {
             </div>
           </div>
 
-          {/* Week 3 */}
+          {/* Week 3 - AI */}
           <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
-            <div className="bg-blue-600  text-white px-4 py-3">
-              <h4 className="font-bold text-lg">Week 3: Integration & Innovation</h4>
-              <p className="text-sm opacity-90">Capstone Projects, Competitions, and Showcase</p>
+            <div className="bg-blue-600 text-white px-4 py-3">
+              <h4 className="font-bold text-lg">Week 3: Artificial Intelligence & Innovation</h4>
+              <p className="text-sm opacity-90">Smart Systems: AI Journey & Final Projects</p>
             </div>
             <div className="p-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-3">
-                  <div className="bg-emerald-50 p-3 rounded">
-                    <p className="font-medium text-sm mb-2 text-emerald-900">Days 11-13: Capstone Projects</p>
+                  <div className="bg-blue-50 p-3 rounded">
+                    <p className="font-medium text-sm mb-2 text-blue-900">Days 11-12: AI Fundamentals & Vision</p>
                     <ul className="text-sm space-y-1 text-gray-700">
-                      <li>• Multi-disciplinary team projects</li>
-                      <li>• Combine tech, arts, and innovation</li>
-                      <li>• Mentor-guided development</li>
+                      <li>• Python programming and AI chatbots</li>
+                      <li>• Image recognition and computer vision</li>
+                      <li>• Neural networks and machine learning</li>
                     </ul>
                   </div>
-                  <div className="bg-cyan-50 p-3 rounded">
-                    <p className="font-medium text-sm mb-2 text-cyan-900">Day 14: Innovation Fair</p>
+                  <div className="bg-green-50 p-3 rounded">
+                    <p className="font-medium text-sm mb-2 text-green-900">Days 13-14: Advanced AI & Projects</p>
                     <ul className="text-sm space-y-1 text-gray-700">
-                      <li>• Project presentations and demos</li>
-                      <li>• Peer and expert judging</li>
-                      <li>• Innovation awards ceremony</li>
+                      <li>• Voice cloning and deepfake detection</li>
+                      <li>• Sentiment analysis and NLP</li>
+                      <li>• Multi-disciplinary capstone projects</li>
                     </ul>
                   </div>
                 </div>
                 <div className="space-y-3">
-                  <div className="bg-rose-50 p-3 rounded">
-                    <p className="font-medium text-sm mb-2 text-rose-900">Day 15: Grand Finale</p>
+                  <div className="bg-emerald-50 p-3 rounded">
+                    <p className="font-medium text-sm mb-2 text-emerald-900">Day 15: Innovation Fair & Graduation</p>
                     <ul className="text-sm space-y-1 text-gray-700">
-                      <li>• Sports tournament finals</li>
-                      <li>• Art exhibition opening</li>
-                      <li>• Graduation ceremony</li>
+                      <li>• Final project presentations</li>
+                      <li>• Innovation awards ceremony</li>
+                      <li>• Graduation and certificates</li>
                     </ul>
                   </div>
                   <div className="bg-violet-50 p-3 rounded">
-                    <p className="font-medium text-sm mb-2 text-violet-900">Special Features</p>
+                    <p className="font-medium text-sm mb-2 text-violet-900">Special Activities</p>
                     <ul className="text-sm space-y-1 text-gray-700">
-                      <li>• Industry expert guest lectures</li>
-                      <li>• University campus tours</li>
-                      <li>• Career guidance sessions</li>
+                      <li>• Day 12: Traditional calligraphy session</li>
+                      <li>• Day 14: Sports tournament finals</li>
+                      <li>• Day 15: Art exhibition opening</li>
                     </ul>
                   </div>
                 </div>
@@ -222,24 +222,6 @@ export default function SteamCamp() {
         </div>
       </div>
 
-      {/* Special Features */}
-      <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-lg">
-        <h4 className="font-medium text-blue-900 mb-2">What Makes This Program Unique:</h4>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <ul className="text-xs sm:text-sm text-gray-700 space-y-1">
-            <li>• Complete STEAM education in one program</li>
-            <li>• Balance of technical and creative skills</li>
-            <li>• Physical fitness and sports integration</li>
-            <li>• Leadership and soft skills development</li>
-          </ul>
-          <ul className="text-xs sm:text-sm text-gray-700 space-y-1">
-            <li>• Multi-disciplinary capstone projects</li>
-            <li>• Industry expert mentorship</li>
-            <li>• Cultural arts and calligraphy</li>
-            <li>• Innovation fair and competitions</li>
-          </ul>
-        </div>
-      </div>
 
       {/* Registration Button */}
       <div className="text-center">
@@ -251,4 +233,5 @@ export default function SteamCamp() {
       </div>
     </div>
   )
+
 }

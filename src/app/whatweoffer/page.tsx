@@ -1,6 +1,6 @@
 "use client"
 
-import { Bot, Brain, Shield, Gamepad2, Users, Beaker } from "lucide-react"
+import { Bot, Brain, Shield, Gamepad2, Users, Beaker, Gamepad, PencilRuler } from "lucide-react"
 import { Footer, NavBar } from "../homeComponents"
 import { Navbar } from "../homeComponents/NavbarL"
 import { FadeIn } from "./components/FadeIn"
@@ -50,6 +50,21 @@ export default function Page() {
       icon: Beaker,
       href: "/whatweoffer/steamcamp",
     },
+    {
+      id: "gameDev",
+      title: "Game Development",
+      description: "Design, code, and build your own 2D & 3D games with Unity in this hands-on game development workshop.",
+      icon: Gamepad,
+      href: "/whatweoffer/gamedev",
+    },
+    {
+      id: "jolly",
+      title: "Jolly Phonics",
+      description: "A joyful early literacy camp for ages 4–6 combining Jolly Phonics with fun science, art, math, and sports activities.",
+      icon: PencilRuler,
+      href: "/whatweoffer/jolly",
+    }
+
   ]
 
   return (
@@ -63,7 +78,7 @@ export default function Page() {
           </p>
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {programs.map((program) => {
             const IconComponent = program.icon
             return (

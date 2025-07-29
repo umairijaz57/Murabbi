@@ -31,10 +31,10 @@ export default async function Home() {
       {/* <Hero /> */}
       <HeroSlider />
       <PageWrapper home={true}>
-        <InLayout upcoming={true}>
+        {/* <InLayout upcoming={true}>
           <CenteredHeading text="Upcoming Event" />
           <UpcomingEvent />
-        </InLayout>
+        </InLayout> */}
         <InLayout offer={true}>
           <CenteredHeading text="Events & Updates" />
           <NewsList home />

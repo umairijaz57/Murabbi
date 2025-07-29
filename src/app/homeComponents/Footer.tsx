@@ -88,17 +88,17 @@ const Footer = (props: Props) => {
                     What We Offer
                   </a>
                 </li>
-                <Link href="/trainings/high">
-                  <li className="mb-4 text-sm">High Tech Trainings</li>
+                <Link href="/whatweoffer/robotics">
+                  <li className="mb-4 text-sm">Robotics</li>
                 </Link>
-                <Link href="/trainings/low">
-                  <li className="mb-4 text-sm">Low Tech Trainings</li>
+                <Link href="/whatweoffer/artificialintelligence">
+                  <li className="mb-4 text-sm">Artificail Intelligence</li>
                 </Link>
-                <Link href="/trainings/summer-winter-camps">
-                  <li className="text-sm mb-4">Summer/ Winter Camps</li>
+                <Link href="/whatweoffer/cybersecurity">
+                  <li className="text-sm mb-4">Cyber Security</li>
                 </Link>
-                <Link href="/trainings/workshops">
-                  <li className="text-sm">Workshops</li>
+                <Link href="/whatweoffer/gamedev">
+                  <li className="text-sm">Game Development</li>
                 </Link>
               </ul>
             </div>

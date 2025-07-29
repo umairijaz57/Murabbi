@@ -113,6 +113,7 @@ export const Navbar = () => {
           </Link>
           
           <div className="flex gap-8 items-center text-base">
+            <NavOption text="Home" link="/" />
             <NavOption text="About Us" link="/aboutus" />
             
             <NavOption text="What We Offer" link="/whatweoffer" clamp="right">
@@ -139,6 +140,18 @@ export const Navbar = () => {
                 className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
               >
                 STEAM Camp
+              </Link>
+              <Link 
+                href="/whatweoffer/gamedev" 
+                className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
+              >
+                Game Development
+              </Link>
+              <Link 
+                href="/whatweoffer/jolly" 
+                className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
+              >
+                Jolly Phonics
               </Link>
             </NavOption>
             
@@ -182,6 +195,13 @@ export const Navbar = () => {
           ${opened ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="px-6 py-4 bg-white border-t border-gray-200">
             <div className="flex flex-col space-y-4">
+               <Link 
+                href="/" 
+                className="text-lg font-medium text-gray-700 hover:text-blue-900 transition-colors py-2 border-b border-gray-100"
+                onClick={() => setOpened(false)}
+              >
+                Home
+              </Link>              
               <Link 
                 href="/aboutus" 
                 className="text-lg font-medium text-gray-700 hover:text-blue-900 transition-colors py-2 border-b border-gray-100"

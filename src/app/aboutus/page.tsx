@@ -21,27 +21,28 @@ import FaqLayout from "../resources/layout/faq";
 import Faq from "../resources/components/Faq";
 import Ambition from "./components/Ambition";
 import { Navbar } from "../homeComponents/NavbarL";
+import Testimonial from "../homeComponents/Testimonial";
 
 type Props = {};
 
 const items = [
   {
     id: 3,
-    title: "Dr. Nazia Perwaiz",
-    description: "Chief Executive Officer ",
-    description1: "Assistant Professor (SEECS)",
-    image: "/aboutus/Nazia.jpg",
-    link: "https://www.linkedin.com/in/nazia-perwaiz-738b5283/",
-    mail: "nazia.perwaiz@seecs.edu.pk",
-  },
-  {
-    id: 4,
     title: "Dr. Abid Rafique",
     description: "Executive Founder",
     description1: "Assistant Professor (SEECS)",
     image: "/aboutus/Abid.jpg",
     link: "https://www.linkedin.com/in/dr-abid-rafique-9b678a225/",
     mail: "abid.rafique@seecs.edu.pk",
+  },
+  {
+    id: 4,
+    title: "Dr. Nazia Perwaiz",
+    description: "Chief Executive Officer & Co. Founder",
+    description1: "Assistant Professor (SEECS)",
+    image: "/aboutus/naziapervez.jpg",
+    link: "https://www.linkedin.com/in/nazia-perwaiz-738b5283/",
+    mail: "nazia.perwaiz@seecs.edu.pk",
   },
   {
     id: 2,
@@ -96,7 +97,7 @@ const AboutUs = (props: Props) => {
         </InLayout>
         <div id="partners-section">
           <InLayout offer>
-            <Testimonials />
+            <Testimonial />
           </InLayout>
         </div>
         <div id="faq">

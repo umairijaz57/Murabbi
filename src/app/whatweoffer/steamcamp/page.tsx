@@ -59,19 +59,13 @@ export default function page() {
         contentClass="text-sm sm:text-base md:text-lg lg:text-base xl:text-lg 2xl:text-xl leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-relaxed text-gray-700"
         list={[
           {
-            title: "Tech & Innovation",
-            content:
-              "Learn robotics, AI, and cybersecurity with real-world tools" 
+            title: "Week 1: Robotics & Computer Vision",
           },
           {
-            title: "Art & Expression:",
-            content:
-              "Explore calligraphy, drawing, and creative thinking",
+            title: "Week 2: Cybersecurity & Digital Defense",
           },
           {
-            title: "Teamwork & Fun:",
-            content:
-              "Solve challenges, build projects, and grow together",
+            title: "Week 3: Artificial Intelligence & Innovation",
           },
         ]}
       />
@@ -124,10 +118,6 @@ export default function page() {
                         list={[
                           {
                             title: "Full 3-week STEAM curriculum and daily activity plans"
-
-
-
-
                           },
                           {
                             title: "Instructors and assistants for each discipline (tech + arts)",

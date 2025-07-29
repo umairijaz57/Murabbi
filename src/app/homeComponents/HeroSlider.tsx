@@ -9,48 +9,23 @@ import { BsArrowRightShort, BsPlay, BsPause, BsChevronLeft, BsChevronRight } fro
 import { motion, AnimatePresence } from "framer-motion"
 
 // Types
-interface SlideImages {
-  main: string
-  top: string
-  bottom: string
-}
-
 interface SlideData {
   title: string
   subtitle: string
   description: string
   badge: string
+  images: string[] // Array of 3 images for each heading
 }
 
-// Main slider images
-const images: string[] = ["/heroslider/hero_1", "/heroslider/hero_2", "/heroslider/hero_3"]
-
-// Different images for staggered layout
-const staggeredImages: SlideImages[] = [
-  {
-    main: "/heroslider/heroS2.jpg",
-    top: "/heroslider/heroS5.jpg",
-    bottom: "/heroslider/heroS2.jpeg",
-  },
-  {
-    main: "/heroslider/heroS3.jpg",
-    top: "/heroslider/heroS1.jpg",
-    bottom: "/heroslider/hero10.jpg",
-  },
-  {
-    main: "/heroslider/hero_3.jpg",
-    top: "/heroslider/hero4.jpg",
-    bottom: "/heroslider/hero2.jpg",
-  },
-]
-
+// Slide data with 3 images per heading
 const slideData: SlideData[] = [
   {
     title: "Welcoming Young Minds from China",
     subtitle: "Learning, Laughing & Growing Together at Murabbi",
     description:
-      "This summer, we welcomed amazing students from China to our Murabbi family. Their journey has been full of joy, exploration, and cross-cultural bonding. Together, we’ve built memories that go beyond language — proving that friendship and learning have no borders.",
+      "This summer, we welcomed amazing students from China to our Murabbi family. Their journey has been full of joy, exploration, and cross-cultural bonding. Together, we've built memories that go beyond language — proving that friendship and learning have no borders.",
     badge: "INNOVATION LEADER",
+    images: ["/heroslider/heroS2.jpg", "/heroslider/heroS5.jpg", "/heroslider/heroS2.jpeg"],
   },
   {
     title: "Murabbi Summer Camp",
@@ -58,6 +33,7 @@ const slideData: SlideData[] = [
     description:
       "This summer at Murabbi, young minds came together to explore, create, and grow. From hands-on STEAM activities to teamwork and fun-filled challenges, every day was a new adventure. We believe in building confident, curious learners — and this camp was a joyful step in that journey.",
     badge: "Summer Camp",
+    images: ["/heroslider/heroS3.jpg", "/heroslider/heroS1.jpg", "/heroslider/hero10.jpg"],
   },
   {
     title: "Learn, Grow & Succeed",
@@ -65,8 +41,12 @@ const slideData: SlideData[] = [
     description:
       "Are you ready to take your career to the next level? Look no further than Murabbi, where our state-of-the-art training solutions will revolutionize the way you learn.",
     badge: "EDUCATION SOLUTION",
+    images: ["/heroslider/hero_3.jpg", "/heroslider/hero4.jpg", "/heroslider/hero2.jpg"],
   },
 ]
+
+// Create flat array of all images for slider
+const allImages: string[] = slideData.flatMap((slide) => slide.images)
 
 // Animation variants
 const containerVariants = {
@@ -186,13 +166,38 @@ const buttonVariants = {
   },
 }
 
+const imageVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+    filter: "blur(10px)",
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    filter: "blur(0px)",
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+    },
+  },
+  exit: {
+    opacity: 0,
+    scale: 1.1,
+    filter: "blur(10px)",
+    transition: {
+      duration: 0.5,
+    },
+  },
+}
+
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState<number>(0)
   const [isPlaying, setIsPlaying] = useState<boolean>(false)
   const [hasAnimated, setHasAnimated] = useState<boolean>(false)
 
   const [sliderRef, instanceRef] = useKeenSlider({
-    slides: images.length,
+    slides: allImages.length, // Total 9 slides (3 headings × 3 images each)
     loop: true,
     renderMode: "performance",
     drag: false,
@@ -241,8 +246,11 @@ export default function HeroSlider() {
     instanceRef.current?.prev()
   }, [instanceRef])
 
-  // Get current slide data
-  const currentSlideData = slideData[currentSlide]
+  // Calculate which heading to show based on current slide
+  // Slides 0,1,2 = Heading 0; Slides 3,4,5 = Heading 1; Slides 6,7,8 = Heading 2
+  const currentHeadingIndex = Math.floor(currentSlide / 3)
+  const currentSlideData = slideData[currentHeadingIndex]
+  const currentImageIndex = currentSlide % 3 // Which image within the current heading (0, 1, or 2)
 
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 overflow-hidden">
@@ -271,7 +279,7 @@ export default function HeroSlider() {
           <div className="max-w-xl mx-auto lg:mx-0 space-y-4 sm:space-y-6 lg:space-y-8 text-center lg:text-left">
             <AnimatePresence mode="wait">
               <motion.div
-                key={currentSlide}
+                key={currentHeadingIndex} // Change key only when heading changes
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -299,13 +307,14 @@ export default function HeroSlider() {
                       variants={headingVariants}
                       className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight text-gray-900"
                     >
-                      <span className="block text-transparent bg-gradient-to-r from-blue-600  to-blue-900 bg-clip-text">
+                      <span className="block text-transparent bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text">
                         {currentSlideData.title}
                       </span>
                     </motion.h1>
                   </div>
                   <motion.div variants={fadeInVariants} className="space-y-2">
-                    <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">{currentSlideData.subtitle}
+                    <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
+                      {currentSlideData.subtitle}
                     </div>
                   </motion.div>
                 </div>
@@ -355,10 +364,10 @@ export default function HeroSlider() {
         </div>
 
         {/* Image Slider */}
-        <div className="relative order-1 lg:order-2 h-64 sm:h-80 md:h-96 lg:h-full">
-          <div className="relative h-full w-full lg:rounded-l-3xl overflow-hidden">
+        <div className="relative order-1 lg:order-2 h-64 sm:h-80 md:h-96 lg:h-full p-4 sm:p-6 lg:p-8">
+          <div className="relative h-full w-full lg:rounded-l-3xl overflow-hidden rounded-2xl shadow-xl">
             <div ref={sliderRef} className="keen-slider h-full w-full">
-              {staggeredImages.map((slideImages, idx) => (
+              {allImages.map((image, idx) => (
                 <div
                   key={idx}
                   className="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
@@ -367,53 +376,39 @@ export default function HeroSlider() {
                     zIndex: currentSlide === idx ? 1 : 0,
                   }}
                 >
-                  {/* Main image - responsive sizing */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-36 sm:w-64 sm:h-48 md:w-80 md:h-60 z-30">
-                    <div className="group relative w-full h-full rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-gray-200/60 shadow-lg hover:shadow-blue-500/20 transition-all duration-500 hover:scale-110 hover:-rotate-1">
-                      <Image
-                        src={slideImages.main || "/placeholder.svg"}
-                        alt={slideData[idx].title}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-125"
-                        priority={idx === 0}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5" />
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-blue-400/10 to-purple-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-                  </div>
-
-                  {/* Top right image - responsive positioning */}
-                  <div className="absolute top-4 right-4 sm:top-8 sm:right-8 md:top-16 md:right-24 w-24 h-18 sm:w-32 sm:h-24 md:w-48 md:h-36 z-20 transform -translate-y-2 sm:-translate-y-4 rotate-3 sm:rotate-6 hover:rotate-6 sm:hover:rotate-12 transition-all duration-500">
-                    <div className="group relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden border-2 border-gray-200/60 shadow-md hover:shadow-purple-500/20 transition-all duration-500 hover:scale-110 hover:-translate-y-2 sm:hover:-translate-y-4 hover:rotate-3">
-                      <Image
-                        src={slideImages.top || "/placeholder.svg"}
-                        alt={`${slideData[idx].title} - Top`}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-120"
-                        priority={idx === 0}
-                      />
-                    </div>
-                  </div>
-
-                  {/* Bottom left image - responsive positioning */}
-                  <div className="absolute bottom-4 left-4 sm:bottom-8 sm:left-8 md:bottom-20 md:left-16 w-28 h-20 sm:w-36 sm:h-24 md:w-52 md:h-32 z-20 transform translate-y-1 sm:translate-y-2 -rotate-2 sm:-rotate-3 hover:-rotate-3 sm:hover:-rotate-6 transition-all duration-500">
-                    <div className="group relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden border-2 border-gray-200/60 shadow-md hover:shadow-blue-500/20 transition-all duration-500 hover:scale-110 hover:translate-y-2 sm:hover:translate-y-4 hover:skew-x-2">
-                      <Image
-                        src={slideImages.bottom || "/placeholder.svg"}
-                        alt={`${slideData[idx].title} - Bottom`}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-120"
-                        priority={idx === 0}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-tl from-blue-500/10 via-transparent to-purple-500/10" />
-                    </div>
-                  </div>
+                  {/* Single Large Image with padding */}
+                  <AnimatePresence mode="wait">
+                    {currentSlide === idx && (
+                      <motion.div
+                        key={idx}
+                        variants={imageVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        className="absolute inset-0 w-full h-full p-3 sm:p-4 md:p-6"
+                      >
+                        <div className="group relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
+                          <Image
+                            src={image || "/placeholder.svg?height=600&width=800"}
+                            alt={`${currentSlideData.title} - Image ${currentImageIndex + 1}`}
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            priority={idx === 0}
+                          />
+                          {/* Gradient overlays */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-blue-400/5 to-purple-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               ))}
             </div>
 
-            {/* Navigation arrows - responsive sizing */}
-            <div className="absolute top-1/2 -translate-y-1/2 left-2 right-2 sm:left-4 sm:right-4 md:left-6 md:right-6 flex justify-between z-40">
+            {/* Navigation arrows - adjusted positioning for new spacing */}
+            <div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 sm:left-6 sm:right-6 md:left-8 md:right-8 flex justify-between z-40">
               <button
                 onClick={prevSlide}
                 className="group w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-white/80 backdrop-blur-sm border border-gray-200/60 rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-50/80 transition-all duration-300 hover:scale-110 shadow-md"
@@ -434,15 +429,27 @@ export default function HeroSlider() {
               </button>
             </div>
 
-            {/* Bottom controls - responsive sizing */}
-            <div className="absolute bottom-2 sm:bottom-4 left-2 right-2 sm:left-4 sm:right-4 md:left-8 md:right-8 z-40">
+            {/* Bottom controls - adjusted positioning */}
+            <div className="absolute bottom-4 sm:bottom-6 left-4 right-4 sm:left-6 sm:right-6 md:left-10 md:right-10 z-40">
               <div className="bg-white/40 backdrop-blur-sm border border-gray-200/60 rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 shadow-lg">
                 <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
+                  {/* Progress bar showing current image within current heading */}
                   <div className="flex-1 h-2 sm:h-3 bg-gray-200/60 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-900 rounded-full transition-all duration-500"
-                      style={{ width: `${((currentSlide + 1) / images.length) * 100}%` }}
+                      style={{ width: `${((currentSlide + 1) / allImages.length) * 100}%` }}
                     />
+                  </div>
+                  {/* Heading indicator */}
+                  <div className="flex gap-1">
+                    {slideData.map((_, headingIdx) => (
+                      <div
+                        key={headingIdx}
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          currentHeadingIndex === headingIdx ? "bg-blue-600 scale-125" : "bg-gray-300"
+                        }`}
+                      />
+                    ))}
                   </div>
                   <button
                     onClick={togglePlayPause}

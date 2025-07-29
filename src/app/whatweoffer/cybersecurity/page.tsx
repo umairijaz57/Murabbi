@@ -58,20 +58,20 @@ export default function page() {
         contentClass="text-sm sm:text-base md:text-lg lg:text-base xl:text-lg 2xl:text-xl leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-relaxed text-gray-700"
         list={[
           {
-            title: "Codebreaking & Ciphers",
-            content:
-              "Learn how secret codes shaped history and crack them yourself",
+            title: "Day 1: Codebreakers' Legacy: Classical Ciphers Unlocked",
           },
           {
-            title: "Hacking & Networks",
-            content:
-              "Explore how data travels, sniff traffic, and try ethical hacking in a safe setup",
+            title: "Day 2: Secrets of Modern Encryption | The Virus Lab",
           },
           {
-            title: "Cryptocurrency & Viruses",
-            content:
-              "Understand how Bitcoin works and build your own (safe) virus demo",
+            title: "Day 3: Hack the Net: Eavesdropping & Digital Sleuthing",
           },
+          {
+            title: "Day 4: Digital Fingerprints & Hacking Protocols",
+          },
+          {
+            title:"Day 5: Cryptocurrencies Crash Course"
+          }
         ]}
       />
     </div>
