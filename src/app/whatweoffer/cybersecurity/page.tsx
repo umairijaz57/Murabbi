@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Footer, NavBar } from "@/app/homeComponents";
+import { Footer } from "@/app/homeComponents";
 import { Navbar } from "@/app/homeComponents/NavbarL";
 import Header from "../components/Header";
 import { FadeIn } from "../components/FadeIn";

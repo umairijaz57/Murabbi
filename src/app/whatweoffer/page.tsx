@@ -1,7 +1,7 @@
 "use client"
 
 import { Bot, Brain, Shield, Gamepad2, Users, Beaker, Gamepad, PencilRuler } from "lucide-react"
-import { Footer, NavBar } from "../homeComponents"
+import { Footer } from "../homeComponents"
 import { Navbar } from "../homeComponents/NavbarL"
 import { FadeIn } from "./components/FadeIn"
 

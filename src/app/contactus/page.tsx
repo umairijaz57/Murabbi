@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { NavBar, Footer } from "../homeComponents";
+import { Footer } from "../homeComponents";
 import PageWrapper from "@/app/layouts/pageLayout";
 import InLayout from "@/app/layouts/inlayout";
 import Info from "./components/info";

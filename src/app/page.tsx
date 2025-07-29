@@ -5,7 +5,6 @@ import {
   Courses,
   Description,
   Info,
-  NavBar,
   Testimonials,
   Trainings,
 } from "./homeComponents";

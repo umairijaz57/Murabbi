@@ -6,7 +6,6 @@ import {
   Courses,
   Description,
   Footer,
-  NavBar,
 } from "../homeComponents";
 import InLayout from "../layouts/inlayout";
 import PageWrapper from "../layouts/pageLayout";

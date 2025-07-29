@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { NavBar, Events, Footer, CenteredHeading } from "../homeComponents";
+import { Events, Footer, CenteredHeading } from "../homeComponents";
 import PageWrapper from "../layouts/pageLayout";
 import InLayout from "../layouts/inlayout";
 import Hero from "./components/hero";

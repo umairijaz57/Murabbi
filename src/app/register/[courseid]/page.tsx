@@ -1,6 +1,6 @@
 "use client";
 
-import { Footer, NavBar } from "@/app/homeComponents";
+import { Footer } from "@/app/homeComponents";
 import Form from "../components/form";
 import { Navbar } from "@/app/homeComponents/NavbarL";
 

@@ -1,4 +1,3 @@
-export { default as NavBar } from "./navBar";
 export { default as Hero_alt } from "./hero_alt";
 export { default as Info } from "./info";
 export { default as Trainings } from "./trainings";

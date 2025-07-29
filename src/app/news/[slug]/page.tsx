@@ -1,5 +1,5 @@
 "use client";
-import { Footer, NavBar } from "@/app/homeComponents";
+import { Footer } from "@/app/homeComponents";
 import { motion } from "framer-motion";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
