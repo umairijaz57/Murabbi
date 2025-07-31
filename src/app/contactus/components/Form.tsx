@@ -1,223 +1,207 @@
-import ConfirmModal from "@/app/register/thanku";
-import Image from "next/image";
-import React, { useState } from "react";
-import { SiBookstack } from "react-icons/si";
+"use client"
 
-type Props = {};
+import { CheckCircle, X } from "lucide-react"
+import { useState, type FormEvent, type ChangeEvent } from "react"
 
-const Form = () => {
-  const multiplicand = 1.6;
-  const [scrollY, setScrollY] = useState(0);
-  const [formData, setFormData] = useState({
-    Name: "",
+interface FormData {
+  name: string
+  email: string
+  organization: string
+  course: string
+  message: string
+}
+
+export default function Form() {
+  const [form, setForm] = useState<FormData>({
+    name: "",
     email: "",
-    Subject: "",
-    phone: "",
+    organization: "",
+    course: "",
     message: "",
-  });
-  const [errors, setErrors] = useState<string | null>(null);
-  const [show, setShow] = useState<boolean>(false);
+  })
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
+  const handleClose = () => {
+    setSuccess(false);
+    // Reset form after closing success popup
+    setForm({
+      name: "",
+      email: "",
+      organization: "",
+      course: "",
+      message: "",
+    })
   };
 
-  React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value })
+    if (success) setSuccess(false)
+    if (error) setError(null)
+  }
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const validateForm = () => {
-    let valid = true;
-    let firstError = null;
-
-    // Validation logic for each field
-    const nameRegex = /^[A-Za-z]+$/; // Only letters allowed for names
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation regex
-    const phoneRegex = /^(\+?\d{1,4})?[-.\s]?\d{10}$/; // Allows optional country code prefix
-
-    if (formData.Name.trim() === "") {
-      firstError = "First name is required";
-      valid = false;
-    } else if (!nameRegex.test(formData.Name)) {
-      firstError = "First name must contain only letters";
-      valid = false;
-    } else if (formData.email.trim() === "") {
-      firstError = "Email is required";
-      valid = false;
-    } else if (!emailRegex.test(formData.email)) {
-      firstError = "Invalid email format";
-      valid = false;
-    } else if (formData.phone.trim() === "") {
-      firstError = "Contact number is required";
-      valid = false;
-    } else if (formData.email.trim() === "") {
-      firstError = "Subject is required";
-      valid = false;
-    } else if (!nameRegex.test(formData.Subject)) {
-      firstError = "Subject must contain only letters";
-      valid = false;
-    } else if (!phoneRegex.test(formData.phone)) {
-      firstError = "Invalid phone number format";
-      valid = false;
-    }
-
-    setErrors(firstError);
-    return valid;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (validateForm()) {
-      try {
-        const response = await fetch("https://formspree.io/f/xlekqwqr", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
-        if (response.ok) {
-          // Show success message or reset the form
-          setShow(true);
-        } else {
-          setErrors("Error Contacting");
-          setShow(true);
-        }
-      } catch (error) {
-        setErrors("Error Sending Email");
-        setShow(true);
-      }
+  const handleSubmit = (e?: FormEvent<HTMLFormElement>) => {
+    if (e) e.preventDefault()
+    
+    // Check if all fields are filled
+    if (form.name && form.email && form.organization && form.course && form.message) {
+      setSuccess(true)
+      setError(null)
     } else {
-      setShow(true);
+      setError("Please fill in all fields before submitting.")
     }
+  }
 
-    // Perform form validation
-  };
-
-  // const closeModal = () => {
-  //   setIsModalOpen(false);
-  //   setModalMessage("");
-  //   setErrors({});
-  // };
-
-  const onCancel = () => {
-    // Hide the modal
-    if (validateForm()!) {
-      setFormData({
-        Name: "",
-        email: "",
-        Subject: "",
-        phone: "",
-        message: "",
-      });
-    }
-    setShow(false);
-  };
+  const handleButtonSubmit = () => {
+    handleSubmit()
+  }
 
   return (
     <>
       <div
         style={{
           position: "relative",
-          backgroundImage: `url('/graphicsbg.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: `center ${scrollY * multiplicand}px`,
         }}
-        className=" flex flex-row justify-center items-center bg-fixed px-6 py-12 md:py-20"
+        className="flex flex-row justify-center items-center bg-fixed px-6 py-12 md:py-20 bg-blue-600"
       >
         <div className="absolute inset-0 bg-blue-600 opacity-90"></div>
-        <div className="absolute top-8 block left-16 h-24 w-24 rounded-full z-50 bg-gray-200/50  animation-offer"></div>
-        <div className="absolute bottom-0 block -right-10 h-40 w-40 rounded-full z-50 border-4 border-blue-500 bg-transparent  animation-offer"></div>
-        <div className="flex flex-col lg:flex-row justify-center items-center z-20 gap-8 lg:gap-12 w-full ">
-          <div className="flex flex-col items-start gap-6 lg:w-[30rem] ">
-            <div className="text-white font-bold text-4xl md:text-5xl   ">
+        <div className="absolute top-8 block left-16 h-24 w-24 rounded-full z-50 bg-gray-200/50 animate-pulse"></div>
+        <div className="absolute bottom-0 block -right-10 h-40 w-40 rounded-full z-50 border-4 border-blue-500 bg-transparent animate-pulse"></div>
+
+        <div className="flex flex-col lg:flex-row justify-center items-center z-20 gap-8 lg:gap-12 w-full">
+          <div className="flex flex-col items-start gap-6 lg:w-[30rem]">
+            <div className="text-white font-bold text-4xl md:text-5xl">
               Contact
-              <span className="text-blue-500"> Us </span> for any queries
+              <span className="text-blue-200"> Us </span>
+              for any queries
             </div>
             <div className="text-lg text-white">
-              Have questions or need assistance? We're here to help. Contact our
-              experts, and we'll provide the support you require.
+              Have questions or need assistance? We're here to help. Contact our experts, and we'll provide the support
+              you require.
             </div>
+
+            {/* Error Message */}
+            {error && (
+              <div className="bg-red-500 text-white p-3 rounded-lg w-full border-l-4 border-red-700">
+                <div className="flex items-center">
+                  <span className="mr-2">❌</span>
+                  <span>{error}</span>
+                </div>
+              </div>
+            )}
+
             <button
-              onClick={handleSubmit}
-              className=" mt-2 py-2 px-12 bg-blue-500  transition-all duration-500 text-base  font-semibold text-white p-2 rounded-lg hover:bg-white hover:text-blue-600 hover:border-blue-600  border-2 border-blue-500"
+              onClick={handleButtonSubmit}
+              className="mt-2 py-2 px-12 bg-blue-500 transition-all duration-500 text-base font-semibold text-white p-2 rounded-lg hover:bg-white hover:text-blue-600 hover:border-blue-600 border-2 border-blue-500"
             >
               Submit
             </button>
           </div>
 
           <div className="flex flex-col gap-8 text-white w-full lg:w-[50rem]">
-            <div className="flex flex-col md:flex-row  gap-8 lg:gap-4">
-              {" "}
+            <div className="flex flex-col md:flex-row gap-8 lg:gap-4">
               <input
                 placeholder="Enter Your name"
-                className="focus:placeholder-transparent  rounded-lg w-full px-4 py-4 md:py-4 md:px-5 bg-opacity-30 bg-gray-200  focus:outline-none focus:ring-0 focus:bg-blue-500  focus:bg-opacity-90 "
+                className="focus:placeholder-transparent rounded-lg w-full px-4 py-4 md:py-4 md:px-5 bg-opacity-30 bg-gray-200 focus:outline-none focus:ring-0 focus:bg-blue-500 focus:bg-opacity-90"
                 type="text"
-                id="Name"
-                name="Name"
+                name="name"
                 onChange={handleChange}
-                value={formData.Name}
+                value={form.name}
+                required
               />
               <input
                 placeholder="Enter Your Email"
-                className="focus:placeholder-transparent rounded-lg w-full px-4 py-4 md:py-4 md:px-5 bg-opacity-30 bg-gray-200  focus:outline-none focus:ring-0 focus:bg-blue-500  focus:bg-opacity-90"
+                className="focus:placeholder-transparent rounded-lg w-full px-4 py-4 md:py-4 md:px-5 bg-opacity-30 bg-gray-200 focus:outline-none focus:ring-0 focus:bg-blue-500 focus:bg-opacity-90"
                 type="email"
-                id="email"
                 name="email"
                 onChange={handleChange}
-                value={formData.email}
+                value={form.email}
+                required
               />
             </div>
-            <div className="flex flex-col md:flex-row  gap-8 lg:gap-4">
-              {" "}
+            <div className="flex flex-col md:flex-row gap-8 lg:gap-4">
               <input
-                placeholder="Enter Your Phone"
-                className="focus:placeholder-transparent rounded-lg w-full px-4 py-4 md:py-4 md:px-5 bg-opacity-30 bg-gray-200  focus:outline-none focus:ring-0 focus:bg-blue-500  focus:bg-opacity-90"
-                type="tel"
-                id="phone"
-                name="phone"
+                placeholder="Enter Your School/Organization"
+                className="focus:placeholder-transparent rounded-lg w-full px-4 py-4 md:py-4 md:px-5 bg-opacity-30 bg-gray-200 focus:outline-none focus:ring-0 focus:bg-blue-500 focus:bg-opacity-90"
+                type="text"
+                name="organization"
+                value={form.organization}
                 onChange={handleChange}
-                value={formData.phone}
+                required
               />
               <input
                 placeholder="Enter Your Subject"
-                className="focus:placeholder-transparent rounded-lg w-full px-4 py-4 md:py-4 md:px-5 bg-opacity-30 bg-gray-200  focus:outline-none focus:ring-0 focus:bg-blue-500  focus:bg-opacity-90"
+                className="focus:placeholder-transparent rounded-lg w-full px-4 py-4 md:py-4 md:px-5 bg-opacity-30 bg-gray-200 focus:outline-none focus:ring-0 focus:bg-blue-500 focus:bg-opacity-90"
                 type="text"
-                id="Subject"
-                name="Subject"
+                name="course"
                 onChange={handleChange}
-                value={formData.Subject}
+                value={form.course}
+                required
               />
             </div>
             <div>
               <textarea
-                className="focus:placeholder-transparent  rounded-lg px-4 py-4 md:py-4 md:px-5 bg-opacity-30 bg-gray-200  mb-4 h-[10rem] md:h-[18rem] w-full b  focus:outline-none focus:ring-0 focus:bg-blue-500  focus:bg-opacity-90"
-                id="subject"
+                className="focus:placeholder-transparent rounded-lg px-4 py-4 md:py-4 md:px-5 bg-opacity-30 bg-gray-200 mb-4 h-[10rem] md:h-[18rem] w-full focus:outline-none focus:ring-0 focus:bg-blue-500 focus:bg-opacity-90"
                 placeholder="Enter Your Message"
                 name="message"
                 onChange={handleChange}
-                value={formData.message}
+                value={form.message}
+                required
               />
             </div>
           </div>
         </div>
       </div>
-      <ConfirmModal isOpen={show} onCancel={onCancel} error={errors} />
-    </>
-  );
-};
 
-export default Form;
+      {/* Success Popup */}
+      {success && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
+          {/* Overlay */}
+          <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm"></div>
+          
+          {/* Popup */}
+          <div className="relative bg-white rounded-xl shadow-2xl p-8 max-w-md w-full mx-4 transform transition-all duration-300 scale-100">
+            {/* Close Button */}
+            <button
+              onClick={handleClose}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200"
+            >
+              <X size={20} />
+            </button>
+
+            {/* Success Icon */}
+            <div className="flex justify-center mb-6">
+              <div className="bg-blue-600 rounded-full p-3">
+                <CheckCircle size={32} className="text-white" />
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="text-center">
+              <h2 className="text-2xl font-bold text-gray-800 mb-3">
+                Message Sent Successfully!
+              </h2>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Thank you for contacting us. We've received your message and will get back to you soon.
+              </p>
+              
+              {/* Action Buttons */}
+              <div className="flex gap-3 justify-center">
+                <button
+                  onClick={handleClose}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-medium transition-colors duration-200"
+                >
+                  Continue
+                </button>
+              </div>
+            </div>
+
+            {/* Decorative Element */}
+            <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-600 rounded-full opacity-20"></div>
+            <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-blue-400 rounded-full opacity-15"></div>
+          </div>
+        </div>
+      )}
+    </>
+  )
+}

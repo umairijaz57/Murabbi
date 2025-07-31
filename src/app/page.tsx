@@ -19,10 +19,9 @@ import Testimonial from "./homeComponents/Testimonial";
 import { Navbar } from "./homeComponents/NavbarL";
 
 const CardSlider = dynamic(() => import("./homeComponents/CardSlide"), {
-  suspense: true,
 });
 
-export default async function Home() {
+export default function Home() {
   return (
     <div className="relative">
       {/* <Update /> */}
@@ -53,13 +52,14 @@ export default async function Home() {
           <Courses />
         </InLayout>
         <Background />
-        <InLayout>
-          <CardSlider type="partner" />
-        </InLayout>
-        <Background bg={true} />
+        
+        {/* <Background bg={true} /> */}
         <InLayout offer={true}>
           {/* <Testimonials /> */}
           <Testimonial />
+        </InLayout>
+        <InLayout>
+          <CardSlider type="partner" />
         </InLayout>
       </PageWrapper>
       <Footer />

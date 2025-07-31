@@ -91,14 +91,6 @@ const AboutUs = (props: Props) => {
           </InLayout>
         </div>
         <Background bg aboutus />
-        <InLayout>
-          <CardSlider type="partner" />
-        </InLayout>
-        <div id="partners-section">
-          <InLayout offer>
-            <Testimonial />
-          </InLayout>
-        </div>
         <div id="faq">
           <FaqLayout>
             <Heading text="Get Your Answers" />

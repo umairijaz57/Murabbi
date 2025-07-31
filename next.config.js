@@ -5,13 +5,19 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
-  experimental: {serverComponentsExternalPackages: ["mongoose"] },
+  
+  // ❌ Wrong: experimental.serverComponentsExternalPackages
+  // ✅ Correct: serverExternalPackages
+  serverExternalPackages: ['mongoose'],
+
   webpack(config) {
-    config.experiments = { ...config.experiments, topLevelAwait: true }
-    return config
+    config.experiments = { ...config.experiments, topLevelAwait: true };
+    return config;
   },
-  output: "standalone",
-   images: {
+
+  output: 'standalone',
+
+  images: {
     domains: ['placehold.co'],
     remotePatterns: [
       {
@@ -22,6 +28,6 @@ const nextConfig = {
       },
     ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -196,14 +196,7 @@ export default function Robotics() {
       </div>
 
 
-      {/* Registration Button */}
-      <div className="text-center">
-        <Link href={"https://rb.gy/0i3502"} target='_blank'>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors">
-          Register Now
-        </button>
-        </Link>
-      </div>
+
     </div>
   )
 }

@@ -191,13 +191,6 @@ export default function ArtificialIntelligence() {
             </div>
           </div>
         </div>
-        <div className="text-center mt-2">
-        <Link href={"https://rb.gy/0i3502"} target='_blank'>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors">
-          Register Now
-        </button>
-        </Link>
-      </div>
       </div>
     </div>
   )

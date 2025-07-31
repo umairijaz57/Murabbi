@@ -91,10 +91,10 @@ const Background = ({
                 lineHeight: "1.2",
               }}
             >
-              Register Yourself and Get access <br /> to {" "}
+              Register Yourself For <br /> {" "}
               <span className="text-blue-500"> Best </span> online courses
             </div>
-            <Link href='register/All-Courses'>
+            <Link href='contactus#form'>
             <button className=" md:m-0 py-3 px-4 md:px-6 bg-blue-500 flex flex-row justify-start items-center gap-2  transition-all duration-500 text-base  font-semibold text-white p-2 rounded-lg hover:bg-white hover:text-blue-600 hover:border-blue-600  border-2 border-blue-500">
               <span>Register Now</span>
               <BsArrowRightShort size={25} />
