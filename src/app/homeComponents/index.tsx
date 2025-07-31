@@ -1,6 +1,5 @@
 export { default as Hero_alt } from "./hero_alt";
 export { default as Info } from "./info";
-export { default as Trainings } from "./trainings";
 export { default as Description } from "./description";
 export { default as Courses } from "./courses";
 export { default as Background } from "./background";

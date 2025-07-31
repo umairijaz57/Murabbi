@@ -1,5 +1,4 @@
 "use client";
-import ConfirmModal from "@/app/register/thanku";
 import useIntersectionObserver from "@/hooks/onViewPort";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -167,12 +166,6 @@ const NewsLetter = (props: Props) => {
           className="relative w-full z-10    "
         />
       </div>
-      <ConfirmModal
-        isOpen={show}
-        onCancel={onCancel}
-        error={errors}
-        newsletter
-      />
     </div>
   );
 };

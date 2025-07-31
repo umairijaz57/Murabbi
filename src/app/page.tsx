@@ -6,7 +6,6 @@ import {
   Description,
   Info,
   Testimonials,
-  Trainings,
 } from "./homeComponents";
 import CenteredHeading from "./homeComponents/centeredHeading";
 import Footer from "./homeComponents/Footer";

@@ -4,22 +4,28 @@ import { motion } from "framer-motion";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProjectGallery from "../components/ProjectGallery";
 import { newsData, toSlug } from "../constant/newsData";
-import { ChevronLeft, ChevronRight } from "lucide-react"; // Import icons for navigation buttons
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Navbar } from "@/app/homeComponents/NavbarL";
 
-export default function NewsDetail({ params }: { params: { slug: string } }) {
-  const [selectedProjectId, setSelectedProjectId] = useState<number | null>(
-    null
-  );
+export default function NewsDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const [slug, setSlug] = useState<string>("");
+  const [selectedProjectId, setSelectedProjectId] = useState<number | null>(null);
   const [showGallery, setShowGallery] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [totalSlides, setTotalSlides] = useState(0);
 
+  // Handle async params
+  useEffect(() => {
+    params.then((resolvedParams) => {
+      setSlug(resolvedParams.slug);
+    });
+  }, [params]);
+
   const currentNews = newsData.find(
-    (item) => toSlug(item.Title) === params.slug
+    (item) => toSlug(item.Title) === slug
   );
 
   // Animation configurations
@@ -55,6 +61,15 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
       setCurrentSlide(slider.track.details.rel);
     },
   });
+
+  // Show loading while params are being resolved
+  if (!slug) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
+      </div>
+    );
+  }
 
   if (!currentNews) {
     return (
@@ -212,9 +227,7 @@ export default function NewsDetail({ params }: { params: { slug: string } }) {
       )}
     </div>
 
-
     <Footer />
     </>
-    
   );
 }
