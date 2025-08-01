@@ -64,10 +64,7 @@ export default function Form() {
         }}
         className="flex flex-row justify-center items-center bg-fixed px-6 py-12 md:py-20 bg-blue-600"
       >
-        <div className="absolute inset-0 bg-blue-600 opacity-90"></div>
-        <div className="absolute top-8 block left-16 h-24 w-24 rounded-full z-50 bg-gray-200/50 animate-pulse"></div>
-        <div className="absolute bottom-0 block -right-10 h-40 w-40 rounded-full z-50 border-4 border-blue-500 bg-transparent animate-pulse"></div>
-
+        
         <div className="flex flex-col lg:flex-row justify-center items-center z-20 gap-8 lg:gap-12 w-full">
           <div className="flex flex-col items-start gap-6 lg:w-[30rem]">
             <div className="text-white font-bold text-4xl md:text-5xl">
@@ -197,8 +194,8 @@ export default function Form() {
             </div>
 
             {/* Decorative Element */}
-            <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-600 rounded-full opacity-20"></div>
-            <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-blue-400 rounded-full opacity-15"></div>
+            {/* <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-600 rounded-full opacity-20"></div>
+            <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-blue-400 rounded-full opacity-15"></div> */}
           </div>
         </div>
       )}
