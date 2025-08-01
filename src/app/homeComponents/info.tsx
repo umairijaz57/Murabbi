@@ -77,11 +77,11 @@ const Info = (props: Props) => {
         <div className="absolute bottom-[10%] -right-[1.5rem] h-20 w-20 rounded-tr-[3rem] rounded-br-[1.5rem] bg-blue-600 animation-about"></div> */}
         <div className=" w-full h-full  rounded-lg  relative">
           <Image
-            src="/home-murabbi.png"
+            src="/infosec.jpeg"
             alt=""
             layout="fill"
             style={{ objectFit: "cover", objectPosition: "45% 30%" }}
-            className="absolute w-full z-30"
+            className="absolute w-full z-30 border-blue-900 border-4 lg:border-8 rounded-lg"
           />
         </div>
       </div>
