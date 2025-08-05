@@ -197,27 +197,6 @@ export default function CyberSecurity() {
             </div>
           </div>
         </div>
-
-        {/* Prerequisites */}
-        <div className="bg-blue-50 rounded-lg p-4">
-          <h4 className="font-medium text-blue-900 mb-2">Prerequisites & Requirements</h4>
-          <ul className="text-sm space-y-1 text-gray-700">
-            <li>• Basic programming skills (Python, C, etc.)</li>
-            <li>• Paper, pencil, calculator and laptop (if possible)</li>
-          </ul>
-        </div>
-
-        {/* Special Features */}
-        <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg">
-          <h4 className="font-medium text-blue-900 mb-2">What Makes This Special:</h4>
-          <div className="text-xs sm:text-sm text-gray-700 space-y-1">
-            <p>• Mix of history, puzzles, hacking challenges, and real-world tools</p>
-            <p>• Learn to hide messages, break encryption, and sniff networks</p>
-            <p>• Explore cryptocurrencies and understand virus creation</p>
-            <p>• Conducted by leading expert Dr. Taha Ali</p>
-          </div>
-        </div>
-
       </div>
   )
 }

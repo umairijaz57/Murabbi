@@ -3,8 +3,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  
-  serverExternalPackages: ['mongoose'],
 
   webpack(config) {
     config.experiments = { ...config.experiments, topLevelAwait: true };
@@ -12,6 +10,8 @@ const nextConfig = {
   },
 
   output: 'export',
+
+  trailingSlash: true,
 
   images: {
     unoptimized: true,

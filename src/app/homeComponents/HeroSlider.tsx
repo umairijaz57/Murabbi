@@ -25,7 +25,7 @@ const slideData: SlideData[] = [
     description:
       "This summer, we welcomed amazing students from China to our Murabbi family. Their journey has been full of joy, exploration, and cross-cultural bonding. Together, we've built memories that go beyond language — proving that friendship and learning have no borders.",
     badge: "INNOVATION LEADER",
-    images: ["/heroslider/heroS2.jpg", "/heroslider/heroS5.jpg", "/heroslider/heroS2.jpeg"],
+    images: ["/heroslider/S1.jpg", "/heroslider/heroS5.jpg", "/heroslider/heroS2.jpg"],
   },
   {
     title: "Murabbi Summer Camp",
