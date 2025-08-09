@@ -162,9 +162,9 @@ const AI: React.FC = () => {
   };
 
   const imageGalleryItems = [
-    { src: "/SingleCarousel/AI/1.jpg" },
-    { src: "/SingleCarousel/AI/2.jpg" },
-    { src: "/SingleCarousel/AI/3.jpg" },
+    { src: "/steamgallery/ai/1.jpg" },
+    { src: "/steamgallery/ai/2.jpg" },
+    { src: "/steamgallery/ai/3.jpg" },
   ];
 
   return (

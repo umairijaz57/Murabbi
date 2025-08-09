@@ -151,9 +151,6 @@ const imageGalleryItems = [
     { src: '/SingleCarousel/jolly/1.jpeg',  },
     { src: '/SingleCarousel/jolly/2.jpeg',  },
     { src: '/SingleCarousel/jolly/3.jpeg',  },
-    { src: '/SingleCarousel/jolly/4.jpeg',  },
-    { src: '/SingleCarousel/jolly/5.jpeg',  },
-    { src: '/SingleCarousel/jolly/6.jpeg',  },
   ];
 
   const handleActivityHover = (activityId: string | null): void => {

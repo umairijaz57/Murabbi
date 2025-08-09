@@ -142,11 +142,9 @@ const GameDev: React.FC = () => {
 
   // Array for image gallery
   const imageGalleryItems = [
-    { src: '/images/unity-dev-1.png', alt: 'Student coding in Unity' },
-    { src: '/images/unity-dev-2.png', alt: '3D game level design in Unity' },
-    { src: '/images/unity-dev-3.png', alt: '2D game character animation in Unity' },
-    { src: '/images/unity-dev-4.png', alt: 'Game development team collaborating' },
-    { src: '/images/unity-dev-5.png', alt: 'Unity editor screenshot' },
+    { src: '/SingleCarousel/gamedev/1.jpg', alt: 'Student coding in Unity' },
+    { src: '/SingleCarousel/gamedev/2.jpg', alt: '3D game level design in Unity' },
+    { src: '/SingleCarousel/gamedev/3.jpg', alt: '2D game character animation in Unity' },
   ];
 
   const handleActivityHover = (activityId: string | null): void => {
@@ -284,7 +282,7 @@ const GameDev: React.FC = () => {
           <p className="text-center text-gray-600 mt-4 text-lg">
             Watch a showcase of games and projects created using the Unity engine.
           </p>
-        </div>
+        </div> */}
 
         <div className="w-full max-w-6xl mb-20 mt-16">
           <h2 className="text-3xl font-bold text-blue-900 text-center mb-8">Game Dev Photo Gallery</h2>
@@ -308,7 +306,7 @@ const GameDev: React.FC = () => {
           <p className="text-center text-gray-600 mt-4 text-lg">
             A glimpse into our workshops, coding sessions, and creative game design processes.
           </p>
-        </div> */}
+        </div>
 
         {/* Program Highlights Section */}
         <div className="w-full max-w-6xl mb-20">

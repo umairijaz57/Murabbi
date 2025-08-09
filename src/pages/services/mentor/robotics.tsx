@@ -174,14 +174,7 @@ const Robotics: React.FC = () => {
     }
   ]
 
-  // Array for image gallery
-  const imageGalleryItems = [
-    { src: '/images/robotics-lab-1.png', alt: 'Students working with ROS and robotics hardware' },
-    { src: '/images/robotics-lab-2.png', alt: 'Computer vision setup with OpenCV' },
-    { src: '/images/robotics-lab-3.png', alt: 'Robot navigation and sensor integration' },
-    { src: '/images/robotics-lab-4.png', alt: 'Team collaboration on robotics project' },
-    { src: '/images/robotics-lab-5.png', alt: 'Final project demonstration' },
-  ];
+
 
   const handleActivityHover = (activityId: string | null): void => {
     setHoveredActivity(activityId)
