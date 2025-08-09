@@ -10,7 +10,51 @@ type NavOptionProps = {
   clamp?: "left" | "right"
 }
 
+type NestedNavOptionProps = {
+  text: string
+  link: string
+  children?: React.ReactNode
+}
+
 const LinkClassName = `transition-colors duration-500 border-b-2 hover:border-blue-900 border-transparent`
+
+const NestedNavOption: React.FC<NestedNavOptionProps> = ({ text, link, children }) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <div 
+      className="relative group"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
+      <Link 
+        href={link} 
+        className="flex items-center justify-between px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors w-full"
+      >
+        {text}
+        {children && (
+          <svg 
+            className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-90'}`}
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24"
+          >
+            <path d="M10,17L15,12L10,7V17Z" fill="currentColor"/>
+          </svg>
+        )}
+      </Link>
+      
+      {children && (
+        <div className={`absolute z-60 left-full top-0 ml-2 
+          ${isOpen ? 'opacity-100 visible translate-x-0' : 'opacity-0 invisible -translate-x-2'}
+          transition-all duration-300 ease-out`}>
+          <div className="bg-white shadow-lg rounded-lg border border-gray-200 py-2 min-w-[200px]">
+            {children}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
 
 const NavOption: React.FC<NavOptionProps> = ({ text, link, children, clamp = "left" }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -116,43 +160,54 @@ export const Navbar = () => {
             <NavOption text="Home" link="/" />
             <NavOption text="About Us" link="/aboutus" />
             
-            <NavOption text="What We Offer" link="/whatweoffer" clamp="right">
-              <Link 
-                href="/whatweoffer/robotics" 
-                className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
-              >
-                Robotics
-              </Link>
-              <Link 
-                href="/whatweoffer/artificialintelligence" 
-                className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
-              >
-                Artificial Intelligence
-              </Link>
-              <Link 
-                href="/whatweoffer/cybersecurity" 
-                className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
-              >
-                Cyber Security
-              </Link>
-              <Link 
-                href="/whatweoffer/steamcamp" 
-                className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
-              >
-                STEAM Camp
-              </Link>
-              <Link 
-                href="/whatweoffer/gamedev" 
-                className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
-              >
-                Game Development
-              </Link>
-              <Link 
-                href="/whatweoffer/jolly" 
-                className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
-              >
-                Jolly Phonics
-              </Link>
+            <NavOption text="What We Offer" link="/services" clamp="right">
+              <NestedNavOption text="STEAM Camps" link="/services/steam">
+                <Link 
+                  href="/services/steam/lego" 
+                  className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
+                >
+                  LEGO League
+                </Link>
+                <Link 
+                  href="/services/steam/ai" 
+                  className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
+                >
+                  Artificial Intelligence
+                </Link>
+                <Link 
+                  href="/services/steam/cybersec" 
+                  className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
+                >
+                  Cyber Security
+                </Link>
+                 <Link 
+                  href="/services/steam/jolly" 
+                  className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
+                >
+                  Jolly Phonics
+                </Link>
+              </NestedNavOption>
+              
+              <NestedNavOption text="Mentor Program for O/A Level" link="/services/mentor">
+                <Link 
+                  href="/services/mentor/aiworkshops" 
+                  className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
+                >
+                  Artificial Intelligence
+                </Link>
+                <Link 
+                  href="/services/mentor/gamedev" 
+                  className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
+                >
+                  Game Development
+                </Link>
+                <Link 
+                  href="/services/mentor/robotics" 
+                  className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
+                >
+                  Robotics
+                </Link>
+              </NestedNavOption>
             </NavOption>
             
             <NavOption text="News" link="/news" />
@@ -192,7 +247,7 @@ export const Navbar = () => {
 
         {/* Mobile Menu */}
         <div className={`overflow-hidden transition-all duration-300 ease-in-out 
-          ${opened ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+          ${opened ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="px-6 py-4 bg-white border-t border-gray-200">
             <div className="flex flex-col space-y-4">
                <Link 
@@ -210,17 +265,16 @@ export const Navbar = () => {
                 About Us
               </Link>
               
-              <div className="py-2">
+              <div className="py-2 border-b border-gray-100">
                 <Link 
-                  href="/whatweoffer" 
-                  className="text-lg font-medium text-gray-700 hover:text-blue-900 transition-colors"
+                  href="/services" 
+                  className="text-lg font-medium text-gray-700 hover:text-blue-900 transition-colors block mb-3"
                   onClick={() => setOpened(false)}
                 >
                   What We Offer
                 </Link>
+                
               </div>
-              
-             
               
               <Link 
                 href="/news" 
