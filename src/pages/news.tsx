@@ -11,15 +11,7 @@ export default function News() {
         <>
             <Navbar />
             <Hero />
-            <PageWrapper>
-                <InLayout>
-                    <CenteredHeading text="What's New" />
                     <NewsList />
-                </InLayout>
-                <InLayout offer>
-                    <NewsLetter />
-                </InLayout>
-            </PageWrapper>
             <Footer />
         </>
     );

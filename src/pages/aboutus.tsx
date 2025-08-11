@@ -20,6 +20,7 @@ import Faq from "../app/resources/components/Faq";
 import Ambition from "../app/aboutus/components/Ambition";
 import { Navbar } from "../app/homeComponents/NavbarL";
 import Testimonial from "../app/homeComponents/Testimonial";
+import Team from "@/app/aboutus/components/team";
 
 type Props = {};
 
@@ -28,7 +29,6 @@ const items = [
         id: 3,
         title: "Dr. Abid Rafique",
         description: "Executive Founder",
-        description1: "Assistant Professor (SEECS)",
         image: "/aboutus/Abid.jpg",
         link: "https://www.linkedin.com/in/dr-abid-rafique-9b678a225/",
         mail: "abid.rafique@seecs.edu.pk",
@@ -67,37 +67,7 @@ const AboutUs = (props: Props) => {
         <div>
             <Navbar />
             <Hero />
-            <PageWrapper>
-                <InLayout offer>
-                    <Ambition />
-                </InLayout>
-                <InLayout>
-                    <OurBackground />
-                </InLayout>
-                <div id="history-section">
-                    <InLayout offer>
-                        <CenteredHeading text="Meet Our Team" />
-                        <Description
-                            center
-                            text="Meet the passionate and experienced individuals who drive Murabbi's educational excellence and innovation."
-                        />
-                        <Slider items={items} />
-                    </InLayout>
-                </div>
-                <div id="teams-section">
-                    <InLayout>
-                        <CenteredHeading text="Our Values" />
-                        <Values />
-                    </InLayout>
-                </div>
-                <Background bg aboutus />
-                <div id="faq">
-                    <FaqLayout>
-                        <Heading text="Get Your Answers" />
-                        <Faq />
-                    </FaqLayout>
-                </div>
-            </PageWrapper>
+            <Team />
             <Footer />
         </div>
     );
