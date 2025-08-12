@@ -1,5 +1,5 @@
-import { cyberSecretsConfig } from '@/pages/wwoLayout/configs/cybercon'
-import { ProgramPage } from '@/pages/wwoLayout/Program'
+import { cyberSecretsConfig } from '@/components/wwoLayout/configs/cybercon'
+import { ProgramPage } from '@/components/wwoLayout/Program'
 import React from 'react'
 
 export default function cybersec() {
