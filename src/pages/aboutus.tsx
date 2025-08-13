@@ -66,7 +66,7 @@ const AboutUs = (props: Props) => {
     return (
         <div>
             <Navbar />
-            <Hero />
+            {/* <Hero /> */}
             <Team />
             <Footer />
         </div>

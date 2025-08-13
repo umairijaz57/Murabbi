@@ -161,6 +161,7 @@ export const Navbar = () => {
             <NavOption text="About Us" link="/aboutus" />
             
             <NavOption text="What We Offer" link="/services" clamp="right">
+            <NestedNavOption text="Zero Code AI" link="/zerocodeai" />
               <NestedNavOption text="STEAM Camps" link="/services/steam">
                 <Link 
                   href="/services/steam/lego" 

@@ -11,7 +11,11 @@ export default function News() {
         <>
             <Navbar />
             <Hero />
+            <PageWrapper>
+                <InLayout >
                     <NewsList />
+                </InLayout>
+            </PageWrapper>
             <Footer />
         </>
     );
