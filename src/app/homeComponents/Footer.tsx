@@ -48,7 +48,7 @@ const Footer = (props: Props) => {
             </div>
           </div>
           <div className="flex flex-col md:gap-20 md:flex-row md:mt-4">
-            <div>
+            {/* <div>
               <ul className="font-medium text-center md:text-left">
                 <li className="mb-2 mt-6 md:mt-0 md:mb-4 text-xl font-bold">
                   <Link href="/aboutus" className="hover:underline">
@@ -65,7 +65,7 @@ const Footer = (props: Props) => {
                   <li className="text-sm">Partners</li>
                 </Link>
               </ul>
-            </div>
+            </div> */}
             <div>
               <ul className="font-medium text-center md:text-left">
                 <li className="mb-2 mt-8 md:mt-0 md:mb-4 text-xl font-bold">
@@ -79,9 +79,6 @@ const Footer = (props: Props) => {
                 <Link href="/news">
                   <li className="mb-4 text-sm">Blog</li>
                 </Link>
-                <Link href="/aboutus#faq">
-                  <li className="text-sm">FAQs</li>
-                </Link>
               </ul>
             </div>
             <div>
@@ -91,17 +88,17 @@ const Footer = (props: Props) => {
                     What We Offer
                   </Link>
                 </li>
-                <Link href="/whatweoffer/robotics">
-                  <li className="mb-4 text-sm">Robotics</li>
+                <Link href="/services/steam/lego">
+                  <li className="mb-4 text-sm">Lego</li>
                 </Link>
-                <Link href="/whatweoffer/artificialintelligence">
+                <Link href="/services/steam/ai">
                   <li className="mb-4 text-sm">Artificial Intelligence</li>
                 </Link>
-                <Link href="/whatweoffer/cybersecurity">
+                <Link href="/services/steam/cybersec">
                   <li className="text-sm mb-4">Cyber Security</li>
                 </Link>
-                <Link href="/whatweoffer/gamedev">
-                  <li className="text-sm">Game Development</li>
+                <Link href="/services/steam/jolly">
+                  <li className="text-sm">Jolly Phonics</li>
                 </Link>
               </ul>
             </div>

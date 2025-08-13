@@ -173,7 +173,7 @@ export const Navbar = () => {
                   href="/services/steam/ai" 
                   className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
                 >
-                  Artificial Intelligence
+                  A is for AI
                 </Link>
                 <Link 
                   href="/services/steam/cybersec" 
@@ -189,7 +189,7 @@ export const Navbar = () => {
                 </Link>
               </NestedNavOption>
               
-              <NestedNavOption text="Mentor Program for O/A Level" link="/services/mentor">
+              {/* <NestedNavOption text="Mentor Program for O/A Level" link="/services/mentor">
                 <Link 
                   href="/services/mentor/aiworkshops" 
                   className="block px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors"
@@ -208,7 +208,7 @@ export const Navbar = () => {
                 >
                   Robotics
                 </Link>
-              </NestedNavOption>
+              </NestedNavOption> */}
             </NavOption>
             
             <NavOption text="News" link="/news" />
