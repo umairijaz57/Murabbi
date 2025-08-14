@@ -8,42 +8,36 @@ export default function ZeroCodeAIPage() {
       <Navbar />
       {/* Hero Section with Asymmetrical Design */}
       <header className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600  to-blue-800"></div>
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-600/20 to-transparent transform skew-x-12 translate-x-16"></div>
-        <div className="relative max-w-7xl mx-auto px-6 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white">
-              <h1 className="font-serif text-5xl lg:text-6xl font-bold mb-6 leading-tight">Zero Coding AI Program</h1>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <p className="text-lg leading-relaxed">
-                  How long does it take to design an AI application? Your AI application will be ready before your
-                  coffee order arrives. We offer a non-coding and non mathematics based understanding of the AI world.
-                </p>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="w-80 h-80 bg-gradient-to-br from-white/20 to-white/5 rounded-full blur-3xl absolute -top-10 -right-10"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 10V3L4 14h7v7l9-11h-7z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <p className="text-white font-medium">AI Made Simple</p>
-                </div>
-              </div>
-            </div>
-          </div>
+  {/* Gradient background */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800"></div>
+  <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-600/20 to-transparent transform skew-x-12 translate-x-16"></div>
+
+  <div className="relative max-w-7xl mx-auto px-6 py-20">
+    <h1 className="font-serif text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white text-center">
+      Zero Coding AI Program
+    </h1>
+
+    <div className="relative flex justify-center">
+      {/* Image */}
+      <img
+        src="/aidiploma/1.jpg"
+        className="object-cover rounded-lg shadow-lg max-h-[400px] w-auto"
+        alt="AI Program"
+      />
+
+      {/* Text Overlay */}
+      <div className="h-screen absolute inset-0 flex items-center justify-center px-6">
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 max-w-xl">
+          <p className="text-white text-lg leading-relaxed text-center">
+            How long does it take to design an AI application? Your AI application will be ready before your coffee order arrives.
+            We offer a non-coding and non-mathematics based understanding of the AI world.
+          </p>
         </div>
-      </header>
+      </div>
+    </div>
+  </div>
+</header>
+
 
       <main className="max-w-7xl mx-auto px-6 py-16">
         {/* Staggered Grid Layout */}

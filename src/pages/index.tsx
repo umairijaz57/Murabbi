@@ -16,6 +16,7 @@ import UpcomingEvent from "../app/homeComponents/upcomingevent";
 import Testimonial from "../app/homeComponents/Testimonial";
 import { Navbar } from "../app/homeComponents/NavbarL";
 import OurMission from "@/app/homeComponents/OurMission";
+import NewsSection from "@/app/homeComponents/News";
 
 const CardSlider = dynamic(() => import("../app/homeComponents/CardSlide"), {
 });
@@ -33,10 +34,11 @@ export default function Home() {
           <CenteredHeading text="Upcoming Event" />
           <UpcomingEvent />
         </InLayout> */}
-                <InLayout offer={true}>
+                {/* <InLayout offer={true}>
                     <CenteredHeading text="News & Updates" />
                     <NewsList home />
-                </InLayout>
+                </InLayout> */}
+                <NewsSection />
                 {/* <InLayout>
                     <Info />
                 </InLayout> */}
