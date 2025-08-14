@@ -10,13 +10,6 @@ export default function TeamPage() {
 
  return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white relative">
-      {/* Animated background elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-700 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/3 right-1/4 w-60 h-60 bg-blue-700/50 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-700"></div>
-      </div>
-
       {/* Content */}
       <div className="relative z-10">
         {/* Header */}
@@ -91,17 +84,6 @@ export default function TeamPage() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Footer CTA */}
-        <div className="text-center py-16 px-4 bg-blue-900/5">
-          <h2 className="text-3xl font-bold text-blue-900 mb-4">Ready to Work With Us?</h2>
-          <p className="text-lg text-blue-700 mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals to join our growing team and make a difference together.
-          </p>
-          <button className="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
-            Join Our Team
-          </button>
         </div>
       </div>
     </div>

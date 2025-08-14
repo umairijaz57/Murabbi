@@ -15,6 +15,7 @@ import NewsList from "../app/news/components/NewsList";
 import UpcomingEvent from "../app/homeComponents/upcomingevent";
 import Testimonial from "../app/homeComponents/Testimonial";
 import { Navbar } from "../app/homeComponents/NavbarL";
+import OurMission from "@/app/homeComponents/OurMission";
 
 const CardSlider = dynamic(() => import("../app/homeComponents/CardSlide"), {
 });
@@ -24,38 +25,38 @@ export default function Home() {
         <div className="relative">
             {/* <Update /> */}
             <Navbar />
+            <OurMission />
             {/* <Hero /> */}
-            <HeroSlider />
+            {/* <HeroSlider /> */}
             <PageWrapper home={true}>
                 {/* <InLayout upcoming={true}>
           <CenteredHeading text="Upcoming Event" />
           <UpcomingEvent />
         </InLayout> */}
                 <InLayout offer={true}>
-                    <CenteredHeading text="Events & Updates" />
+                    <CenteredHeading text="News & Updates" />
                     <NewsList home />
                 </InLayout>
-                <InLayout>
+                {/* <InLayout>
                     <Info />
-                </InLayout>
+                </InLayout> */}
                 {/* <InLayout offer={true}>
           <Trainings />
         </InLayout> */}
-                <InLayout>
+                {/* <InLayout>
                     <CenteredHeading text="Best Courses" />
                     <Description
                         center
                         text="Explore our top-rated courses here and equip yourself with the knowledge and skills you need for success."
                     />
                     <Courses />
-                </InLayout>
-                <Background />
+                </InLayout> */}
+                {/* <Background /> */}
 
                 {/* <Background bg={true} /> */}
-                <InLayout offer={true}>
-                    {/* <Testimonials /> */}
+                {/* <InLayout offer={true}>
                     <Testimonial />
-                </InLayout>
+                </InLayout> */}
                 <InLayout>
                     <CardSlider type="partner" />
                 </InLayout>

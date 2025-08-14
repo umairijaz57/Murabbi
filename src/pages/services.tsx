@@ -30,9 +30,9 @@ export default function WhatWeOffer() {
       id: "mentor-program",
       title: "Zero Code AI",
       description:
-        "Our mentorship programs provide in-depth guidance and practical experience for students aiming for excellence in their O/A-Level studies and beyond, preparing them for future academic and career success.",
+        "Our AI training programs offer practical, no-code experience and collaborative learning, empowering professionals to design real-world AI solutions and excel in the evolving digital landscape.",
       icon: Users,
-      href: "/services/zerocode ai ",
+      href: "/services/zerocodeai ",
       bgColor: "bg-blue-100",
       iconColor: "text-blue-800",
       buttonColor: "bg-blue-800 hover:bg-blue-900",
