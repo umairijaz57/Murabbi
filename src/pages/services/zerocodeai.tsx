@@ -7,30 +7,29 @@ export default function ZeroCodeAIPage() {
     <div className="min-h-screen bg-blue-50">
       <Navbar />
       {/* Hero Section with Asymmetrical Design */}
-      <header className="relative overflow-hidden">
+     <header className="relative overflow-hidden">
   {/* Gradient background */}
   <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800"></div>
-  <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-600/20 to-transparent transform skew-x-12 translate-x-16"></div>
+  <div className="absolute top-0 right-0 w-1/2 md:w-1/3 h-full bg-gradient-to-l from-blue-600/20 to-transparent transform skew-x-6 md:skew-x-12 translate-x-8 md:translate-x-16"></div>
 
-  <div className="relative max-w-7xl mx-auto px-6 py-20">
-    <h1 className="font-serif text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white text-center">
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20 pb-16 sm:pb-20 lg:pb-24">
+    <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 lg:mb-6 leading-tight text-white text-center">
       Zero Coding AI Program
     </h1>
 
-    <div className="relative flex justify-center">
+    <div className="relative flex flex-col items-center">
       {/* Image */}
       <img
         src="/aidiploma/1.jpg"
-        className="object-cover rounded-lg shadow-lg max-h-[400px] w-auto"
+        className="object-cover rounded-lg shadow-lg w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl max-h-[250px] sm:max-h-[300px] md:max-h-[350px] lg:max-h-[400px]"
         alt="AI Program"
       />
 
-      {/* Text Overlay */}
-      <div className="h-screen absolute inset-0 flex items-center justify-center px-6">
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 max-w-xl">
-          <p className="text-white text-lg leading-relaxed text-center">
-            How long does it take to design an AI application? Your AI application will be ready before your coffee order arrives.
-            We offer a non-coding and non-mathematics based understanding of the AI world.
+      {/* Text Overlay - Half on image, half outside */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 px-2 sm:px-4 w-full flex justify-center">
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-2 shadow-lg">
+          <p className="text-white text-sm sm:text-base md:text-lg leading-relaxed text-center">
+            How long does it take to design an AI application? Your AI application will be ready before your coffee order arrives. We offer a non-coding and non-mathematics based understanding of the AI world.
           </p>
         </div>
       </div>

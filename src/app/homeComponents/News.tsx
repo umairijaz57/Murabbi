@@ -5,7 +5,7 @@ import { newsitems } from "@/utils/newsitem"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Calendar, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { useResponsiveItems } from "@/hooks/use-responsive-item"
 import Link from "next/link"
 
@@ -35,9 +35,7 @@ const NewsSlider = () => {
         </div>
       </div>
 
-      <div  className="max-w-7xl mx-auto px-6 py-16">
-
-     
+      <div className="max-w-7xl mx-auto px-6 py-16">
         <Carousel
           opts={{
             align: "start",
@@ -60,7 +58,7 @@ const NewsSlider = () => {
                 >
                   {group.map((item, index) => (
                     <Card
-                      key={""}
+                      key={index}
                       className="group overflow-hidden bg-card border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
                     >
                       <div className="relative h-64 overflow-hidden">
@@ -68,7 +66,7 @@ const NewsSlider = () => {
                         <img
                           src={item.image || "/placeholder.svg?height=300&width=400&query=modern news article"}
                           alt={""}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 bg-gray-100"
                           onError={(e) => {
                             e.currentTarget.src = "/placeholder.svg?height=300&width=400"
                           }}
@@ -76,10 +74,9 @@ const NewsSlider = () => {
                       </div>
 
                       <CardContent className="p-8">
-                        <p className="font-sans text-muted-foreground text-base leading-relaxed mb-6 line-clamp-3">
+                        <p className="font-sans text-muted-foreground text-base leading-relaxed line-clamp-3 mb-6">
                           {item.description}
                         </p>
-
                       </CardContent>
                     </Card>
                   ))}
@@ -87,12 +84,11 @@ const NewsSlider = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-
-      </Link>
+        </Link>
           <CarouselPrevious className="left-0 bg-blue-500 text-white hover:bg-primary hover:text-primary-foreground shadow-xl border-0 w-12 h-12 transition-all duration-300" />
           <CarouselNext className="right-0 bg-blue-500 text-white hover:bg-primary hover:text-primary-foreground shadow-xl border-0 w-12 h-12 transition-all duration-300" />
         </Carousel>
-       </div>
+      </div>
     </div>
   )
 }
