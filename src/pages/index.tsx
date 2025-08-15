@@ -39,6 +39,7 @@ export default function Home() {
                     <NewsList home />
                 </InLayout> */}
                 <NewsSection />
+                <Testimonials />
                 {/* <InLayout>
                     <Info />
                 </InLayout> */}
