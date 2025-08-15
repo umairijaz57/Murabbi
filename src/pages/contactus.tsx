@@ -17,10 +17,10 @@ const ContactUs = (props: Props) => {
                 <InLayout>
                     <Info />
                 </InLayout>
-                <Form />
+                {/* <Form />
                 <InLayout offer={true}>
                     <NewsLetter />
-                </InLayout>
+                </InLayout> */}
             </PageWrapper>
             <Footer />
         </div>

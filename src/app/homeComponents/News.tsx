@@ -1,110 +1,100 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { newsitems } from '@/utils/newsitem';
+"use client"
+
+import React from "react"
+import { newsitems } from "@/utils/newsitem"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Calendar, ArrowRight } from "lucide-react"
+import { useResponsiveItems } from "@/hooks/use-responsive-item"
+import Link from "next/link"
 
 const NewsSlider = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const itemsPerSlide = useResponsiveItems()
 
-
-  const itemsPerSlide = 3;
-  const totalSlides = Math.ceil(newsitems.length / itemsPerSlide);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % totalSlides);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
-
-  const getCurrentItems = () => {
-    const startIndex = currentIndex * itemsPerSlide;
-    return newsitems.slice(startIndex, startIndex + itemsPerSlide);
-  };
+  // Group items based on current screen size
+  const groupedItems = React.useMemo(() => {
+    const groups = []
+    for (let i = 0; i < newsitems.length; i += itemsPerSlide) {
+      groups.push(newsitems.slice(i, i + itemsPerSlide))
+    }
+    return groups
+  }, [itemsPerSlide])
 
   return (
-    <div className="max-w-full mx-auto p-6 bg-blue-50 min-h-screen">
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold text-center text-blue-900 mb-2">Latest News & Updates</h2>
-        <p className="text-center text-gray-600">Stay updated with our recent activities and achievements</p>
-      </div>
-
-      <div className="relative">
-        {/* Navigation Buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-gray-100 rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110"
-          disabled={totalSlides <= 1}
-        >
-          <ChevronLeft className="w-6 h-6 text-gray-700" />
-        </button>
-
-        <button
-          onClick={nextSlide}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-gray-100 rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110"
-          disabled={totalSlides <= 1}
-        >
-          <ChevronRight className="w-6 h-6 text-gray-700" />
-        </button>
-
-        {/* Slider Container */}
-        <div className="overflow-hidden mx-12">
-          <div 
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {Array.from({ length: totalSlides }, (_, slideIndex) => (
-              <div key={slideIndex} className="w-full flex-shrink-0">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
-                  {newsitems
-                    .slice(slideIndex * itemsPerSlide, slideIndex * itemsPerSlide + itemsPerSlide)
-                    .map((item, index) => (
-                      <div key={slideIndex * itemsPerSlide + index} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        {/* Image Container with proper aspect ratio handling */}
-                        <div className="relative h-64 bg-gray-200 overflow-hidden">
-                          <img
-                            src={item.image}
-                            alt={`News item ${slideIndex * itemsPerSlide + index + 1}`}
-                            className="w-full h-full object-contain bg-gray-100"
-                            onError={(e) => {
-                              e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OTk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBmb3VuZDwvdGV4dD48L3N2Zz4=';
-                            }}
-                          />
-                        </div>
-                        
-                        {/* Content */}
-                        <div className="p-6">
-                          <p className="text-gray-700 text-sm ">
-                            {item.description}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                </div>
-              </div>
-            ))}
-          </div>
+    <div className="min-h-screen bg-blue-50">
+      <div className="bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h1 className="font-serif text-5xl md:text-6xl font-bold text-foreground mb-4 tracking-tight">
+            Latest News & Updates
+          </h1>
+          <p className="font-sans text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Stay informed with our latest stories, achievements, and industry insights
+          </p>
+          <div className="w-24 h-1 bg-primary mx-auto mt-8 rounded-full"></div>
         </div>
-
-        {/* Slide Indicators */}
-        {totalSlides > 1 && (
-          <div className="flex justify-center mt-8 space-x-2">
-            {Array.from({ length: totalSlides }, (_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-1 rounded-full transition-all duration-200 ${
-                  currentIndex === index
-                    ? 'bg-blue-600 scale-125 w-3'
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-              />
-            ))}
-          </div>
-        )}
       </div>
-    </div>
-  );
-};
 
-export default NewsSlider;
+      <div  className="max-w-7xl mx-auto px-6 py-16">
+
+     
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <Link href={"/newsitems"}>
+          <CarouselContent className="-ml-4">
+            {groupedItems.map((group, slideIndex) => (
+              <CarouselItem key={slideIndex} className="pl-4">
+                <div
+                  className={`grid gap-8 ${
+                    itemsPerSlide === 1
+                      ? "grid-cols-1"
+                      : itemsPerSlide === 2
+                        ? "grid-cols-1 md:grid-cols-2"
+                        : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                  }`}
+                >
+                  {group.map((item, index) => (
+                    <Card
+                      key={""}
+                      className="group overflow-hidden bg-card border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                    >
+                      <div className="relative h-64 overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <img
+                          src={item.image || "/placeholder.svg?height=300&width=400&query=modern news article"}
+                          alt={""}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          onError={(e) => {
+                            e.currentTarget.src = "/placeholder.svg?height=300&width=400"
+                          }}
+                        />
+                      </div>
+
+                      <CardContent className="p-8">
+                        <p className="font-sans text-muted-foreground text-base leading-relaxed mb-6 line-clamp-3">
+                          {item.description}
+                        </p>
+
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+      </Link>
+          <CarouselPrevious className="left-0 bg-blue-500 text-white hover:bg-primary hover:text-primary-foreground shadow-xl border-0 w-12 h-12 transition-all duration-300" />
+          <CarouselNext className="right-0 bg-blue-500 text-white hover:bg-primary hover:text-primary-foreground shadow-xl border-0 w-12 h-12 transition-all duration-300" />
+        </Carousel>
+       </div>
+    </div>
+  )
+}
+
+export default NewsSlider

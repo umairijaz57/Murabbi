@@ -106,10 +106,12 @@ export const Navbar = () => {
     if (typeof window !== "undefined") {
       const currentScrollY = window.scrollY
       
+      // Don't hide navbar if mobile menu is open
+      if (opened) return
+      
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         // Scrolling down and past 100px
         setIsVisible(false)
-        setOpened(false)
       } else {
         // Scrolling up
         setIsVisible(true)
@@ -125,7 +127,7 @@ export const Navbar = () => {
         window.removeEventListener("scroll", controlNavbar)
       }
     }
-  }, [lastScrollY])
+  }, [lastScrollY, opened]) // Add 'opened' to dependency array
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -138,6 +140,13 @@ export const Navbar = () => {
     if (opened) {
       document.addEventListener('click', handleClickOutside)
       return () => document.removeEventListener('click', handleClickOutside)
+    }
+  }, [opened])
+
+  // Show navbar when mobile menu is opened
+  useEffect(() => {
+    if (opened) {
+      setIsVisible(true)
     }
   }, [opened])
 
@@ -220,7 +229,7 @@ export const Navbar = () => {
       {/* Mobile Navbar */}
       <nav className={`flex lg:hidden flex-col w-full bg-white border-b-2 border-blue-900 
         sticky top-0 z-30 transition-transform duration-300 
-        ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+        ${(isVisible || opened) ? 'translate-y-0' : '-translate-y-full'}`}>
         
         <div className="flex justify-between items-center py-4 px-6">
           <Link href="/" className="flex items-center">
@@ -278,7 +287,7 @@ export const Navbar = () => {
               </div>
               
               <Link 
-                href="/news" 
+                href="/newsitems" 
                 className="text-lg font-medium text-gray-700 hover:text-blue-900 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setOpened(false)}
               >
