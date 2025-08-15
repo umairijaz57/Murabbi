@@ -211,7 +211,7 @@ export const Navbar = () => {
               </NestedNavOption> */}
             </NavOption>
             
-            <NavOption text="News" link="/news" />
+            <NavOption text="News" link="/newsitems" />
             <NavOption text="Contact Us" link="/contactus" />
           </div>
         </div>
