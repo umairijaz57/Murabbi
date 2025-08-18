@@ -25,7 +25,7 @@ const NewsSlider = () => {
     <div className="min-h-screen bg-blue-50">
       <div className="bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-foreground mb-4 tracking-tight">
+          <h1 className="font-serif text-blue-600 text-5xl md:text-6xl font-bold text-foreground mb-4 tracking-tight">
             Latest News & Updates
           </h1>
           <p className="font-sans text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
