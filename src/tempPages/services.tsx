@@ -13,19 +13,19 @@ export default function WhatWeOffer() {
   const [hoveredProgram, setHoveredProgram] = useState(null)
 
   const programs = [
-    {
-      id: "steam-camps",
-      title: "STEAM Camps",
-      description:
-        "Our Steam Camp offers a dynamic learning environment where creativity meets innovation. Explore various fields through interactive projects and collaborative challenges designed to spark curiosity and foster scientific thinking.",
-      icon: PencilRuler,
-      href: "/services/steam",
-      bgColor: "bg-blue-50",
-      iconColor: "text-blue-700",
-      buttonColor: "bg-blue-700 hover:bg-blue-800",
-      features: ["Interactive Projects", "Problem Solving", "Hands-on Learning"],
-      stats: "50+ Projects"
-    },
+    // {
+    //   id: "steam-camps",
+    //   title: "STEAM Camps",
+    //   description:
+    //     "Our Steam Camp offers a dynamic learning environment where creativity meets innovation. Explore various fields through interactive projects and collaborative challenges designed to spark curiosity and foster scientific thinking.",
+    //   icon: PencilRuler,
+    //   href: "/services/steam",
+    //   bgColor: "bg-blue-50",
+    //   iconColor: "text-blue-700",
+    //   buttonColor: "bg-blue-700 hover:bg-blue-800",
+    //   features: ["Interactive Projects", "Problem Solving", "Hands-on Learning"],
+    //   stats: "50+ Projects"
+    // },
     {
       id: "mentor-program",
       title: "Zero Code AI",
@@ -42,7 +42,7 @@ export default function WhatWeOffer() {
   ]
 
   return (
-    <div className="min-h-screen bg-blue-50 flex flex-col">
+    <div className="min-h-screen bg-blue-50 flex items-center justify-center flex-col">
       {/* Animated background elements */}
        <div className="fixed inset-0 overflow-hidden pointer-events-none ">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-700 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
@@ -68,7 +68,7 @@ export default function WhatWeOffer() {
             <span className="font-semibold text-blue-800"> inspire, educate, and transform</span> young minds.
           </p>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-sm">
             {['Expert-Led Programs', 'Proven Results', 'Personalized Learning', 'Future-Ready Skills'].map((feature) => (
               <span key={feature} className="px-4 py-2 bg-white/60 backdrop-blur-sm border border-blue-700 rounded-full text-blue-800">
                 {feature}
