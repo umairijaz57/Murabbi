@@ -84,21 +84,18 @@ const Footer = (props: Props) => {
             <div>
               <ul className="font-medium text-center md:text-left">
                 <li className="mb-2 mt-8 md:mt-0 md:mb-4 text-xl font-bold">
-                  <Link href="/offer" className="hover:underline">
-                    What We Offer
+                  <Link href="/" className="hover:underline">
+                    Links
                   </Link>
                 </li>
-                <Link href="/services/steam/lego">
-                  <li className="mb-4 text-sm">Lego</li>
+                <Link href="/aboutus">
+                  <li className="mb-4 text-sm">About</li>
                 </Link>
-                <Link href="/services/steam/ai">
-                  <li className="mb-4 text-sm">Artificial Intelligence</li>
+                <Link href="/services/zerocodeai">
+                  <li className="mb-4 text-sm">Zero Code AI</li>
                 </Link>
-                <Link href="/services/steam/cybersec">
-                  <li className="text-sm mb-4">Cyber Security</li>
-                </Link>
-                <Link href="/services/steam/jolly">
-                  <li className="text-sm">Jolly Phonics</li>
+                <Link href="/contactus">
+                  <li className="text-sm mb-4">Contact us </li>
                 </Link>
               </ul>
             </div>
