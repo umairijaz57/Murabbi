@@ -22,13 +22,13 @@ export const students: Testimonial[] = [
   },
    {
     id: 2,
-    name: "Musa",
+    name: "Salar Shamsi",
     image: "/testimonial/2.jpg",
     text: "The course was comprehensive and aptly guided by a skilled and kind instructor, who addressed every query to the highest standard. Moreover, this course helped me and others understand how game development works and encouraged us to explore it further."
   },
   {
     id: 3,
-    name: "Yahya",
+    name: "Muhammad Shameer",
     image: "/testimonial/3.jpg",
     text: "This course gave me a strong foundation in Unity and advanced game development techniques. The instructor explained everything clearly and was very supportive, which made learning easy and enjoyable. It has boosted my confidence and motivated me to keep exploring game development."
   }
