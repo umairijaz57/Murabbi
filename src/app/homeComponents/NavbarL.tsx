@@ -171,7 +171,6 @@ export const Navbar = () => {
             
             <NavOption text="What We Offer" link="#" clamp="right">
             <NestedNavOption text="Zero Code AI" link="/services/zerocodeai" />
-            <NestedNavOption text="Mentor Program" link="/services/mentor" />
               {/* <NestedNavOption text="STEAM Camps" link="/services/steam">
                 <Link 
                   href="/services/steam/lego" 
@@ -278,7 +277,7 @@ export const Navbar = () => {
               
               <div className="py-2 border-b border-gray-100">
                 <Link 
-                  href="/services" 
+                  href="/services/zerocodeai/" 
                   className="text-lg font-medium text-gray-700 hover:text-blue-900 transition-colors block mb-3"
                   onClick={() => setOpened(false)}
                 >

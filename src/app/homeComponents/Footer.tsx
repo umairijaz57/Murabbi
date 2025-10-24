@@ -69,9 +69,9 @@ const Footer = (props: Props) => {
             <div>
               <ul className="font-medium text-center md:text-left">
                 <li className="mb-2 mt-8 md:mt-0 md:mb-4 text-xl font-bold">
-                  <Link href="/resources" className="hover:underline">
+                  <h1 className="hover:underline hover:cursor-pointer">
                     Resources
-                  </Link>
+                  </h1>
                 </li>
                 <Link href="/newsitems">
                   <li className="mb-4 text-sm">News</li>
