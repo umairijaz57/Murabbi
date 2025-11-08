@@ -18,7 +18,7 @@ const Footer = (props: Props) => {
             <div>
               <div className="flex space-x-6 sm:justify-center">
                 <a
-                suppressHydrationWarning
+                  suppressHydrationWarning
                   href="https://www.facebook.com/profile.php?id=61558689572370"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -27,7 +27,7 @@ const Footer = (props: Props) => {
                   <FaFacebookF className="text-[1rem] text-blue-600" />
                 </a>
                 <a
-                suppressHydrationWarning
+                  suppressHydrationWarning
                   href="https://www.instagram.com/murabbi.io/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -36,7 +36,7 @@ const Footer = (props: Props) => {
                   <FaInstagram className="text-[1.1rem] text-blue-600" />
                 </a>
                 <a
-                suppressHydrationWarning
+                  suppressHydrationWarning
                   href="https://www.linkedin.com/company/murabbi/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -47,89 +47,65 @@ const Footer = (props: Props) => {
               </div>
             </div>
           </div>
+
           <div className="flex flex-col md:gap-20 md:flex-row md:mt-4">
-            {/* <div>
-              <ul className="font-medium text-center md:text-left">
-                <li className="mb-2 mt-6 md:mt-0 md:mb-4 text-xl font-bold">
-                  <Link href="/aboutus" className="hover:underline">
-                    About Us
-                  </Link>
-                </li>
-                <Link href="/aboutus#teams-section">
-                  <li className="mb-4 text-sm">Our Team</li>
-                </Link>
-                <Link href="/aboutus#history-section">
-                  <li className="mb-4 text-sm">Our History</li>
-                </Link>
-                <Link href="/aboutus#partners-section">
-                  <li className="text-sm">Partners</li>
-                </Link>
-              </ul>
-            </div> */}
             <div>
               <ul className="font-medium text-center md:text-left">
                 <li className="mb-2 mt-8 md:mt-0 md:mb-4 text-xl font-bold">
-                  <h1 className="hover:underline hover:cursor-pointer">
-                    Resources
-                  </h1>
+                  <h1 className="hover:underline hover:cursor-pointer">Resources</h1>
                 </li>
-                <Link href="/newsitems">
-                  <li className="mb-4 text-sm">News</li>
-                </Link>
-                <Link href="/newsitems">
-                  <li className="mb-4 text-sm">Blog</li>
-                </Link>
+                <Link href="/newsitems"><li className="mb-4 text-sm">News</li></Link>
+                <Link href="/newsitems"><li className="mb-4 text-sm">Blog</li></Link>
               </ul>
             </div>
+
             <div>
               <ul className="font-medium text-center md:text-left">
                 <li className="mb-2 mt-8 md:mt-0 md:mb-4 text-xl font-bold">
-                  <Link href="/" className="hover:underline">
-                    Links
-                  </Link>
+                  <Link href="/" className="hover:underline">Links</Link>
                 </li>
-                <Link href="/aboutus">
-                  <li className="mb-4 text-sm">About</li>
-                </Link>
-                <Link href="/services/zerocodeai">
-                  <li className="mb-4 text-sm">Zero Code AI</li>
-                </Link>
-                <Link href="/contactus">
-                  <li className="text-sm mb-4">Contact us </li>
-                </Link>
+                <Link href="/aboutus"><li className="mb-4 text-sm">About</li></Link>
+                <Link href="/services/zerocodeai"><li className="mb-4 text-sm">Zero Code AI</li></Link>
+                <Link href="/contactus"><li className="text-sm mb-4">Contact us</li></Link>
               </ul>
             </div>
+
             <div>
               <ul className="font-medium text-center md:text-left">
                 <li className="mb-2 mt-8 md:mt-0 md:mb-4 text-xl font-bold">
-                  <Link href="/contactus" className="hover:underline">
-                    Contact Us
-                  </Link>
+                  <Link href="/contactus" className="hover:underline">Contact Us</Link>
                 </li>
                 <li className="mb-4 text-sm">+92 333 1555665</li>
                 <li className="mb-4 text-sm">
-                  <Link
-                    href="mailto:murabbi.socials@gmail.com"
-                    className="underline"
-                  >
+                  <Link href="mailto:murabbi.socials@gmail.com" className="underline">
                     <span>murabbi.socials@gmail.com</span>
                   </Link>
                 </li>
-                <li className="text-sm">
-                  NUST Sector H-12, <br /> Islamabad, Pakistan
-                </li>
+                <li className="text-sm">NUST Sector H-12, <br /> Islamabad, Pakistan</li>
               </ul>
             </div>
           </div>
         </div>
+
+        <div className=" w-full left-72 my-10 flex flex-col items-center text-center">
+          <h1 className="text-2xl font-bold mb-2">Explore Our Learning Programs for Kids</h1>
+          <p className="text-sm mb-3 max-w-md">
+            Our programs encourage kids to learn, explore, and build a strong foundation for future success.
+          </p>
+          <Link
+            href="https://a4ai-murabbi.vercel.app" 
+            target="_blank"
+            className="bg-white hover:bg-blue-600 text-blue-600 px-6 py-2 rounded-full font-medium hover:text-white border-2 border-white transition"
+          >
+            Visit A4AI
+          </Link>
+        </div>
+
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm sm:text-center">
-            © 2025{" "}
-            <Link href="/" className="hover:underline">
-              Murabbi
-            </Link>
-            . All Rights Reserved.
+            © 2025 <Link href="/" className="hover:underline">Murabbi</Link>. All Rights Reserved.
           </span>
         </div>
       </div>
